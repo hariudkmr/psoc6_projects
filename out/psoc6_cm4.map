@@ -1,0 +1,1297 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+                              build/cy_sysclk.o (__aeabi_uldivmod)
+/usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+                              /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+/usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
+                              /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+/usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-exit.o)
+                              /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (exit)
+/usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-fini.o)
+                              build/startup_psoc6_02_cm4.o (__libc_fini_array)
+/usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-impure.o)
+                              /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-exit.o) (_global_impure_ptr)
+/usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-init.o)
+                              /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (__libc_init_array)
+/usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-memset.o)
+                              /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o (memset)
+/usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-strncpy.o)
+                              build/cy_syslib.o (strncpy)
+/usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+                              /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-exit.o) (_exit)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+ .data          0x0000000000000000        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .rodata        0x0000000000000000       0x24 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .text          0x0000000000000000       0x7c /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .ARM.extab     0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .ARM.exidx     0x0000000000000000       0x10 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .ARM.attributes
+                0x0000000000000000       0x1c /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+ .data          0x0000000000000000        0x0 build/startup_psoc6_02_cm4.o
+ .bss           0x0000000000000000        0x0 build/startup_psoc6_02_cm4.o
+ .data          0x0000000000000000        0x0 build/cy_syslib_gcc.o
+ .bss           0x0000000000000000        0x0 build/cy_syslib_gcc.o
+ .text          0x0000000000000000        0x0 build/system_psoc6_cm4.o
+ .data          0x0000000000000000        0x0 build/system_psoc6_cm4.o
+ .bss           0x0000000000000000        0x0 build/system_psoc6_cm4.o
+ .bss.cy_BleEcoClockFreqHz
+                0x0000000000000000        0x4 build/system_psoc6_cm4.o
+ .text          0x0000000000000000        0x0 build/cy_gpio.o
+ .data          0x0000000000000000        0x0 build/cy_gpio.o
+ .bss           0x0000000000000000        0x0 build/cy_gpio.o
+ .text.Cy_GPIO_Port_Init
+                0x0000000000000000       0xc8 build/cy_gpio.o
+ .text.Cy_GPIO_Port_Deinit
+                0x0000000000000000       0x58 build/cy_gpio.o
+ .text.Cy_GPIO_SetAmuxSplit
+                0x0000000000000000       0x58 build/cy_gpio.o
+ .text.Cy_GPIO_GetAmuxSplit
+                0x0000000000000000       0x3c build/cy_gpio.o
+ .text.Cy_GPIO_Pin_FastInit
+                0x0000000000000000       0x74 build/cy_gpio.o
+ .text.Cy_GPIO_GetHSIOM
+                0x0000000000000000       0x40 build/cy_gpio.o
+ .text.Cy_GPIO_Read
+                0x0000000000000000       0x10 build/cy_gpio.o
+ .text.Cy_GPIO_Write
+                0x0000000000000000       0x1c build/cy_gpio.o
+ .text.Cy_GPIO_ReadOut
+                0x0000000000000000       0x10 build/cy_gpio.o
+ .text.Cy_GPIO_Set
+                0x0000000000000000       0x10 build/cy_gpio.o
+ .text.Cy_GPIO_Clr
+                0x0000000000000000       0x10 build/cy_gpio.o
+ .text.Cy_GPIO_Inv
+                0x0000000000000000       0x10 build/cy_gpio.o
+ .text.Cy_GPIO_GetDrivemode
+                0x0000000000000000       0x20 build/cy_gpio.o
+ .text.Cy_GPIO_SetVtrip
+                0x0000000000000000       0x3c build/cy_gpio.o
+ .text.Cy_GPIO_GetVtrip
+                0x0000000000000000       0x1c build/cy_gpio.o
+ .text.Cy_GPIO_SetSlewRate
+                0x0000000000000000       0x3c build/cy_gpio.o
+ .text.Cy_GPIO_GetSlewRate
+                0x0000000000000000       0x1c build/cy_gpio.o
+ .text.Cy_GPIO_SetDriveSel
+                0x0000000000000000       0x40 build/cy_gpio.o
+ .text.Cy_GPIO_GetDriveSel
+                0x0000000000000000       0x20 build/cy_gpio.o
+ .text.Cy_GPIO_SetVregEn
+                0x0000000000000000       0x40 build/cy_gpio.o
+ .text.Cy_GPIO_GetVregEn
+                0x0000000000000000       0x24 build/cy_gpio.o
+ .text.Cy_GPIO_SetIbufMode
+                0x0000000000000000       0x44 build/cy_gpio.o
+ .text.Cy_GPIO_GetIbufMode
+                0x0000000000000000       0x28 build/cy_gpio.o
+ .text.Cy_GPIO_SetVtripSel
+                0x0000000000000000       0x44 build/cy_gpio.o
+ .text.Cy_GPIO_GetVtripSel
+                0x0000000000000000       0x28 build/cy_gpio.o
+ .text.Cy_GPIO_SetVrefSel
+                0x0000000000000000       0x44 build/cy_gpio.o
+ .text.Cy_GPIO_GetVrefSel
+                0x0000000000000000       0x28 build/cy_gpio.o
+ .text.Cy_GPIO_SetVohSel
+                0x0000000000000000       0x44 build/cy_gpio.o
+ .text.Cy_GPIO_GetVohSel
+                0x0000000000000000       0x28 build/cy_gpio.o
+ .text.Cy_GPIO_GetInterruptStatus
+                0x0000000000000000       0x10 build/cy_gpio.o
+ .text.Cy_GPIO_ClearInterrupt
+                0x0000000000000000       0x14 build/cy_gpio.o
+ .text.Cy_GPIO_SetInterruptMask
+                0x0000000000000000       0x26 build/cy_gpio.o
+ .text.Cy_GPIO_GetInterruptMask
+                0x0000000000000000       0x10 build/cy_gpio.o
+ .text.Cy_GPIO_GetInterruptStatusMasked
+                0x0000000000000000       0x10 build/cy_gpio.o
+ .text.Cy_GPIO_SetSwInterrupt
+                0x0000000000000000       0x10 build/cy_gpio.o
+ .text.Cy_GPIO_SetInterruptEdge
+                0x0000000000000000       0x3c build/cy_gpio.o
+ .text.Cy_GPIO_Pin_Init
+                0x0000000000000000      0x15c build/cy_gpio.o
+ .text.Cy_GPIO_GetInterruptEdge
+                0x0000000000000000       0x20 build/cy_gpio.o
+ .text.Cy_GPIO_SetFilter
+                0x0000000000000000       0x24 build/cy_gpio.o
+ .text.Cy_GPIO_GetFilter
+                0x0000000000000000       0x14 build/cy_gpio.o
+ .text          0x0000000000000000        0x0 build/cy_syslib.o
+ .data          0x0000000000000000        0x0 build/cy_syslib.o
+ .bss           0x0000000000000000        0x0 build/cy_syslib.o
+ .text.Cy_SysLib_DelayUs
+                0x0000000000000000       0x14 build/cy_syslib.o
+ .text.Cy_SysLib_Rtos_Delay
+                0x0000000000000000        0x8 build/cy_syslib.o
+ .text.Cy_SysLib_Rtos_DelayUs
+                0x0000000000000000        0x8 build/cy_syslib.o
+ .text.Cy_SysLib_Halt
+                0x0000000000000000        0x4 build/cy_syslib.o
+ .text.Cy_SysLib_AssertFailed
+                0x0000000000000000       0x1c build/cy_syslib.o
+ .text.Cy_SysLib_ClearFlashCacheAndBuffer
+                0x0000000000000000       0x10 build/cy_syslib.o
+ .text.Cy_SysLib_ResetBackupDomain
+                0x0000000000000000       0x20 build/cy_syslib.o
+ .text.Cy_SysLib_GetResetReason
+                0x0000000000000000       0x34 build/cy_syslib.o
+ .text.Cy_SysLib_ClearResetReason
+                0x0000000000000000       0x28 build/cy_syslib.o
+ .text.Cy_SysLib_GetUniqueId
+                0x0000000000000000       0x4a build/cy_syslib.o
+ .text.Cy_SysLib_SetWaitStates
+                0x0000000000000000       0xd0 build/cy_syslib.o
+ .text.Cy_SysLib_GetDeviceRevision
+                0x0000000000000000       0x16 build/cy_syslib.o
+ .text.Cy_SysLib_GetDevice
+                0x0000000000000000       0x1a build/cy_syslib.o
+ .text          0x0000000000000000        0x0 build/cy_sysclk.o
+ .data          0x0000000000000000        0x0 build/cy_sysclk.o
+ .bss           0x0000000000000000        0x0 build/cy_sysclk.o
+ .text.cy_sqrt  0x0000000000000000       0x2a build/cy_sysclk.o
+ .text.Cy_SysClk_PeriphGetDivider
+                0x0000000000000000       0x44 build/cy_sysclk.o
+ .text.Cy_SysClk_PeriphSetFracDivider
+                0x0000000000000000       0xcc build/cy_sysclk.o
+ .text.Cy_SysClk_PeriphGetFracDivider
+                0x0000000000000000       0x88 build/cy_sysclk.o
+ .text.Cy_SysClk_PeriphGetAssignedDivider
+                0x0000000000000000       0x34 build/cy_sysclk.o
+ .text.Cy_SysClk_PeriphDisableDivider
+                0x0000000000000000       0x64 build/cy_sysclk.o
+ .text.Cy_SysClk_PeriphEnablePhaseAlignDivider
+                0x0000000000000000       0x9c build/cy_sysclk.o
+ .text.Cy_SysClk_PeriphGetDividerEnabled
+                0x0000000000000000       0x94 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkSlowSetDivider
+                0x0000000000000000       0x1c build/cy_sysclk.o
+ .text.Cy_SysClk_ClkSlowGetDivider
+                0x0000000000000000       0x18 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkPumpSetSource
+                0x0000000000000000       0x24 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkPumpGetSource
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkPumpSetDivider
+                0x0000000000000000       0x24 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkPumpGetDivider
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkPumpEnable
+                0x0000000000000000       0x14 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkPumpIsEnabled
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkPumpDisable
+                0x0000000000000000       0x14 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkBakSetSource
+                0x0000000000000000       0x20 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkBakGetSource
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkTimerSetSource
+                0x0000000000000000       0x2c build/cy_sysclk.o
+ .text.Cy_SysClk_ClkTimerGetSource
+                0x0000000000000000       0x14 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkTimerSetDivider
+                0x0000000000000000       0x18 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkTimerGetDivider
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkTimerEnable
+                0x0000000000000000       0x14 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkTimerIsEnabled
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkTimerDisable
+                0x0000000000000000       0x14 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkLfSetSource
+                0x0000000000000000       0x20 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkLfGetSource
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkPeriSetDivider
+                0x0000000000000000       0x1c build/cy_sysclk.o
+ .text.Cy_SysClk_ClkFastSetDivider
+                0x0000000000000000       0x1c build/cy_sysclk.o
+ .text.Cy_SysClk_ClkHfEnable
+                0x0000000000000000       0x30 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkHfIsEnabled
+                0x0000000000000000       0x24 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkHfDisable
+                0x0000000000000000       0x38 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkHfSetSource
+                0x0000000000000000       0x40 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkHfSetDivider
+                0x0000000000000000       0x40 build/cy_sysclk.o
+ .text.Cy_SysClk_MfoEnable
+                0x0000000000000000       0x2c build/cy_sysclk.o
+ .text.Cy_SysClk_MfoIsEnabled
+                0x0000000000000000       0x2c build/cy_sysclk.o
+ .text.Cy_SysClk_MfoDisable
+                0x0000000000000000       0x20 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkMfEnable
+                0x0000000000000000       0x28 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkMfIsEnabled
+                0x0000000000000000       0x2c build/cy_sysclk.o
+ .text.Cy_SysClk_ClkMfDisable
+                0x0000000000000000       0x28 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkMfSetDivider
+                0x0000000000000000       0x40 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkMfGetDivider
+                0x0000000000000000       0x28 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkMfGetFrequency
+                0x0000000000000000       0x20 build/cy_sysclk.o
+ .text.Cy_SysClk_WcoEnable
+                0x0000000000000000       0x34 build/cy_sysclk.o
+ .text.Cy_SysClk_WcoDisable
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_WcoBypass
+                0x0000000000000000       0x18 build/cy_sysclk.o
+ .text.Cy_SysClk_PiloEnable
+                0x0000000000000000       0x28 build/cy_sysclk.o
+ .text.Cy_SysClk_PiloIsEnabled
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_PiloDisable
+                0x0000000000000000       0x14 build/cy_sysclk.o
+ .text.Cy_SysClk_PiloSetTrim
+                0x0000000000000000       0x20 build/cy_sysclk.o
+ .text.Cy_SysClk_PiloGetTrim
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_AltLfIsEnabled
+                0x0000000000000000        0x4 build/cy_sysclk.o
+ .text.Cy_SysClk_IloEnable
+                0x0000000000000000       0x14 build/cy_sysclk.o
+ .text.Cy_SysClk_IloIsEnabled
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_IloDisable
+                0x0000000000000000       0x28 build/cy_sysclk.o
+ .text.Cy_SysClk_IloHibernateOn
+                0x0000000000000000       0x20 build/cy_sysclk.o
+ .text.Cy_SysClk_ExtClkSetFrequency
+                0x0000000000000000       0x14 build/cy_sysclk.o
+ .text.Cy_SysClk_EcoDisable
+                0x0000000000000000       0x14 build/cy_sysclk.o
+ .text.Cy_SysClk_EcoConfigure
+                0x0000000000000000      0x13c build/cy_sysclk.o
+ .text.Cy_SysClk_EcoEnable
+                0x0000000000000000       0x64 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkPathSetSource
+                0x0000000000000000       0x5c build/cy_sysclk.o
+ .text.Cy_SysClk_FllLocked
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_FllDisable
+                0x0000000000000000       0x34 build/cy_sysclk.o
+ .text.Cy_SysClk_FllManualConfigure
+                0x0000000000000000      0x104 build/cy_sysclk.o
+ .text.Cy_SysClk_FllConfigure
+                0x0000000000000000      0x35c build/cy_sysclk.o
+ .text.Cy_SysClk_FllEnable
+                0x0000000000000000       0x94 build/cy_sysclk.o
+ .text.Cy_SysClk_PllLocked
+                0x0000000000000000       0x28 build/cy_sysclk.o
+ .text.Cy_SysClk_PllLostLock
+                0x0000000000000000       0x30 build/cy_sysclk.o
+ .text.Cy_SysClk_PllDisable
+                0x0000000000000000       0x4c build/cy_sysclk.o
+ .text.Cy_SysClk_PllManualConfigure
+                0x0000000000000000       0xd0 build/cy_sysclk.o
+ .text.Cy_SysClk_PllConfigure
+                0x0000000000000000      0x134 build/cy_sysclk.o
+ .text.Cy_SysClk_PllEnable
+                0x0000000000000000       0xb4 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkMeasurementCountersGetFreq
+                0x0000000000000000       0xac build/cy_sysclk.o
+ .text.Cy_SysClk_ClkMeasurementCountersDone
+                0x0000000000000000       0x10 build/cy_sysclk.o
+ .text.Cy_SysClk_StartClkMeasurementCounters
+                0x0000000000000000      0x16c build/cy_sysclk.o
+ .text.Cy_SysClk_IloTrim
+                0x0000000000000000       0x74 build/cy_sysclk.o
+ .text.Cy_SysClk_PiloTrim
+                0x0000000000000000       0x6c build/cy_sysclk.o
+ .text.Cy_SysClk_PiloInitialTrim
+                0x0000000000000000       0x84 build/cy_sysclk.o
+ .text.Cy_SysClk_PiloUpdateTrimStep
+                0x0000000000000000       0xb8 build/cy_sysclk.o
+ .text.Cy_SysClk_DeepSleepCallback
+                0x0000000000000000      0x21c build/cy_sysclk.o
+ .text.Cy_SysClk_ClkPumpGetFrequency
+                0x0000000000000000       0x20 build/cy_sysclk.o
+ .text.Cy_SysClk_ClkPeriGetFrequency
+                0x0000000000000000       0x1a build/cy_sysclk.o
+ .text.Cy_SysClk_ClkSlowGetFrequency
+                0x0000000000000000       0x18 build/cy_sysclk.o
+ .text.Cy_SysClk_PeriphGetFrequency
+                0x0000000000000000       0x8c build/cy_sysclk.o
+ .text.Cy_SysClk_ClkFastGetFrequency
+                0x0000000000000000       0x1a build/cy_sysclk.o
+ .text.Cy_SysClk_ClkTimerGetFrequency
+                0x0000000000000000       0x6c build/cy_sysclk.o
+ .rodata        0x0000000000000000       0x28 build/cy_sysclk.o
+ .bss.changedSourcePaths.1
+                0x0000000000000000        0x2 build/cy_sysclk.o
+ .bss.clk1Count1
+                0x0000000000000000        0x4 build/cy_sysclk.o
+ .bss.clkCounting
+                0x0000000000000000        0x1 build/cy_sysclk.o
+ .bss.pllAutoModes.0
+                0x0000000000000000        0x2 build/cy_sysclk.o
+ .bss.preventCounting
+                0x0000000000000000        0x1 build/cy_sysclk.o
+ .data.stepSize
+                0x0000000000000000        0x4 build/cy_sysclk.o
+ .text          0x0000000000000000        0x0 build/cy_device.o
+ .data          0x0000000000000000        0x0 build/cy_device.o
+ .bss           0x0000000000000000        0x0 build/cy_device.o
+ .rodata.cy_deviceIpBlockCfgPSoC6_01
+                0x0000000000000000       0xc0 build/cy_device.o
+ .rodata.cy_deviceIpBlockCfgPSoC6_03
+                0x0000000000000000       0xc0 build/cy_device.o
+ .rodata.cy_deviceIpBlockCfgPSoC6_04
+                0x0000000000000000       0xc0 build/cy_device.o
+ .text          0x0000000000000000        0x0 build/cy_scb_common.o
+ .data          0x0000000000000000        0x0 build/cy_scb_common.o
+ .bss           0x0000000000000000        0x0 build/cy_scb_common.o
+ .text.Cy_SCB_ReadArrayNoCheck
+                0x0000000000000000       0x32 build/cy_scb_common.o
+ .text.Cy_SCB_ReadArray
+                0x0000000000000000       0x1c build/cy_scb_common.o
+ .text.Cy_SCB_ReadArrayBlocking
+                0x0000000000000000       0x2e build/cy_scb_common.o
+ .text.Cy_SCB_WriteArrayNoCheck
+                0x0000000000000000       0x32 build/cy_scb_common.o
+ .text.Cy_SCB_WriteArray
+                0x0000000000000000       0x2c build/cy_scb_common.o
+ .text.Cy_SCB_WriteArrayBlocking
+                0x0000000000000000       0x2e build/cy_scb_common.o
+ .text.Cy_SCB_WriteDefaultArrayNoCheck
+                0x0000000000000000        0xe build/cy_scb_common.o
+ .text.Cy_SCB_WriteDefaultArray
+                0x0000000000000000       0x2c build/cy_scb_common.o
+ .text          0x0000000000000000        0x0 build/cy_scb_uart.o
+ .data          0x0000000000000000        0x0 build/cy_scb_uart.o
+ .bss           0x0000000000000000        0x0 build/cy_scb_uart.o
+ .text.SelectRxFifoLevel
+                0x0000000000000000       0x1e build/cy_scb_uart.o
+ .text.HandleDataTransmit
+                0x0000000000000000       0xc0 build/cy_scb_uart.o
+ .text.HandleDataReceive
+                0x0000000000000000       0xbc build/cy_scb_uart.o
+ .text.Cy_SCB_UART_SetOverSample
+                0x0000000000000000       0x70 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_SetDataWidth
+                0x0000000000000000       0x42 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_SetParity
+                0x0000000000000000       0x2a build/cy_scb_uart.o
+ .text.Cy_SCB_UART_SetStopBits
+                0x0000000000000000       0x26 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_SetDropOnParityError
+                0x0000000000000000       0x12 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_SetEnableMsbFirst
+                0x0000000000000000       0x24 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_DeInit
+                0x0000000000000000       0x48 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_Disable
+                0x0000000000000000       0x16 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_StartRingBuffer
+                0x0000000000000000       0x70 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_GetNumInRingBuffer
+                0x0000000000000000       0x18 build/cy_scb_uart.o
+ .text.HandleRingBuffer
+                0x0000000000000000       0xa8 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_ClearRingBuffer
+                0x0000000000000000        0x6 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_StopRingBuffer
+                0x0000000000000000       0x14 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_Receive
+                0x0000000000000000      0x120 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_AbortReceive
+                0x0000000000000000       0x14 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_GetNumReceived
+                0x0000000000000000        0x4 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_GetReceiveStatus
+                0x0000000000000000        0x4 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_Transmit
+                0x0000000000000000       0x98 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_AbortTransmit
+                0x0000000000000000       0x2a build/cy_scb_uart.o
+ .text.Cy_SCB_UART_GetNumLeftToTransmit
+                0x0000000000000000        0x4 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_GetTransmitStatus
+                0x0000000000000000        0x4 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_DeepSleepCallback
+                0x0000000000000000       0x88 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_HibernateCallback
+                0x0000000000000000        0x8 build/cy_scb_uart.o
+ .text.Cy_SCB_UART_SendBreakBlocking
+                0x0000000000000000       0x6a build/cy_scb_uart.o
+ .text.Cy_SCB_UART_Interrupt
+                0x0000000000000000      0x122 build/cy_scb_uart.o
+ .text          0x0000000000000000        0x0 build/psoc6_cm0.o
+ .data          0x0000000000000000        0x0 build/psoc6_cm0.o
+ .bss           0x0000000000000000        0x0 build/psoc6_cm0.o
+ .text          0x0000000000000000        0x0 build/main.o
+ .data          0x0000000000000000        0x0 build/main.o
+ .bss           0x0000000000000000        0x0 build/main.o
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
+ .text          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-exit.o)
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-exit.o)
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-exit.o)
+ .text.exit     0x0000000000000000       0x28 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000000       0x28 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-exit.o)
+ .text          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-fini.o)
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-fini.o)
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-fini.o)
+ .text          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x0000000000000000        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-impure.o)
+ .data.impure_data
+                0x0000000000000000       0x60 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x0000000000000000        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-init.o)
+ .text          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-memset.o)
+ .text.memset   0x0000000000000000       0x10 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000000       0x20 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-strncpy.o)
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-strncpy.o)
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-strncpy.o)
+ .text.strncpy  0x0000000000000000       0x26 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-strncpy.o)
+ .debug_frame   0x0000000000000000       0x28 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-strncpy.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-strncpy.o)
+ .text          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .rodata        0x0000000000000000       0x24 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .text          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ .text          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .data          0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .text._exit    0x0000000000000000        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .debug_frame   0x0000000000000000       0x20 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a(_exit.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000008002000 0x00000000000fd800 xrw
+flash            0x0000000010000000 0x0000000000200000 xr
+em_eeprom        0x0000000014000000 0x0000000000008000 xr
+sflash_user_data 0x0000000016000800 0x0000000000000800 xr
+sflash_nar       0x0000000016001a00 0x0000000000000200 xr
+sflash_public_key 0x0000000016005a00 0x0000000000000c00 xr
+sflash_toc_2     0x0000000016007c00 0x0000000000000200 xr
+sflash_rtoc_2    0x0000000016007e00 0x0000000000000200 xr
+xip              0x0000000018000000 0x0000000008000000 xr
+efuse            0x0000000090700000 0x0000000000100000 r
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+START GROUP
+END GROUP
+LOAD build/startup_psoc6_02_cm4.o
+LOAD build/cy_syslib_gcc.o
+LOAD build/system_psoc6_cm4.o
+LOAD build/cy_gpio.o
+LOAD build/cy_syslib.o
+LOAD build/cy_sysclk.o
+LOAD build/cy_device.o
+LOAD build/cy_scb_common.o
+LOAD build/cy_scb_uart.o
+LOAD build/psoc6_cm0.o
+LOAD build/main.o
+START GROUP
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a
+END GROUP
+START GROUP
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a
+END GROUP
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+START GROUP
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a
+END GROUP
+                0x0000000000001000                STACK_SIZE = 0x1000
+                0x0000000000002000                FLASH_CM0P_SIZE = 0x2000
+START GROUP
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a
+LOAD /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a
+END GROUP
+
+.cy_m0p_image   0x0000000010000000     0x15b8
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                __cy_m0p_code_start = .
+ *(.cy_m0p_image)
+ .cy_m0p_image  0x0000000010000000     0x15b8 build/psoc6_cm0.o
+                0x0000000010000000                cy_m0p_image
+                0x00000000100015b8                __cy_m0p_code_end = .
+                0x0000000000000001                ASSERT ((__cy_m0p_code_end <= (ORIGIN (flash) + FLASH_CM0P_SIZE)), CM0+ flash image overflows with CM4, increase FLASH_CM0P_SIZE)
+
+.text           0x0000000010002000     0x1478
+                0x0000000010002000                . = ALIGN (0x4)
+                0x0000000010002000                __Vectors = .
+ *(.vectors)
+ .vectors       0x0000000010002000      0x2e0 build/startup_psoc6_02_cm4.o
+                0x00000000100022e0                . = ALIGN (0x4)
+                0x00000000100022e0                __Vectors_End = .
+                0x00000000100022e0                __Vectors_Size = (__Vectors_End - __Vectors)
+                0x0000000008002400                __end__ = .
+                0x00000000100022e0                . = ALIGN (0x4)
+ *(.text*)
+ .text          0x00000000100022e0       0x40 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .text          0x0000000010002320       0x94 build/startup_psoc6_02_cm4.o
+                0x0000000010002320                Cy_OnResetUser
+                0x0000000010002322                cy_toolchain_init
+                0x0000000010002324                Reset_Handler
+                0x0000000010002394                scb_11_interrupt_IRQHandler
+                0x0000000010002394                lpcomp_interrupt_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_5_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_28_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_6_IRQHandler
+                0x0000000010002394                DebugMon_Handler
+                0x0000000010002394                tcpwm_1_interrupts_11_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_24_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_0_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_15_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_23_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_18_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_13_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_8_IRQHandler
+                0x0000000010002394                tcpwm_0_interrupts_0_IRQHandler
+                0x0000000010002394                SysTick_Handler
+                0x0000000010002394                cpuss_interrupt_fm_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_7_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_14_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dmac_0_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_11_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_9_IRQHandler
+                0x0000000010002394                cpuss_interrupts_cm0_cti_1_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_22_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_4_IRQHandler
+                0x0000000010002394                PendSV_Handler
+                0x0000000010002394                NMI_Handler
+                0x0000000010002394                scb_10_interrupt_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_12_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_12_IRQHandler
+                0x0000000010002394                smif_interrupt_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_2_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_13_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_18_IRQHandler
+                0x0000000010002394                tcpwm_0_interrupts_2_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_13_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_7_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_1_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_7_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_24_IRQHandler
+                0x0000000010002394                scb_5_interrupt_IRQHandler
+                0x0000000010002394                cpuss_interrupts_fault_1_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_4_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_5_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_19_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_10_IRQHandler
+                0x0000000010002394                audioss_0_interrupt_i2s_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_6_IRQHandler
+                0x0000000010002394                scb_4_interrupt_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_2_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_27_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_9_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_13_IRQHandler
+                0x0000000010002394                scb_2_interrupt_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_20_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dmac_3_IRQHandler
+                0x0000000010002394                cpuss_interrupts_cm4_fp_IRQHandler
+                0x0000000010002394                srss_interrupt_IRQHandler
+                0x0000000010002394                scb_0_interrupt_IRQHandler
+                0x0000000010002394                csd_interrupt_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_18_IRQHandler
+                0x0000000010002394                profile_interrupt_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_1_IRQHandler
+                0x0000000010002394                scb_12_interrupt_IRQHandler
+                0x0000000010002394                audioss_0_interrupt_pdm_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_25_IRQHandler
+                0x0000000010002394                sdhc_0_interrupt_wakeup_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_12_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_3_IRQHandler
+                0x0000000010002394                tcpwm_0_interrupts_7_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_1_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_0_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_9_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_23_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_20_IRQHandler
+                0x0000000010002394                ioss_interrupt_gpio_IRQHandler
+                0x0000000010002394                tcpwm_0_interrupts_1_IRQHandler
+                0x0000000010002394                sdhc_0_interrupt_general_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_8_IRQHandler
+                0x0000000010002394                tcpwm_0_interrupts_6_IRQHandler
+                0x0000000010002394                scb_7_interrupt_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_7_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_11_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_15_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_6_IRQHandler
+                0x0000000010002394                cpuss_interrupt_crypto_IRQHandler
+                0x0000000010002394                scb_1_interrupt_IRQHandler
+                0x0000000010002394                Default_Handler
+                0x0000000010002394                usb_interrupt_hi_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_0_IRQHandler
+                0x0000000010002394                scb_9_interrupt_IRQHandler
+                0x0000000010002394                srss_interrupt_mcwdt_0_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dmac_1_IRQHandler
+                0x0000000010002394                scb_3_interrupt_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_16_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_3_IRQHandler
+                0x0000000010002394                scb_6_interrupt_IRQHandler
+                0x0000000010002394                cpuss_interrupts_cm4_cti_0_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_26_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_3_IRQHandler
+                0x0000000010002394                pass_interrupt_sar_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_0_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_17_IRQHandler
+                0x0000000010002394                sdhc_1_interrupt_general_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_14_IRQHandler
+                0x0000000010002394                tcpwm_0_interrupts_4_IRQHandler
+                0x0000000010002394                tcpwm_0_interrupts_5_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_16_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_15_IRQHandler
+                0x0000000010002394                cpuss_interrupts_cm4_cti_1_IRQHandler
+                0x0000000010002394                scb_8_interrupt_IRQHandler
+                0x0000000010002394                srss_interrupt_mcwdt_1_IRQHandler
+                0x0000000010002394                SVC_Handler
+                0x0000000010002394                cpuss_interrupts_dw1_27_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_20_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_5_IRQHandler
+                0x0000000010002394                audioss_1_interrupt_i2s_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_1_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_0_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_12_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_17_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_3_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_22_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_23_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_17_IRQHandler
+                0x0000000010002394                srss_interrupt_backup_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_26_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_10_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_9_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_14_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_4_IRQHandler
+                0x0000000010002394                tcpwm_0_interrupts_3_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_15_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_10_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_8_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dmac_2_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_11_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_14_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_5_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_4_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_8_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_14_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_22_IRQHandler
+                0x0000000010002394                usb_interrupt_med_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_2_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_10_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_28_IRQHandler
+                0x0000000010002394                cpuss_interrupts_fault_0_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_12_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_6_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_21_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_16_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_4_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_11_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_6_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_25_IRQHandler
+                0x0000000010002394                ioss_interrupt_vdd_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_5_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_2_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_10_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_19_IRQHandler
+                0x0000000010002394                tcpwm_1_interrupts_19_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_1_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_9_IRQHandler
+                0x0000000010002394                sdhc_1_interrupt_wakeup_IRQHandler
+                0x0000000010002394                usb_interrupt_lo_IRQHandler
+                0x0000000010002394                cpuss_interrupts_ipc_8_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_21_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_7_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_2_IRQHandler
+                0x0000000010002394                cpuss_interrupts_cm0_cti_0_IRQHandler
+                0x0000000010002394                ioss_interrupts_gpio_13_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw1_21_IRQHandler
+                0x0000000010002394                cpuss_interrupts_dw0_3_IRQHandler
+                0x0000000010002398                HardFault_Handler
+                0x0000000010002398                UsageFault_Handler
+                0x0000000010002398                MemManage_Handler
+                0x0000000010002398                BusFault_Handler
+ *fill*         0x00000000100023b4        0x4 
+ .text          0x00000000100023b8       0x20 build/cy_syslib_gcc.o
+                0x00000000100023b8                Cy_SysLib_DelayCycles
+                0x00000000100023ca                Cy_SysLib_EnterCriticalSection
+                0x00000000100023d2                Cy_SysLib_ExitCriticalSection
+ .text.Cy_SystemInit
+                0x00000000100023d8        0x2 build/system_psoc6_cm4.o
+                0x00000000100023d8                Cy_SystemInit
+ *fill*         0x00000000100023da        0x2 
+ .text.SystemCoreClockUpdate
+                0x00000000100023dc       0x74 build/system_psoc6_cm4.o
+                0x00000000100023dc                SystemCoreClockUpdate
+ .text.SystemInit
+                0x0000000010002450       0x18 build/system_psoc6_cm4.o
+                0x0000000010002450                SystemInit
+ .text.Cy_SystemInitFpuEnable
+                0x0000000010002468       0x28 build/system_psoc6_cm4.o
+                0x0000000010002468                Cy_SystemInitFpuEnable
+ .text.Cy_GPIO_SetHSIOM
+                0x0000000010002490       0x70 build/cy_gpio.o
+                0x0000000010002490                Cy_GPIO_SetHSIOM
+ .text.Cy_GPIO_SetDrivemode
+                0x0000000010002500       0x48 build/cy_gpio.o
+                0x0000000010002500                Cy_GPIO_SetDrivemode
+ .text.Cy_SysLib_Delay
+                0x0000000010002548       0x30 build/cy_syslib.o
+                0x0000000010002548                Cy_SysLib_Delay
+ .text.Cy_SysLib_ProcessingFault
+                0x0000000010002578        0x2 build/cy_syslib.o
+                0x0000000010002578                Cy_SysLib_ProcessingFault
+ *fill*         0x000000001000257a        0x2 
+ .text.Cy_SysLib_FaultHandler
+                0x000000001000257c       0xa4 build/cy_syslib.o
+                0x000000001000257c                Cy_SysLib_FaultHandler
+ .text.Cy_SysClk_PeriphSetDivider
+                0x0000000010002620       0x84 build/cy_sysclk.o
+                0x0000000010002620                Cy_SysClk_PeriphSetDivider
+ .text.Cy_SysClk_PeriphAssignDivider
+                0x00000000100026a4       0x78 build/cy_sysclk.o
+                0x00000000100026a4                Cy_SysClk_PeriphAssignDivider
+ .text.Cy_SysClk_PeriphEnableDivider
+                0x000000001000271c       0x84 build/cy_sysclk.o
+                0x000000001000271c                Cy_SysClk_PeriphEnableDivider
+ .text.Cy_SysClk_ClkPeriGetDivider
+                0x00000000100027a0       0x14 build/cy_sysclk.o
+                0x00000000100027a0                Cy_SysClk_ClkPeriGetDivider
+ .text.Cy_SysClk_ClkFastGetDivider
+                0x00000000100027b4       0x18 build/cy_sysclk.o
+                0x00000000100027b4                Cy_SysClk_ClkFastGetDivider
+ .text.Cy_SysClk_ClkHfGetSource
+                0x00000000100027cc       0x24 build/cy_sysclk.o
+                0x00000000100027cc                Cy_SysClk_ClkHfGetSource
+ .text.Cy_SysClk_ClkHfGetDivider
+                0x00000000100027f0       0x24 build/cy_sysclk.o
+                0x00000000100027f0                Cy_SysClk_ClkHfGetDivider
+ .text.Cy_SysClk_WcoOkay
+                0x0000000010002814       0x10 build/cy_sysclk.o
+                0x0000000010002814                Cy_SysClk_WcoOkay
+ .text.Cy_SysClk_AltHfGetFrequency
+                0x0000000010002824        0x4 build/cy_sysclk.o
+                0x0000000010002824                Cy_SysClk_AltHfGetFrequency
+ .text.Cy_SysClk_AltLfGetFrequency
+                0x0000000010002828        0x4 build/cy_sysclk.o
+                0x0000000010002828                Cy_SysClk_AltLfGetFrequency
+ .text.Cy_SysClk_ExtClkGetFrequency
+                0x000000001000282c        0xc build/cy_sysclk.o
+                0x000000001000282c                Cy_SysClk_ExtClkGetFrequency
+ .text.Cy_SysClk_EcoGetStatus
+                0x0000000010002838       0x24 build/cy_sysclk.o
+                0x0000000010002838                Cy_SysClk_EcoGetStatus
+ .text.Cy_SysClk_EcoGetFrequency
+                0x000000001000285c       0x18 build/cy_sysclk.o
+                0x000000001000285c                Cy_SysClk_EcoGetFrequency
+ .text.Cy_SysClk_ClkPathGetSource
+                0x0000000010002874       0x3c build/cy_sysclk.o
+                0x0000000010002874                Cy_SysClk_ClkPathGetSource
+ .text.Cy_SysClk_ClkPathMuxGetFrequency
+                0x00000000100028b0       0xb0 build/cy_sysclk.o
+                0x00000000100028b0                Cy_SysClk_ClkPathMuxGetFrequency
+ .text.Cy_SysClk_FllIsEnabled
+                0x0000000010002960       0x10 build/cy_sysclk.o
+                0x0000000010002960                Cy_SysClk_FllIsEnabled
+ .text.Cy_SysClk_FllGetConfiguration
+                0x0000000010002970       0x5c build/cy_sysclk.o
+                0x0000000010002970                Cy_SysClk_FllGetConfiguration
+ .text.Cy_SysClk_PllIsEnabled
+                0x00000000100029cc       0x28 build/cy_sysclk.o
+                0x00000000100029cc                Cy_SysClk_PllIsEnabled
+ .text.Cy_SysClk_PllGetConfiguration
+                0x00000000100029f4       0x4c build/cy_sysclk.o
+                0x00000000100029f4                Cy_SysClk_PllGetConfiguration
+ .text.Cy_SysClk_FllGetFrequency
+                0x0000000010002a40       0x68 build/cy_sysclk.o
+                0x0000000010002a40                Cy_SysClk_FllGetFrequency
+ .text.Cy_SysClk_PllGetFrequency
+                0x0000000010002aa8       0x9c build/cy_sysclk.o
+                0x0000000010002aa8                Cy_SysClk_PllGetFrequency
+ .text.Cy_SysClk_ClkPathGetFrequency
+                0x0000000010002b44       0x40 build/cy_sysclk.o
+                0x0000000010002b44                Cy_SysClk_ClkPathGetFrequency
+ .text.Cy_SysClk_ClkHfGetFrequency
+                0x0000000010002b84       0x20 build/cy_sysclk.o
+                0x0000000010002b84                Cy_SysClk_ClkHfGetFrequency
+ .text.Cy_PDL_Init
+                0x0000000010002ba4        0xc build/cy_device.o
+                0x0000000010002ba4                Cy_PDL_Init
+ .text.Cy_SCB_Write
+                0x0000000010002bb0       0x26 build/cy_scb_common.o
+                0x0000000010002bb0                Cy_SCB_Write
+ .text.Cy_SCB_WriteString
+                0x0000000010002bd6       0x38 build/cy_scb_common.o
+                0x0000000010002bd6                Cy_SCB_WriteString
+ *fill*         0x0000000010002c0e        0x2 
+ .text.Cy_SCB_UART_Init
+                0x0000000010002c10      0x318 build/cy_scb_uart.o
+                0x0000000010002c10                Cy_SCB_UART_Init
+ .text.main     0x0000000010002f28       0xac build/main.o
+                0x0000000010002f28                main
+ .text          0x0000000010002fd4       0x30 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+                0x0000000010002fd4                __aeabi_uldivmod
+ .text          0x0000000010003004      0x2d0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+                0x0000000010003004                __udivmoddi4
+ .text          0x00000000100032d4        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x00000000100032d4                __aeabi_ldiv0
+                0x00000000100032d4                __aeabi_idiv0
+ .text.__libc_fini_array
+                0x00000000100032d8       0x28 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-fini.o)
+                0x00000000100032d8                __libc_fini_array
+ .text.__libc_init_array
+                0x0000000010003300       0x48 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-init.o)
+                0x0000000010003300                __libc_init_array
+ *(.init)
+ .init          0x0000000010003348        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x0000000010003348                _init
+ .init          0x000000001000334c        0x8 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ *(.fini)
+ .fini          0x0000000010003354        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x0000000010003354                _fini
+ .fini          0x0000000010003358        0x8 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+ *(.rodata .rodata.* .constdata .constdata.* .conststring .conststring.*)
+ .rodata.cy_deviceIpBlockCfgPSoC6_02
+                0x0000000010003360       0xc0 build/cy_device.o
+                0x0000000010003360                cy_deviceIpBlockCfgPSoC6_02
+ .rodata.main.str1.4
+                0x0000000010003420        0x2 build/main.o
+ *fill*         0x0000000010003422        0x2 
+ .rodata.str1.4
+                0x0000000010003424        0xe build/main.o
+ *fill*         0x0000000010003432        0x2 
+ .rodata.uartConfig
+                0x0000000010003434       0x40 build/main.o
+                0x0000000010003434                uartConfig
+ *(.eh_frame*)
+ .eh_frame      0x0000000010003474        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x0000000010003474        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+
+.glue_7         0x0000000010003478        0x0
+ .glue_7        0x0000000010003478        0x0 linker stubs
+
+.glue_7t        0x0000000010003478        0x0
+ .glue_7t       0x0000000010003478        0x0 linker stubs
+
+.vfp11_veneer   0x0000000010003478        0x0
+ .vfp11_veneer  0x0000000010003478        0x0 linker stubs
+
+.v4_bx          0x0000000010003478        0x0
+ .v4_bx         0x0000000010003478        0x0 linker stubs
+
+.iplt           0x0000000010003478        0x0
+ .iplt          0x0000000010003478        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000010003478                __exidx_start = .
+
+.ARM.exidx      0x0000000010003478        0x8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x0000000010003478        0x8 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+                0x0000000010003480                __exidx_end = .
+
+.rel.dyn        0x0000000010003480        0x0
+ .rel.iplt      0x0000000010003480        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+
+.copy.table     0x0000000010003480       0x18
+                0x0000000010003480                . = ALIGN (0x4)
+                0x0000000010003480                __copy_table_start__ = .
+                0x0000000010003480        0x4 LONG 0x10002000 __Vectors
+                0x0000000010003484        0x4 LONG 0x8002000 __ram_vectors_start__
+                0x0000000010003488        0x4 LONG 0x2e0 (__Vectors_End - __Vectors)
+                0x000000001000348c        0x4 LONG 0x100034a0 __etext
+                0x0000000010003490        0x4 LONG 0x80022e0 __data_start__
+                0x0000000010003494        0x4 LONG 0x24 (__data_end__ - __data_start__)
+                0x0000000010003498                __copy_table_end__ = .
+
+.zero.table     0x0000000010003498        0x8
+                0x0000000010003498                . = ALIGN (0x4)
+                0x0000000010003498                __zero_table_start__ = .
+                0x0000000010003498        0x4 LONG 0x800239c __bss_start__
+                0x000000001000349c        0x4 LONG 0x64 (__bss_end__ - __bss_start__)
+                0x00000000100034a0                __zero_table_end__ = .
+                0x00000000100034a0                __etext = .
+
+.ramVectors     0x0000000008002000      0x2e0
+                0x0000000008002000                __ram_vectors_start__ = .
+ *(.ram_vectors)
+ .ram_vectors   0x0000000008002000      0x2e0 build/startup_psoc6_02_cm4.o
+                0x0000000008002000                __ramVectors
+                0x00000000080022e0                __ram_vectors_end__ = .
+
+.data           0x00000000080022e0       0x24 load address 0x00000000100034a0
+                0x00000000080022e0                . = ALIGN (0x4)
+                0x00000000080022e0                __data_start__ = .
+ *(vtable)
+ *(.data*)
+ .data.SystemCoreClock
+                0x00000000080022e0        0x4 build/system_psoc6_cm4.o
+                0x00000000080022e0                SystemCoreClock
+ .data.cy_Hfclk0FreqHz
+                0x00000000080022e4        0x4 build/system_psoc6_cm4.o
+                0x00000000080022e4                cy_Hfclk0FreqHz
+ .data.cy_PeriClkFreqHz
+                0x00000000080022e8        0x4 build/system_psoc6_cm4.o
+                0x00000000080022e8                cy_PeriClkFreqHz
+ .data.cy_delay32kMs
+                0x00000000080022ec        0x4 build/system_psoc6_cm4.o
+                0x00000000080022ec                cy_delay32kMs
+ .data.cy_delayFreqKhz
+                0x00000000080022f0        0x4 build/system_psoc6_cm4.o
+                0x00000000080022f0                cy_delayFreqKhz
+ .data.cy_delayFreqMhz
+                0x00000000080022f4        0x1 build/system_psoc6_cm4.o
+                0x00000000080022f4                cy_delayFreqMhz
+ *fill*         0x00000000080022f5        0x3 
+ .data.string   0x00000000080022f8        0x4 build/main.o
+                0x00000000080022f8                string
+                0x00000000080022fc                . = ALIGN (0x4)
+                0x00000000080022fc                PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                0x00000000080022fc                PROVIDE (__preinit_array_end = .)
+                0x00000000080022fc                . = ALIGN (0x4)
+                0x00000000080022fc                PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+ .init_array    0x00000000080022fc        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+                0x0000000008002300                PROVIDE (__init_array_end = .)
+                0x0000000008002300                . = ALIGN (0x4)
+                0x0000000008002300                PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array)
+ .fini_array    0x0000000008002300        0x4 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+                0x0000000008002304                PROVIDE (__fini_array_end = .)
+ *(.jcr*)
+                0x0000000008002304                . = ALIGN (0x4)
+ *(.cy_ramfunc*)
+                0x0000000008002304                . = ALIGN (0x4)
+                0x0000000008002304                __data_end__ = .
+
+.igot.plt       0x0000000008002304        0x0 load address 0x00000000100034c4
+ .igot.plt      0x0000000008002304        0x0 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+
+.noinit         0x0000000008002308       0x94 load address 0x00000000100034c8
+ *(.noinit)
+ .noinit        0x0000000008002308       0x94 build/cy_syslib.o
+                0x0000000008002308                cy_assertFileName
+                0x0000000008002320                cy_assertLine
+                0x0000000008002324                cy_faultFrame
+
+.bss            0x000000000800239c       0x64 load address 0x00000000100034c4
+                0x000000000800239c                . = ALIGN (0x4)
+                0x000000000800239c                __bss_start__ = .
+ *(.bss*)
+ .bss           0x000000000800239c       0x1c /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .bss.cySysClkExtFreq
+                0x00000000080023b8        0x4 build/cy_sysclk.o
+ .bss.ecoFrequency
+                0x00000000080023bc        0x4 build/cy_sysclk.o
+ .bss.cy_device
+                0x00000000080023c0        0x4 build/cy_device.o
+                0x00000000080023c0                cy_device
+ .bss.uartContext
+                0x00000000080023c4       0x3c build/main.o
+                0x00000000080023c4                uartContext
+ *(COMMON)
+                0x0000000008002400                . = ALIGN (0x4)
+                0x0000000008002400                __bss_end__ = .
+
+.heap           0x0000000008002400    0xfc400 load address 0x00000000100034c4
+                0x0000000008002400                __HeapBase = .
+                0x0000000008002400                __end__ = .
+                0x0000000008002400                end = __end__
+ *(.heap*)
+ .heap          0x0000000008002400      0x400 build/startup_psoc6_02_cm4.o
+                0x00000000080fe800                . = ((ORIGIN (ram) + LENGTH (ram)) - STACK_SIZE)
+ *fill*         0x0000000008002800    0xfc000 
+                0x00000000080fe800                __HeapLimit = .
+
+.stack_dummy    0x00000000080fe800     0x1000 load address 0x00000000100034c4
+ *(.stack*)
+ .stack         0x00000000080fe800     0x1000 build/startup_psoc6_02_cm4.o
+                0x00000000080ff800                __StackTop = (ORIGIN (ram) + LENGTH (ram))
+                0x00000000080fe800                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
+                0x00000000080ff800                PROVIDE (__stack = __StackTop)
+                0x0000000000000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
+
+.cy_app_signature
+ *(.cy_app_signature)
+
+.cy_em_eeprom
+ *(.cy_em_eeprom)
+
+.cy_sflash_user_data
+ *(.cy_sflash_user_data)
+
+.cy_sflash_nar
+ *(.cy_sflash_nar)
+
+.cy_sflash_public_key
+ *(.cy_sflash_public_key)
+
+.cy_toc_part2
+ *(.cy_toc_part2)
+
+.cy_rtoc_part2
+ *(.cy_rtoc_part2)
+
+cy_xip          0x0000000018000000        0x0
+                0x0000000018000000                __cy_xip_start = .
+ *(.cy_xip)
+                0x0000000018000000                __cy_xip_end = .
+
+.cy_efuse
+ *(.cy_efuse)
+
+.cymeta
+ *(.cymeta)
+                0x0000000010000000                __cy_memory_0_start = 0x10000000
+                0x0000000000200000                __cy_memory_0_length = 0x200000
+                0x0000000000000200                __cy_memory_0_row_size = 0x200
+                0x0000000014000000                __cy_memory_1_start = 0x14000000
+                0x0000000000008000                __cy_memory_1_length = 0x8000
+                0x0000000000000200                __cy_memory_1_row_size = 0x200
+                0x0000000016000000                __cy_memory_2_start = 0x16000000
+                0x0000000000008000                __cy_memory_2_length = 0x8000
+                0x0000000000000200                __cy_memory_2_row_size = 0x200
+                0x0000000018000000                __cy_memory_3_start = 0x18000000
+                0x0000000008000000                __cy_memory_3_length = 0x8000000
+                0x0000000000000200                __cy_memory_3_row_size = 0x200
+                0x0000000090700000                __cy_memory_4_start = 0x90700000
+                0x0000000000100000                __cy_memory_4_length = 0x100000
+                0x0000000000000001                __cy_memory_4_row_size = 0x1
+OUTPUT(out/psoc6_cm4.elf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x0000000000000000       0x2e
+ .ARM.attributes
+                0x0000000000000000       0x1e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+ .ARM.attributes
+                0x000000000000001e       0x2e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .ARM.attributes
+                0x000000000000004c       0x1b build/startup_psoc6_02_cm4.o
+ .ARM.attributes
+                0x0000000000000067       0x1c build/cy_syslib_gcc.o
+ .ARM.attributes
+                0x0000000000000083       0x32 build/system_psoc6_cm4.o
+ .ARM.attributes
+                0x00000000000000b5       0x32 build/cy_gpio.o
+ .ARM.attributes
+                0x00000000000000e7       0x32 build/cy_syslib.o
+ .ARM.attributes
+                0x0000000000000119       0x32 build/cy_sysclk.o
+ .ARM.attributes
+                0x000000000000014b       0x32 build/cy_device.o
+ .ARM.attributes
+                0x000000000000017d       0x32 build/cy_scb_common.o
+ .ARM.attributes
+                0x00000000000001af       0x32 build/cy_scb_uart.o
+ .ARM.attributes
+                0x00000000000001e1       0x32 build/psoc6_cm0.o
+ .ARM.attributes
+                0x0000000000000213       0x32 build/main.o
+ .ARM.attributes
+                0x0000000000000245       0x1e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x0000000000000263       0x2e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x0000000000000291       0x1e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000000000002af       0x2e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-fini.o)
+ .ARM.attributes
+                0x00000000000002dd       0x2e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x000000000000030b       0x2e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtend.o
+ .ARM.attributes
+                0x0000000000000339       0x1e /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtn.o
+
+.comment        0x0000000000000000       0x49
+ .comment       0x0000000000000000       0x49 build/system_psoc6_cm4.o
+                                         0x4a (size before relaxing)
+ .comment       0x0000000000000049       0x4a build/cy_gpio.o
+ .comment       0x0000000000000049       0x4a build/cy_syslib.o
+ .comment       0x0000000000000049       0x4a build/cy_sysclk.o
+ .comment       0x0000000000000049       0x4a build/cy_device.o
+ .comment       0x0000000000000049       0x4a build/cy_scb_common.o
+ .comment       0x0000000000000049       0x4a build/cy_scb_uart.o
+ .comment       0x0000000000000049       0x4a build/psoc6_cm0.o
+ .comment       0x0000000000000049       0x4a build/main.o
+
+.debug_line     0x0000000000000000     0x8345
+ .debug_line    0x0000000000000000       0xf5 build/startup_psoc6_02_cm4.o
+ .debug_line    0x00000000000000f5       0x86 build/cy_syslib_gcc.o
+ .debug_line    0x000000000000017b      0x3bb build/system_psoc6_cm4.o
+ .debug_line    0x0000000000000536     0x1ceb build/cy_gpio.o
+ .debug_line    0x0000000000002221      0x7fb build/cy_syslib.o
+ .debug_line    0x0000000000002a1c     0x2f50 build/cy_sysclk.o
+ .debug_line    0x000000000000596c      0x173 build/cy_device.o
+ .debug_line    0x0000000000005adf      0x6b5 build/cy_scb_common.o
+ .debug_line    0x0000000000006194     0x1d77 build/cy_scb_uart.o
+ .debug_line    0x0000000000007f0b       0xe2 build/psoc6_cm0.o
+ .debug_line    0x0000000000007fed      0x358 build/main.o
+
+.debug_info     0x0000000000000000    0x130e2
+ .debug_info    0x0000000000000000       0x26 build/startup_psoc6_02_cm4.o
+ .debug_info    0x0000000000000026       0x26 build/cy_syslib_gcc.o
+ .debug_info    0x000000000000004c      0xa5e build/system_psoc6_cm4.o
+ .debug_info    0x0000000000000aaa     0x461a build/cy_gpio.o
+ .debug_info    0x00000000000050c4     0x2868 build/cy_syslib.o
+ .debug_info    0x000000000000792c     0x40ab build/cy_sysclk.o
+ .debug_info    0x000000000000b9d7      0x654 build/cy_device.o
+ .debug_info    0x000000000000c02b      0xf1d build/cy_scb_common.o
+ .debug_info    0x000000000000cf48     0x2db5 build/cy_scb_uart.o
+ .debug_info    0x000000000000fcfd       0xa9 build/psoc6_cm0.o
+ .debug_info    0x000000000000fda6     0x333c build/main.o
+
+.debug_abbrev   0x0000000000000000     0x1680
+ .debug_abbrev  0x0000000000000000       0x14 build/startup_psoc6_02_cm4.o
+ .debug_abbrev  0x0000000000000014       0x14 build/cy_syslib_gcc.o
+ .debug_abbrev  0x0000000000000028      0x27e build/system_psoc6_cm4.o
+ .debug_abbrev  0x00000000000002a6      0x27b build/cy_gpio.o
+ .debug_abbrev  0x0000000000000521      0x396 build/cy_syslib.o
+ .debug_abbrev  0x00000000000008b7      0x3a9 build/cy_sysclk.o
+ .debug_abbrev  0x0000000000000c60       0xc5 build/cy_device.o
+ .debug_abbrev  0x0000000000000d25      0x2e7 build/cy_scb_common.o
+ .debug_abbrev  0x000000000000100c      0x3a7 build/cy_scb_uart.o
+ .debug_abbrev  0x00000000000013b3       0x61 build/psoc6_cm0.o
+ .debug_abbrev  0x0000000000001414      0x26c build/main.o
+
+.debug_aranges  0x0000000000000000      0x7c0
+ .debug_aranges
+                0x0000000000000000       0x20 build/startup_psoc6_02_cm4.o
+ .debug_aranges
+                0x0000000000000020       0x20 build/cy_syslib_gcc.o
+ .debug_aranges
+                0x0000000000000040       0x38 build/system_psoc6_cm4.o
+ .debug_aranges
+                0x0000000000000078      0x168 build/cy_gpio.o
+ .debug_aranges
+                0x00000000000001e0       0x98 build/cy_syslib.o
+ .debug_aranges
+                0x0000000000000278      0x388 build/cy_sysclk.o
+ .debug_aranges
+                0x0000000000000600       0x20 build/cy_device.o
+ .debug_aranges
+                0x0000000000000620       0x68 build/cy_scb_common.o
+ .debug_aranges
+                0x0000000000000688      0x100 build/cy_scb_uart.o
+ .debug_aranges
+                0x0000000000000788       0x18 build/psoc6_cm0.o
+ .debug_aranges
+                0x00000000000007a0       0x20 build/main.o
+
+.debug_str      0x0000000000000000     0xbd17
+ .debug_str     0x0000000000000000       0xac build/startup_psoc6_02_cm4.o
+ .debug_str     0x00000000000000ac       0x46 build/cy_syslib_gcc.o
+                                         0x76 (size before relaxing)
+ .debug_str     0x00000000000000f2      0x9c2 build/system_psoc6_cm4.o
+                                        0xa3e (size before relaxing)
+ .debug_str     0x0000000000000ab4     0x6904 build/cy_gpio.o
+                                       0x70bf (size before relaxing)
+ .debug_str     0x00000000000073b8     0x12ee build/cy_syslib.o
+                                       0x1dce (size before relaxing)
+ .debug_str     0x00000000000086a6     0x25b4 build/cy_sysclk.o
+                                       0x33b5 (size before relaxing)
+ .debug_str     0x000000000000ac5a       0x97 build/cy_device.o
+                                        0x845 (size before relaxing)
+ .debug_str     0x000000000000acf1      0x443 build/cy_scb_common.o
+                                        0x6d1 (size before relaxing)
+ .debug_str     0x000000000000b134      0xad1 build/cy_scb_uart.o
+                                       0x1208 (size before relaxing)
+ .debug_str     0x000000000000bc05       0x22 build/psoc6_cm0.o
+                                        0x181 (size before relaxing)
+ .debug_str     0x000000000000bc27       0xf0 build/main.o
+                                       0x71c5 (size before relaxing)
+
+.debug_loc      0x0000000000000000     0x6d4e
+ .debug_loc     0x0000000000000000       0x6e build/system_psoc6_cm4.o
+ .debug_loc     0x000000000000006e     0x12ad build/cy_gpio.o
+ .debug_loc     0x000000000000131b      0x225 build/cy_syslib.o
+ .debug_loc     0x0000000000001540     0x3475 build/cy_sysclk.o
+ .debug_loc     0x00000000000049b5      0x70f build/cy_scb_common.o
+ .debug_loc     0x00000000000050c4     0x1b82 build/cy_scb_uart.o
+ .debug_loc     0x0000000000006c46      0x108 build/main.o
+
+.debug_ranges   0x0000000000000000      0xb68
+ .debug_ranges  0x0000000000000000       0x28 build/system_psoc6_cm4.o
+ .debug_ranges  0x0000000000000028      0x158 build/cy_gpio.o
+ .debug_ranges  0x0000000000000180       0x88 build/cy_syslib.o
+ .debug_ranges  0x0000000000000208      0x478 build/cy_sysclk.o
+ .debug_ranges  0x0000000000000680       0x10 build/cy_device.o
+ .debug_ranges  0x0000000000000690       0xe8 build/cy_scb_common.o
+ .debug_ranges  0x0000000000000778      0x3c8 build/cy_scb_uart.o
+ .debug_ranges  0x0000000000000b40       0x28 build/main.o
+
+.debug_frame    0x0000000000000000     0x12c8
+ .debug_frame   0x0000000000000000       0x60 build/system_psoc6_cm4.o
+ .debug_frame   0x0000000000000060      0x35c build/cy_gpio.o
+ .debug_frame   0x00000000000003bc      0x158 build/cy_syslib.o
+ .debug_frame   0x0000000000000514      0x914 build/cy_sysclk.o
+ .debug_frame   0x0000000000000e28       0x20 build/cy_device.o
+ .debug_frame   0x0000000000000e48      0x108 build/cy_scb_common.o
+ .debug_frame   0x0000000000000f50      0x288 build/cy_scb_uart.o
+ .debug_frame   0x00000000000011d8       0x2c build/main.o
+ .debug_frame   0x0000000000001204       0x2c /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000000000001230       0x34 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000000000001264       0x38 /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-fini.o)
+ .debug_frame   0x000000000000129c       0x2c /usr/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libg_nano.a(lib_a-init.o)
