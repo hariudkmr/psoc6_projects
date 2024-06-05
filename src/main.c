@@ -74,8 +74,6 @@ const cy_stc_scb_uart_config_t uartConfig =
 int main(void)
 {
 
-    cy_rslt_t result;
-
 
     /* Connect assigned divider to be a clock source for UART */
     Cy_SysClk_PeriphAssignDivider(UART_CLK, UART_CLK_DIV_TYPE, UART_CLK_DIV_NUMBER);
