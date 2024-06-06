@@ -6,8 +6,8 @@ TGTFLAGS = $(TARGET_SEL) -mfpu=fpv4-sp-d16
 #Include Directory
 SRC_DIR      =./src
 INC_DIR      =./inc
-LIB_DIR      =../libs
-LIB_INC_DIR  =../../libs
+LIB_DIR      =./libs
+LIB_INC_DIR  =./../libs
 BUILD_DIR    =./build
 
 
