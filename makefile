@@ -144,7 +144,7 @@ flash:	$(PSOC6_TARGET).hex
 	@echo "-------------------------"
 	@echo "Flashing the hex file" $@
 	@echo "-------------------------"
-	$(FD) -f interface/kitprog3.cfg -f target/psoc6_512k.cfg -c"program $(PSOC6_TARGET).hex verify reset; exit"
+	$(FD) -f interface/kitprog3.cfg -f target/$(DEVICE).cfg -c"program $(PSOC6_TARGET).hex verify reset; exit"
 	
 	
 codecheck: 
