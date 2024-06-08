@@ -59,6 +59,9 @@ const cy_stc_scb_uart_config_t uartConfig =
     .txFifoTriggerLevel  = 0UL,
     .txFifoIntEnableMask = 0UL,
 };
+
+#define USER_LED_PORT	GPIO_PRT11
+#define USER_LED_PIN	P11_1_PIN
 /*****************************************************************************
 * Function Name: main(void)
 ******************************************************************************
@@ -73,8 +76,15 @@ const cy_stc_scb_uart_config_t uartConfig =
 *****************************************************************************/
 int main(void)
 {
+    cy_stc_gpio_pin_config_t pinCfg;
+    memset((void *) &pinCfg, 0, sizeof(pinCfg));
 
+     pinCfg.driveMode = CY_GPIO_DM_STRONG_IN_OFF;
+     pinCfg.hsiom = HSIOM_SEL_GPIO;
 
+    Cy_GPIO_Pin_Init(USER_LED_PORT, USER_LED_PIN,&pinCfg);
+                       
+  
     /* Connect assigned divider to be a clock source for UART */
     Cy_SysClk_PeriphAssignDivider(UART_CLK, UART_CLK_DIV_TYPE, UART_CLK_DIV_NUMBER);
     
@@ -107,6 +117,7 @@ int main(void)
         Cy_SCB_UART_PutString(UART, string);
         Cy_SCB_UART_Put(UART, count++);
         Cy_SCB_UART_PutString(UART, "\n");
+	Cy_GPIO_Inv(USER_LED_PORT, USER_LED_PIN);
         Cy_SysLib_Delay(1000);
     }
 
