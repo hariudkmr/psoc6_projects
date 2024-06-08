@@ -62,6 +62,8 @@ const cy_stc_scb_uart_config_t uartConfig =
 
 #define USER_LED_PORT	GPIO_PRT11
 #define USER_LED_PIN	P11_1_PIN
+
+
 /*****************************************************************************
 * Function Name: main(void)
 ******************************************************************************
