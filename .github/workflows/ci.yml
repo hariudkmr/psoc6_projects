@@ -11,5 +11,7 @@ jobs:
     steps:
       - name: checkout the repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - run: make
       - run: make codecheck
