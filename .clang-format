@@ -23,5 +23,3 @@ AlwaysBreakTemplateDeclarations: true
 AllowShortEnumsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: Empty
 SortIncludes: false
-AlignConsecutiveBitFields:
-    
