@@ -79,12 +79,13 @@ LD  = arm-none-eabi-gcc
 OC  = arm-none-eabi-objcopy
 FD  = openocd
 CCK = cppcheck
+FMT = clang-format-12
 
 DONE=@if [ -f $(1) ]; then echo Build completed.; fi
 RM=rm -f $(1)
 
 .SUFFIXES: .o .c .s
-.PHONY: all clean build codecheck
+.PHONY: all clean build codecheck format
 
 all: prep ofiles $(PSOC6_TARGET).elf $(PSOC6_TARGET).hex
 	$(call DONE,$(PSOC6_TARGET).hex)
@@ -153,3 +154,6 @@ codecheck:
 	-I $(INC_DIR)	\
 	$(CFILES)	\
 	-i $(LIB_DIR)
+
+format:
+	$(FMT) -i $(CFILES)
