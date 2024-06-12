@@ -80,7 +80,7 @@ OC  = arm-none-eabi-objcopy
 FD  = openocd
 CPCK = cppcheck
 CLCK = clang-check
-FMT = clang-format
+FMT = clang-format-12
 
 DONE=@if [ -f $(1) ]; then echo Build completed.; fi
 RM=rm -f $(1)
