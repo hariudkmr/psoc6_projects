@@ -78,8 +78,9 @@ AS  = arm-none-eabi-gcc
 LD  = arm-none-eabi-gcc
 OC  = arm-none-eabi-objcopy
 FD  = openocd
-CCK = cppcheck
-FMT = clang-format-12
+CPCK = cppcheck
+CLCK = clang-check
+FMT = clang-format
 
 DONE=@if [ -f $(1) ]; then echo Build completed.; fi
 RM=rm -f $(1)
@@ -149,11 +150,14 @@ flash:	$(PSOC6_TARGET).hex
 	
 	
 codecheck: 
-	@$(CCK) --quiet --enable=all --suppress=missingInclude --error-exitcode=1 \
+	@$(CPCK) --quiet --enable=all --suppress=missingInclude --error-exitcode=1 \
 	--inline-suppr	\
 	-I $(INC_DIR)	\
 	$(CFILES)	\
 	-i $(LIB_DIR)
 
+clangcheck:
+	@$(CLCK) $(CFILES) $(INC_DIR)/*.h
+
 format:
-	$(FMT) -i $(CFILES)
+	$(FMT) -i $(CFILES) $(INC_DIR)/*.h
