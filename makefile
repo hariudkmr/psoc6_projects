@@ -33,7 +33,10 @@ PDLFILES += \
 # C source files
 CFILES += \
 	 $(SRC_DIR)/psoc6_cm0.c	\
+	 $(SRC_DIR)/gpio.c	\
+	 $(SRC_DIR)/uart.c      \
 	 $(SRC_DIR)/main.c
+	
 
 # Assembler command line arguments.
 AFLAGS = -c $(TARGET_SEL) --specs=nano.specs -mfloat-abi=softfp \
@@ -45,6 +48,7 @@ CFLAGS = \
 	-mthumb -ffunction-sections -fdata-sections -g \
 	-I. \
 	-I$(INC_DIR) \
+	-I../$(INC_DIR) \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/cmsis/include \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/include \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB \
@@ -70,6 +74,8 @@ OBJECTS += \
 	$(BUILD_DIR)/cy_scb_common.o 	\
 	$(BUILD_DIR)/cy_scb_uart.o 	\
 	$(BUILD_DIR)/psoc6_cm0.o 	\
+	$(BUILD_DIR)/gpio.o 	\
+	$(BUILD_DIR)/uart.o 	\
 	$(BUILD_DIR)/main.o
 
 # Path to compiler/linker tools.
