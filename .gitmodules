@@ -16,3 +16,6 @@
 [submodule "libs/serial-flash"]
 	path = libs/serial-flash
 	url = https://github.com/Infineon/serial-flash.git
+[submodule "libs/freertos"]
+	path = libs/freertos
+	url = https://github.com/Infineon/freertos.git
