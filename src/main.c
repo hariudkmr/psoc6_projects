@@ -34,7 +34,6 @@ int main(void)
 
     /* Initialize the LED GPIO pin */
 
-
     /* Enable global interrupts */
     __enable_irq();
 

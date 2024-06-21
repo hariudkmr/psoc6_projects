@@ -26,13 +26,12 @@ void gpio_toggle_user_led()
 void LedTask(void *arg)
 {
     (void)arg;
-    
+
     gpio_init();
-    
+
     for (;;) {
         /* Toggle the LED periodically */
         Cy_GPIO_Inv(USER_LED_PORT, USER_LED_PIN);
         vTaskDelay(500);
     }
 }
-
