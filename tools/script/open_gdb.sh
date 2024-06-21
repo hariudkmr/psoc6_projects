@@ -1,2 +1,1 @@
-arm-none-eabi-gdb $1 -ex "target extended-remote localhost:3334"
-
+arm-none-eabi-gdb $1 target remote localhost:3334
