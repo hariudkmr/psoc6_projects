@@ -134,7 +134,8 @@ OC  = arm-none-eabi-objcopy
 FD  = openocd
 CPCK = cppcheck
 CLCK = clang-check
-FMT = clang-format
+FMT = clang-format-12
+FMT1 = clang-format
 
 DONE=@if [ -f $(1) ]; then echo Build completed.; fi
 RM=rm -f $(1)
@@ -220,5 +221,7 @@ codecheck:
 clangcheck:
 	@$(CLCK) $(CFILES) $(INC_DIR)/*.h
 
+format1:
+	$(FMT1) -i $(CFILES) $(INC_DIR)/*.h
 format:
 	$(FMT) -i $(CFILES) $(INC_DIR)/*.h

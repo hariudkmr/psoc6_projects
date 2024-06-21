@@ -73,7 +73,6 @@ void uart_transmit()
     Cy_SCB_UART_PutString(UART, "\n");
 }
 
-
 void UartTask(void *arg)
 {
     (void)arg;
@@ -83,6 +82,6 @@ void UartTask(void *arg)
     for (;;) {
         /* Toggle the LED periodically */
         uart_transmit();
-	    vTaskDelay(1000);
+        vTaskDelay(1000);
     }
 }
