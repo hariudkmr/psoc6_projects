@@ -33,24 +33,20 @@ int main(void)
     BaseType_t retval;
 
     /* Initialize the LED GPIO pin */
-    gpio_init();
-    uart_init();
 
 
     /* Enable global interrupts */
     __enable_irq();
 
-    //retval = xTaskCreate(setTask, "Set LED Task", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
-    //retval = xTaskCreate(clrTask, "Clear LED Task", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
+    retval = xTaskCreate(LedTask, "Toggle LED Task", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
+    retval = xTaskCreate(UartTask, "UART TX Task", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
 
-    //if (pdPASS == retval) {
-    //    vTaskStartScheduler();
-    //}
+    if (pdPASS == retval) {
+        vTaskStartScheduler();
+    }
 
     while (1) {
         /* vTaskStartScheduler never returns */
-	    uart_transmit();
-	    gpio_toggle_user_led();
     }
 }
 

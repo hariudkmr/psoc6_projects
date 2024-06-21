@@ -1,5 +1,8 @@
 #include "uart.h"
 
+#include "FreeRTOS.h"
+#include "task.h"
+
 const char *string = "HelloWorld : ";
 
 /* Allocate context for UART operation */
@@ -68,4 +71,18 @@ void uart_transmit()
     Cy_SCB_UART_PutString(UART, string);
     Cy_SCB_UART_Put(UART, count++);
     Cy_SCB_UART_PutString(UART, "\n");
+}
+
+
+void UartTask(void *arg)
+{
+    (void)arg;
+
+    uart_init();
+
+    for (;;) {
+        /* Toggle the LED periodically */
+        uart_transmit();
+	    vTaskDelay(1000);
+    }
 }

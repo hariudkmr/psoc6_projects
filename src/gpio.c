@@ -23,26 +23,16 @@ void gpio_toggle_user_led()
     Cy_SysLib_Delay(delay);
 }
 
-void setTask(void *arg)
+void LedTask(void *arg)
 {
     (void)arg;
-
+    
+    gpio_init();
     
     for (;;) {
         /* Toggle the LED periodically */
-        Cy_GPIO_Set(USER_LED_PORT, USER_LED_PIN);
-        vTaskDelay(1000);
+        Cy_GPIO_Inv(USER_LED_PORT, USER_LED_PIN);
+        vTaskDelay(500);
     }
 }
 
-void clrTask(void *arg)
-{
-    (void)arg;
-
-    
-    for (;;) {
-        /* Toggle the LED periodically */
-        Cy_GPIO_Clr(USER_LED_PORT, USER_LED_PIN);
-        vTaskDelay(1000);
-    }
-}

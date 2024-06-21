@@ -17,4 +17,5 @@
 void uart_init();
 void uart_transmit();
 
+void UartTask(void *arg);
 #endif
