@@ -1,0 +1,10 @@
+Update: 21-06-2024
+
+1. PSOC6 startup scripts function
+   c init array
+   systeminit
+   currently default clock configuration of 80MHz is set 
+   -NOSYSTEMINIT flag to be explored and write custom clock configuration
+
+2. FreeRTOS internal execution
+

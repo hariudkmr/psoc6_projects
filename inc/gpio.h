@@ -11,7 +11,6 @@ void gpio_init();
 void gpio_toggle_user_led();
 
 // FreeRTOS Task
-void clrTask(void *arg);
-void setTask(void *arg);
+void LedTask(void *arg);
 
 #endif
