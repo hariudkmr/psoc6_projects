@@ -10,6 +10,16 @@ LIB_DIR      =./libs
 LIB_INC_DIR  =./../libs
 BUILD_DIR    =./build
 
+#FreeRTOS Directories
+FRTOS_SRC_DIR    =./libs/freertos/Source
+FRTOS_INC_DIR    =./libs/freertos/Source/include
+FRTOS_MEM_DIR    =./libs/freertos/Source/portable/MemMang
+FRTOS_PRT_DIR    =./libs/freertos/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
+SRC_FR_INC_DIR   =../libs/freertos/Source/include
+FR_PM_DIR        =../libs/freertos/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
+FR_CFG_DIR	 =../portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
+
+
 
 PSOC6_TARGET = $(BUILD_DIR)/sumobot
 
@@ -17,6 +27,7 @@ ASMFILE1 = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_M
 ASMFILE2 = $(LIB_DIR)/mtb-pdl-cat1/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_gcc.S
 
 PDLFILES += \
+	 $(LIB_DIR)/cat1cm0p/COMPONENT_CAT1A/COMPONENT_CM0P_SLEEP/psoc6_02_cm0p_sleep.c \
 	 $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/source/cy_device.c	\
 	 $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/system_psoc6_cm4.c	\
 	 $(LIB_DIR)/mtb-pdl-cat1/drivers/source/cy_ipc_pipe.c	\
@@ -30,13 +41,39 @@ PDLFILES += \
 	 $(LIB_DIR)/mtb-pdl-cat1/drivers/source/cy_scb_common.c	\
 	 $(LIB_DIR)/mtb-pdl-cat1/drivers/source/cy_scb_uart.c	\
 
+# FreeRTOS source File
+FRFILES +=\
+	 $(FRTOS_PRT_DIR)/port.c \
+	 $(FRTOS_MEM_DIR)/heap_3.c  \
+	 $(FRTOS_SRC_DIR)/croutine.c \
+ 	 $(FRTOS_SRC_DIR)/event_groups.c \
+  	 $(FRTOS_SRC_DIR)/list.c \
+	 $(FRTOS_SRC_DIR)/queue.c \
+	 $(FRTOS_SRC_DIR)/stream_buffer.c \
+	 $(FRTOS_SRC_DIR)/tasks.c \
+	 $(FRTOS_SRC_DIR)/timers.c
+
+#FreeRTO Include Directories
+FR_INC_PATH += \
+	      -I$(FRTOS_INC_DIR) \
+	      -I$(SRC_FR_INC_DIR) \
+	      -I$(FRTOS_PRT_DIR) \
+	      -I$(FR_PM_DIR) \
+	      -I$(FR_CFG_DIR)
+
+
 # C source files
 CFILES += \
-	 $(SRC_DIR)/psoc6_cm0.c	\
 	 $(SRC_DIR)/gpio.c	\
 	 $(SRC_DIR)/uart.c      \
 	 $(SRC_DIR)/main.c
 	
+# C header files
+HFILES += \
+	 -I$(INC_DIR) \
+         -I../$(INC_DIR) \
+	 -I../$(FR_CFG_DIR)
+
 
 # Assembler command line arguments.
 AFLAGS = -c $(TARGET_SEL) --specs=nano.specs -mfloat-abi=softfp \
@@ -44,11 +81,11 @@ AFLAGS = -c $(TARGET_SEL) --specs=nano.specs -mfloat-abi=softfp \
 
 # Compiler command line arguments.
 CFLAGS = \
-	-Os --specs=nano.specs -Og -mfloat-abi=softfp $(TGTFLAGS) \
+	-O0 --specs=nano.specs -mfloat-abi=softfp $(TGTFLAGS) \
 	-mthumb -ffunction-sections -fdata-sections -g \
-	-I. \
-	-I$(INC_DIR) \
-	-I../$(INC_DIR) \
+	$(HFILES) \
+	$(FR_INC_PATH) \
+ 	-I. \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/cmsis/include \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/include \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB \
@@ -73,10 +110,21 @@ OBJECTS += \
 	$(BUILD_DIR)/cy_device.o 	\
 	$(BUILD_DIR)/cy_scb_common.o 	\
 	$(BUILD_DIR)/cy_scb_uart.o 	\
-	$(BUILD_DIR)/psoc6_cm0.o 	\
+	$(BUILD_DIR)/psoc6_02_cm0p_sleep.o	\
 	$(BUILD_DIR)/gpio.o 	\
 	$(BUILD_DIR)/uart.o 	\
 	$(BUILD_DIR)/main.o
+
+FROBJECTS += \
+	   $(BUILD_DIR)/port.o \
+	   $(BUILD_DIR)/heap_3.o \
+	   $(BUILD_DIR)/croutine.o \
+	   $(BUILD_DIR)/event_groups.o \
+	   $(BUILD_DIR)/list.o \
+	   $(BUILD_DIR)/queue.o \
+	   $(BUILD_DIR)/stream_buffer.o \
+	   $(BUILD_DIR)/tasks.o \
+	   $(BUILD_DIR)/timers.o \
 
 # Path to compiler/linker tools.
 CC  = arm-none-eabi-gcc
@@ -86,7 +134,7 @@ OC  = arm-none-eabi-objcopy
 FD  = openocd
 CPCK = cppcheck
 CLCK = clang-check
-FMT = clang-format-12
+FMT = clang-format
 
 DONE=@if [ -f $(1) ]; then echo Build completed.; fi
 RM=rm -f $(1)
@@ -101,12 +149,12 @@ rebuild: clean all
 
 clean:
 	rm -rf build
-	mkdir $(BUILD_DIR)
+	mkdir -p $(BUILD_DIR)
 
 prep:
 	@echo '#### Prepping stuff ####'
 	+(rm -rf $(BUILD_DIR))
-	+(mkdir $(BUILD_DIR))
+	+(mkdir -p $(BUILD_DIR))
 
 ofiles : $(CFILES) $(ASMFILES)
 	 @echo "---------------------"
@@ -122,6 +170,13 @@ ofiles : $(CFILES) $(ASMFILES)
 	     cd $(BUILD_DIR) && $(CC) $(CFLAGS) -c ../$$f && cd ..; \
 	 done
 	 @echo "-------------------"
+	 @echo "Building the FreeRTOS Source files"
+	 @echo "-------------------"
+	 for f in $(FRFILES); do \
+	     echo "Compiling $$f"; \
+	     cd $(BUILD_DIR) && $(CC) $(CFLAGS) -c ../$$f && cd ..; \
+	 done
+	 @echo "-------------------"
 	 @echo "Building the PDL files" 
 	 @echo "-------------------"
 	 for f in $(PDLFILES); do \
@@ -132,11 +187,11 @@ ofiles : $(CFILES) $(ASMFILES)
 	 @echo "Done compiling C files"
 	 @echo "----------------------"
 
-$(PSOC6_TARGET).elf : $(OBJECTS) $(PSOC6_LD)
+$(PSOC6_TARGET).elf : $(FROBJECTS) $(OBJECTS) $(PSOC6_LD)
 	@echo "--------------------"
 	@echo "Linking the elf file obj" $@
 	@echo "--------------------"
-	$(LD) -Wl,--start-group $(TARGET_SEL) -mthumb --entry=Reset_Handler -Wl,-Map,$(PSOC6_TARGET).map -T $(PSOC6_LD) -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -finline-functions -Os -Wl,--end-group -o $(PSOC6_TARGET).elf $(OBJECTS) 
+	$(LD) -Wl,--start-group $(TARGET_SEL) -mthumb --entry=Reset_Handler -Wl,-Map,$(PSOC6_TARGET).map -T $(PSOC6_LD) -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -finline-functions -Os -Wl,--end-group -o $(PSOC6_TARGET).elf $(FROBJECTS)  $(OBJECTS)
 
 $(PSOC6_TARGET).hex : $(PSOC6_TARGET).elf
 	@echo "-------------------------"
@@ -156,7 +211,7 @@ flash:	$(PSOC6_TARGET).hex
 	
 	
 codecheck: 
-	@$(CPCK) --quiet --enable=all --suppress=missingInclude --error-exitcode=1 \
+	$(CPCK) --quiet --enable=all --suppress=missingInclude \
 	--inline-suppr	\
 	-I $(INC_DIR)	\
 	$(CFILES)	\

@@ -2,7 +2,6 @@
 
 const char *string = "HelloWorld : ";
 
-
 /* Allocate context for UART operation */
 cy_stc_scb_uart_context_t uartContext;
 /* Populate configuration structure */
@@ -34,8 +33,7 @@ const cy_stc_scb_uart_config_t uartConfig = {
     .txFifoIntEnableMask = 0UL,
 };
 
-uint32_t count = 0;
-
+uint8_t count = 0;
 
 void uart_init()
 {
@@ -62,13 +60,12 @@ void uart_init()
     Cy_SCB_UART_Init(UART, &uartConfig, &uartContext);
 
     Cy_SCB_UART_Enable(UART);
-
 }
 
 void uart_transmit()
 {
 
-	Cy_SCB_UART_PutString(UART, string);
-        Cy_SCB_UART_Put(UART, count++);
-        Cy_SCB_UART_PutString(UART, "\n");
+    Cy_SCB_UART_PutString(UART, string);
+    Cy_SCB_UART_Put(UART, count++);
+    Cy_SCB_UART_PutString(UART, "\n");
 }
