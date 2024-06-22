@@ -33,7 +33,9 @@ int main(void)
     BaseType_t retval;
 
     /* Initialize the LED GPIO pin */
-
+    SEGGER_SYSVIEW_Conf();
+    SEGGER_SYSVIEW_Start();
+    
     /* Enable global interrupts */
     __enable_irq();
 
