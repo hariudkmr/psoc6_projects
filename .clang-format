@@ -25,3 +25,4 @@ AllowShortFunctionsOnASingleLine: Empty
 SortIncludes: false
 AlignConsecutiveMacros: true
 AlignConsecutiveDeclarations: true
+SortIncludes: false

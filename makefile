@@ -19,12 +19,35 @@ SRC_FR_INC_DIR   =../libs/freertos/Source/include
 FR_PM_DIR        =../libs/freertos/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
 FR_CFG_DIR	 =../portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
 
+#Segger Directories
+SGR_SRC_DIR = ./libs/systemview/SEGGER
+SGR_SAM_DIR = ./libs/systemview/Sample/FreeRTOSV10.4
+SGR_SYS_DIR = ./libs/systemview/SEGGER/Syscalls
+SGR_CFG_DIR = ./libs/systemview/Config
 
 
 PSOC6_TARGET = $(BUILD_DIR)/sumobot
 
 ASMFILE1 = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/startup_psoc6_02_cm4.S
 ASMFILE2 = $(LIB_DIR)/mtb-pdl-cat1/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_gcc.S
+
+#FreeRTO Include Directories
+FR_INC_PATH += \
+	      -I$(FRTOS_INC_DIR) \
+	      -I$(SRC_FR_INC_DIR) \
+	      -I$(FRTOS_PRT_DIR) \
+	      -I$(FR_PM_DIR) \
+	      -I$(FR_CFG_DIR)
+
+#Segger Include Directories
+SGR_INC_PATH += \
+		-I$(SGR_SRC_DIR) \
+		-I../$(SGR_SRC_DIR) \
+		-I$(SGR_SAM_DIR) \
+		-I../$(SGR_SAM_DIR) \
+		-I$(SGR_SYS_DIR) \
+		-I$(SGR_CFG_DIR) \
+		-I../$(SGR_CFG_DIR) 
 
 PDLFILES += \
 	 $(LIB_DIR)/cat1cm0p/COMPONENT_CAT1A/COMPONENT_CM0P_SLEEP/psoc6_02_cm0p_sleep.c \
@@ -53,13 +76,15 @@ FRFILES +=\
 	 $(FRTOS_SRC_DIR)/tasks.c \
 	 $(FRTOS_SRC_DIR)/timers.c
 
-#FreeRTO Include Directories
-FR_INC_PATH += \
-	      -I$(FRTOS_INC_DIR) \
-	      -I$(SRC_FR_INC_DIR) \
-	      -I$(FRTOS_PRT_DIR) \
-	      -I$(FR_PM_DIR) \
-	      -I$(FR_CFG_DIR)
+#Segger Source Files
+SGRASMFILE =  $(SGR_SRC_DIR)/SEGGER_RTT_ASM_ARMv7M.S
+SGRFILES += \
+	   $(SGR_SAM_DIR)/SEGGER_SYSVIEW_FreeRTOS.c \
+	   $(SGR_SRC_DIR)/SEGGER_RTT.c \
+	   $(SGR_SRC_DIR)/SEGGER_RTT_printf.c \
+ 	   $(SGR_SRC_DIR)/SEGGER_SYSVIEW.c \
+	   $(SGR_CFG_DIR)/SEGGER_SYSVIEW_Config_FreeRTOS.c \
+	   $(SGR_SYS_DIR)/SEGGER_RTT_Syscalls_GCC.c \
 
 
 # C source files
@@ -77,6 +102,7 @@ HFILES += \
 
 # Assembler command line arguments.
 AFLAGS = -c $(TARGET_SEL) --specs=nano.specs -mfloat-abi=softfp \
+	 -I$(SGR_CFG_DIR) \
 	 -mthumb -ffunction-sections -fdata-sections -g
 
 # Compiler command line arguments.
@@ -85,6 +111,7 @@ CFLAGS = \
 	-mthumb -ffunction-sections -fdata-sections -g \
 	$(HFILES) \
 	$(FR_INC_PATH) \
+	$(SGR_INC_PATH) \
  	-I. \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/cmsis/include \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/include \
@@ -113,7 +140,7 @@ OBJECTS += \
 	$(BUILD_DIR)/psoc6_02_cm0p_sleep.o	\
 	$(BUILD_DIR)/gpio.o 	\
 	$(BUILD_DIR)/uart.o 	\
-	$(BUILD_DIR)/main.o
+	$(BUILD_DIR)/main.o \
 
 FROBJECTS += \
 	   $(BUILD_DIR)/port.o \
@@ -125,6 +152,15 @@ FROBJECTS += \
 	   $(BUILD_DIR)/stream_buffer.o \
 	   $(BUILD_DIR)/tasks.o \
 	   $(BUILD_DIR)/timers.o \
+
+#Segger Source Files
+SGROBJECTS += \
+	   $(BUILD_DIR)/SEGGER_RTT_ASM_ARMv7M.o \
+	   $(BUILD_DIR)/SEGGER_RTT.o \
+ 	   $(BUILD_DIR)/SEGGER_SYSVIEW.o \
+	   $(BUILD_DIR)/SEGGER_SYSVIEW_FreeRTOS.o \
+	   $(BUILD_DIR)/SEGGER_SYSVIEW_Config_FreeRTOS.o \
+
 
 # Path to compiler/linker tools.
 CC  = arm-none-eabi-gcc
@@ -163,10 +199,18 @@ ofiles : $(CFILES) $(ASMFILES)
 	 @echo "---------------------"
 	 $(AS) $(AFLAGS) $(ASMFILE1) -o $(BUILD_DIR)/startup_psoc6_02_cm4.o
 	 $(AS) $(AFLAGS) $(ASMFILE2) -o $(BUILD_DIR)/cy_syslib_gcc.o
+	 $(AS) $(AFLAGS) $(SGRASMFILE) -o $(BUILD_DIR)/SEGGER_RTT_ASM_ARMv7M.o
 	 @echo "-------------------"
 	 @echo "Building the Source files"
 	 @echo "-------------------"
 	 for f in $(CFILES); do \
+	     echo "Compiling $$f"; \
+	     cd $(BUILD_DIR) && $(CC) $(CFLAGS) -c ../$$f && cd ..; \
+	 done
+	  @echo "-------------------"
+	 @echo "Building the PDL files" 
+	 @echo "-------------------"
+	 for f in $(PDLFILES); do \
 	     echo "Compiling $$f"; \
 	     cd $(BUILD_DIR) && $(CC) $(CFLAGS) -c ../$$f && cd ..; \
 	 done
@@ -178,9 +222,9 @@ ofiles : $(CFILES) $(ASMFILES)
 	     cd $(BUILD_DIR) && $(CC) $(CFLAGS) -c ../$$f && cd ..; \
 	 done
 	 @echo "-------------------"
-	 @echo "Building the PDL files" 
+	 @echo "Building the Seggerview Source files"
 	 @echo "-------------------"
-	 for f in $(PDLFILES); do \
+	 for f in $(SGRFILES); do \
 	     echo "Compiling $$f"; \
 	     cd $(BUILD_DIR) && $(CC) $(CFLAGS) -c ../$$f && cd ..; \
 	 done
@@ -188,11 +232,11 @@ ofiles : $(CFILES) $(ASMFILES)
 	 @echo "Done compiling C files"
 	 @echo "----------------------"
 
-$(PSOC6_TARGET).elf : $(FROBJECTS) $(OBJECTS) $(PSOC6_LD)
+$(PSOC6_TARGET).elf : $(OBJECTS) $(FROBJECTS) $(SGROBJECTS) $(PSOC6_LD)
 	@echo "--------------------"
 	@echo "Linking the elf file obj" $@
 	@echo "--------------------"
-	$(LD) -Wl,--start-group $(TARGET_SEL) -mthumb --entry=Reset_Handler -Wl,-Map,$(PSOC6_TARGET).map -T $(PSOC6_LD) -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -finline-functions -Os -Wl,--end-group -o $(PSOC6_TARGET).elf $(FROBJECTS)  $(OBJECTS)
+	$(LD) -Wl,--start-group $(TARGET_SEL) -mthumb --entry=Reset_Handler -Wl,-Map,$(PSOC6_TARGET).map -T $(PSOC6_LD) -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -finline-functions -Os -Wl,--end-group -o $(PSOC6_TARGET).elf   $(OBJECTS) $(FROBJECTS) $(SGROBJECTS)
 
 $(PSOC6_TARGET).hex : $(PSOC6_TARGET).elf
 	@echo "-------------------------"
