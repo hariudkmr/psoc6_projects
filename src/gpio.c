@@ -17,12 +17,6 @@ void gpio_init()
     Cy_GPIO_Pin_Init(USER_LED_PORT, USER_LED_PIN, &pinCfg);
 }
 
-void gpio_toggle_user_led()
-{
-    Cy_GPIO_Inv(USER_LED_PORT, USER_LED_PIN);
-    Cy_SysLib_Delay(delay);
-}
-
 void LedTask(void *arg)
 {
     (void)arg;
