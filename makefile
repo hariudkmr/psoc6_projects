@@ -1,6 +1,21 @@
 ######################################################################################################
 TARGET_SEL = -mcpu=cortex-m4
 TGTFLAGS = $(TARGET_SEL) -mfpu=fpv4-sp-d16 
+
+ifeq ($(DEVICE), psoc6_512k)
+    STUP=startup_psoc6_03_cm4
+    TGT=CY8C6245AZI_S3D72
+    CFLAGS += -DPSOCS3=1 
+    PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx5_cm4_dual.ld
+endif
+
+ifeq ($(DEVICE), psoc6_2m)
+    STUP=startup_psoc6_02_cm4
+    TGT=CY8C624ABZI_S2D44 
+    CFLAGS += -DPSOC62=1
+    PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xxa_cm4_dual.ld
+endif
+
 ######################################################################################################
 
 #Include Directory
@@ -28,7 +43,7 @@ SGR_CFG_DIR = ./libs/systemview/Config
 
 PSOC6_TARGET = $(BUILD_DIR)/sumobot
 
-ASMFILE1 = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/startup_psoc6_02_cm4.S
+ASMFILE1 = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/$(STUP).S
 ASMFILE2 = $(LIB_DIR)/mtb-pdl-cat1/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_gcc.S
 
 #FreeRTO Include Directories
@@ -105,8 +120,9 @@ AFLAGS = -c $(TARGET_SEL) --specs=nano.specs -mfloat-abi=softfp \
 	 -I$(SGR_CFG_DIR) \
 	 -mthumb -ffunction-sections -fdata-sections -g
 
+
 # Compiler command line arguments.
-CFLAGS = \
+CFLAGS += \
 	-O0 --specs=nano.specs -mfloat-abi=softfp $(TGTFLAGS) \
 	-mthumb -ffunction-sections -fdata-sections -g \
 	$(HFILES) \
@@ -115,6 +131,8 @@ CFLAGS = \
  	-I. \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/cmsis/include \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/include \
+	-I$(LIB_INC_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/include/ip \
+	-I$(LIB_INC_DIR)/mtb-pdl-cat1/cmsis/source \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/drivers/include	\
 	-I$(LIB_INC_DIR)/core-lib/include \
@@ -123,12 +141,11 @@ CFLAGS = \
 	-I$(LIB_INC_DIR)/psoc6hal/COMPONENT_PSOC6HAL/include/triggers \
 	-I$(LIB_INC_DIR)/psoc6hal/COMPONENT_PSOC6HAL/include/pin_packages \
 	-I$(LIB_INC_DIR)/retarget-io \
-	-DCY8C624ABZI_S2D44 -DCY_IPC_DEFAULT_CFG_DISABLE
+	-D$(TGT) -DCY_IPC_DEFAULT_CFG_DISABLE
 
-PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xxa_cm4_dual.ld
 
 OBJECTS += \
-	$(BUILD_DIR)/startup_psoc6_02_cm4.o \
+	$(BUILD_DIR)/$(STUP).o \
 	$(BUILD_DIR)/cy_syslib_gcc.o \
 	$(BUILD_DIR)/system_psoc6_cm4.o \
 	$(BUILD_DIR)/cy_gpio.o 	\
@@ -197,7 +214,7 @@ ofiles : $(CFILES) $(ASMFILES)
 	 @echo "---------------------"
 	 @echo "Building the ASM files"
 	 @echo "---------------------"
-	 $(AS) $(AFLAGS) $(ASMFILE1) -o $(BUILD_DIR)/startup_psoc6_02_cm4.o
+	 $(AS) $(AFLAGS) $(ASMFILE1) -o $(BUILD_DIR)/$(STUP).o
 	 $(AS) $(AFLAGS) $(ASMFILE2) -o $(BUILD_DIR)/cy_syslib_gcc.o
 	 $(AS) $(AFLAGS) $(SGRASMFILE) -o $(BUILD_DIR)/SEGGER_RTT_ASM_ARMv7M.o
 	 @echo "-------------------"

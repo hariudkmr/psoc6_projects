@@ -1,11 +1,25 @@
 #ifndef GPIO_H
 #define GPIO_H
 
-#include "cy_gpio.h"
+
+#include "cy_pdl.h"
 #include <string.h>
 
-#define USER_LED_PORT GPIO_PRT13
-#define USER_LED_PIN  P13_7_PIN
+
+#if PSOC62 
+
+
+#define USER_LED_PORT (GPIO_PRT13)
+#define USER_LED_PIN  (P13_7_PIN)
+
+#endif
+
+#if PSOCS3
+
+#define USER_LED_PORT (GPIO_PRT11)
+#define USER_LED_PIN  (P11_1_PIN)
+
+#endif
 
 void gpio_init();
 void gpio_toggle_user_led();

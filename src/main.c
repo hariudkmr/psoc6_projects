@@ -14,7 +14,8 @@
 #include "main.h"
 #include "system_psoc6.h"
 #include "cy_device.h"
-#include <gpio_psoc6_02_124_bga.h>
+
+
 
 /*****************************************************************************
 * Function Name: main(void)
@@ -33,6 +34,8 @@ int main(void)
     BaseType_t retval;
 
     /* Initialize the LED GPIO pin */
+    DWT->CTRL |= (1 << 0);
+
     SEGGER_SYSVIEW_Conf();
     SEGGER_SYSVIEW_Start();
 
