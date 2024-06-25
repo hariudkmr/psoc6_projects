@@ -15,4 +15,7 @@ jobs:
           submodules: recursive
       - run: make format && git diff --quiet
       - run: make codecheck
-      - run: make
+      - run: make DEVICE=psoc6_2m
+      - run: make DEVICE=psoc6_512k
+
+
