@@ -15,8 +15,11 @@
 #include "system_psoc6.h"
 #include "cy_device.h"
 
-
-
+void Freertos_error()
+{
+    while (1)
+        ;
+}
 /*****************************************************************************
 * Function Name: main(void)
 ******************************************************************************
@@ -43,11 +46,14 @@ int main(void)
     __enable_irq();
 
     retval = xTaskCreate(LedTask, "Toggle LED Task", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
+    if (retval != pdPASS)
+        Freertos_error();
     retval = xTaskCreate(UartTask, "UART TX Task", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
 
-    if (pdPASS == retval) {
-        vTaskStartScheduler();
-    }
+    if (retval != pdPASS)
+        Freertos_error();
+
+    vTaskStartScheduler();
 
     while (1) {
         /* vTaskStartScheduler never returns */
