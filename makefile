@@ -2,18 +2,28 @@
 TARGET_SEL = -mcpu=cortex-m4
 TGTFLAGS = $(TARGET_SEL) -mfpu=fpv4-sp-d16 
 
-ifeq ($(DEVICE), psoc6_512k)
+ifeq ($(BRD), s3)
+    DEVICE=psoc6_512k
     STUP=startup_psoc6_03_cm4
-    TGT=CY8C6245AZI_S3D72
+    TGT=CY8C6245LQI_S3D72
     CFLAGS += -DPSOCS3=1 
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx5_cm4_dual.ld
 endif
 
-ifeq ($(DEVICE), psoc6_2m)
+ifeq ($(BRD), 62)
+    DEVICE=psoc6_2m
     STUP=startup_psoc6_02_cm4
     TGT=CY8C624ABZI_S2D44 
     CFLAGS += -DPSOC62=1
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xxa_cm4_dual.ld
+endif
+
+ifeq ($(BRD), wb)
+    DEVICE=psoc6
+    STUP=startup_psoc6_01_cm4
+    TGT=CY8C6247BZI_D54 
+    CFLAGS += -DPSOCWB=1
+    PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx7_cm4_dual.ld
 endif
 
 ######################################################################################################

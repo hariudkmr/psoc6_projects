@@ -15,7 +15,9 @@ jobs:
           submodules: recursive
       - run: make format && git diff --quiet
       - run: make codecheck
-      - run: make DEVICE=psoc6_2m
-      - run: make DEVICE=psoc6_512k
+      - run: make BRD=62
+      - run: make BRD=s3
+      - run: make BRD=wb
+
 
 
