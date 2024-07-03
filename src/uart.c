@@ -53,8 +53,8 @@ void uart_init()
     Cy_SysClk_PeriphEnableDivider(UART_CLK_DIV_TYPE, UART_CLK_DIV_NUMBER);
 
     /* Connect SCB5 UART function to pins */
-    Cy_GPIO_SetHSIOM(UART_PORT, UART_RX_NUM, P5_0_SCB5_UART_RX);
-    Cy_GPIO_SetHSIOM(UART_PORT, UART_TX_NUM, P5_1_SCB5_UART_TX);
+    Cy_GPIO_SetHSIOM(UART_PORT, UART_RX_NUM, SCB_UART_RX);
+    Cy_GPIO_SetHSIOM(UART_PORT, UART_TX_NUM, SCB_UART_TX);
 
     /* Configure pins for UART operation */
     Cy_GPIO_SetDrivemode(UART_PORT, UART_RX_NUM, CY_GPIO_DM_HIGHZ);
