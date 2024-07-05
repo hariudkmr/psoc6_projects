@@ -7,6 +7,7 @@ ifeq ($(BRD), s3)
     STUP=startup_psoc6_03_cm4
     TGT=CY8C6245LQI_S3D72
     CFLAGS += -DPSOCS3=1 
+    CM0 = psoc6_03_cm0p_sleep
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx5_cm4_dual.ld
 endif
 
@@ -15,6 +16,7 @@ ifeq ($(BRD), 62)
     STUP=startup_psoc6_02_cm4
     TGT=CY8C624ABZI_S2D44 
     CFLAGS += -DPSOC62=1
+    CM0 = psoc6_02_cm0p_sleep
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xxa_cm4_dual.ld
 endif
 
@@ -23,6 +25,7 @@ ifeq ($(BRD), wb)
     STUP=startup_psoc6_01_cm4
     TGT=CY8C6247BZI_D54 
     CFLAGS += -DPSOCWB=1
+    CM0 = psoc6_01_cm0p_sleep
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx7_cm4_dual.ld
 endif
 
@@ -75,7 +78,7 @@ SGR_INC_PATH += \
 		-I../$(SGR_CFG_DIR) 
 
 PDLFILES += \
-	 $(LIB_DIR)/cat1cm0p/COMPONENT_CAT1A/COMPONENT_CM0P_SLEEP/psoc6_02_cm0p_sleep.c \
+	 $(LIB_DIR)/cat1cm0p/COMPONENT_CAT1A/COMPONENT_CM0P_SLEEP/$(CM0).c \
 	 $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/source/cy_device.c	\
 	 $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/system_psoc6_cm4.c	\
 	 $(LIB_DIR)/mtb-pdl-cat1/drivers/source/cy_ipc_pipe.c	\
@@ -164,7 +167,7 @@ OBJECTS += \
 	$(BUILD_DIR)/cy_device.o 	\
 	$(BUILD_DIR)/cy_scb_common.o 	\
 	$(BUILD_DIR)/cy_scb_uart.o 	\
-	$(BUILD_DIR)/psoc6_02_cm0p_sleep.o	\
+	$(BUILD_DIR)/$(CM0).o	\
 	$(BUILD_DIR)/gpio.o 	\
 	$(BUILD_DIR)/uart.o 	\
 	$(BUILD_DIR)/main.o \

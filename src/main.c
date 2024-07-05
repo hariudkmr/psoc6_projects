@@ -15,11 +15,10 @@
 #include "system_psoc6.h"
 #include "cy_device.h"
 
-#if 0
 /*
  * Clock configuration to be setup for FX3G2 device:
  *
- * CLK_PATH #1: IMO (8 MHz) --> PLL0 (150 MHz) --> clk_hf0 --> clk_fast
+ * CLK_PATH #1: IMO (8 MHz) --> PLL0 (100 MHz) --> clk_hf0 --> clk_fast
  *                                             |           |
  *                                             |           --> clk_peri (75 MHz) --> clk_slow
  *                                             |
@@ -34,16 +33,16 @@
  * CLK_PATH #3: ECO (24 MHz) --> USBHS PLL Reference
  */
 
-void fx3g2_clk_init(void)
+void system_clk_init(void)
 {
     cy_stc_pll_manual_config_t pll0_cfg;
-    cy_stc_pll_manual_config_t pll1_cfg;
-    cy_stc_fll_manual_config_t fll_cfg;
+    // cy_stc_pll_manual_config_t pll1_cfg;
+    // cy_stc_fll_manual_config_t fll_cfg;
 
     /* Configure PLL0 to generate 150 MHz clock, enable it and
      * wait for it to lock.
      */
-    pll0_cfg.feedbackDiv = 75u;
+    pll0_cfg.feedbackDiv = 50u;
     pll0_cfg.referenceDiv = 2u;
     pll0_cfg.outputDiv = 2u;
     pll0_cfg.lfMode = false; /* VCO frequency is 300 MHz. */
@@ -54,16 +53,16 @@ void fx3g2_clk_init(void)
         ;
 
     /* Select PLL0 output as clk_hf0. */
-    Cy_SysLib_SetWaitStates(false, 150UL);
+    Cy_SysLib_SetWaitStates(false, 100UL);
     Cy_SysClk_ClkHfSetSource(0, CY_SYSCLK_CLKHF_IN_CLKPATH1);
     Cy_SysClk_ClkFastSetDivider(0U);
 
-    /* clk_peri is (clk_fast / 2) or 75 MHz. clk_slow has same frequency as clk_peri. */
+    /* clk_peri is (clk_fast / 2) or 50 MHz. clk_slow has same frequency as clk_peri. */
     Cy_SysClk_ClkPeriSetDivider(1);
     Cy_SysClk_ClkSlowSetDivider(0);
 
     /* Update modified frequency with the PDL. */
-    Cy_SysClk_ClkHfUpdateFrequency(150000000UL);
+    // Cy_SysClk_ClkHfUpdateFrequency(100000000UL);
     SystemCoreClockUpdate();
 
     /* clk_hf1 configuration. */
@@ -71,6 +70,8 @@ void fx3g2_clk_init(void)
     Cy_SysClk_ClkHfSetSource(1, CY_SYSCLK_CLKHF_IN_CLKPATH1);
     Cy_SysClk_ClkHfSetDivider(1, CY_SYSCLK_CLKHF_DIVIDE_BY_2);
     Cy_SysClk_ClkHfEnable(1);
+
+#if 0
 
     /* clk_hf4 configuration. */
     Cy_SysClk_ClkHfDisable(4);
@@ -119,8 +120,14 @@ void fx3g2_clk_init(void)
     Cy_SysClk_ClkHfSetSource(3, CY_SYSCLK_CLKHF_IN_CLKPATH0);
     Cy_SysClk_ClkHfSetDivider(3, CY_SYSCLK_CLKHF_NO_DIVIDE);
     Cy_SysClk_ClkHfEnable(3);
+#endif
 }
-#endif 
+
+#define DWT_CTRL 0xE0001000
+
+#define DWT_CYCLE_COUNT 0xE0001004
+
+uint32_t clkPerifreq;
 
 /*****************************************************************************
 * Function Name: main(void)
@@ -137,13 +144,22 @@ void fx3g2_clk_init(void)
 int main(void)
 {
 
+    system_clk_init();
     /* Initialize the LED GPIO pin */
     /* Enable global interrupts */
+    (*(int *)DWT_CTRL) |= 0x1; // Counter enable
+
+    (*(int *)DWT_CYCLE_COUNT) = 0; // Set counter to Zero
+                                   //
+    clkPerifreq = Cy_SysClk_ClkPeriGetFrequency();
+
     __enable_irq();
 
-    xTaskCreate(LedTask, "Toggle LED Task", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
-    xTaskCreate(UartTask, "UART TX Task", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
+    SEGGER_SYSVIEW_Conf();
+    SEGGER_SYSVIEW_Start();
 
+    xTaskCreate(LedTask, "Toggle LED Task", 512, NULL, 5, NULL);
+    xTaskCreate(UartTask, "UART TX Task", 512, NULL, 5, NULL);
 
     vTaskStartScheduler();
 
