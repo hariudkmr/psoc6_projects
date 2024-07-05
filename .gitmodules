@@ -18,4 +18,4 @@
 	url = https://github.com/Infineon/serial-flash.git
 [submodule "libs/freertos"]
 	path = libs/freertos
-	url = https://github.com/Infineon/freertos.git
+	url = https://github.com/hariudkmr/freertos.git
