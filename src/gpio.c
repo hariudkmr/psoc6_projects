@@ -1,3 +1,19 @@
+/* ========================================================================= */
+/**
+ * @file gpio.c
+ * @author Hari Udayakumar 
+ * @date 06-07-2024
+ */
+/* ========================================================================= */
+
+/** @defgroup GPIO gpio.c
+ * The GPIO Modules handles all the initialization of the IO Pins, configures P13.7 USER LED
+ * which toggles every second. This Led acts as the Heart Beat of the System
+ * @{
+ */
+
+
+
 #include "gpio.h"
 
 #include "FreeRTOS.h"

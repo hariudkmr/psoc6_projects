@@ -1,4 +1,4 @@
-# Intro
+# Coding Guidelines 
 This documentation describes some of the coding guidelines I follow in this project.
 Some guidelines have good reasons while others are just based on my personal preference.
 Some are also enforced by the formatter (clang-formatter). The goals with them are to
