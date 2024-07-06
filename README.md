@@ -1,4 +1,4 @@
-# PSoC&trade; 6 MCU: Sumo Bot
+# System Details 
 
 This project aims to Sumobot project from Embedded System Project Series using PSoC&trade; 6 MCU.
 
@@ -23,6 +23,7 @@ This project aims to Sumobot project from Embedded System Project Series using P
 ## HW Kit 
 
 - [PSoC&trade; 62S2 Wi-Fi Bluetooth&reg; pioneer kit](https://www.cypress.com/CY8CKIT-062S2-43012) (`CY8CKIT-062S2-4343W`)
+
 
 ## Make 
 

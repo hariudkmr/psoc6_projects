@@ -1,3 +1,16 @@
+/* ========================================================================= */
+/**
+ * @file uart.c
+ * @author Hari Udayakumar 
+ * @date 06-07-2024
+ */
+/* ========================================================================= */
+
+/** @defgroup UART uart.c
+ * The UART Module handles the uart debug messages, which will be printed using SCB5
+ * @{
+ */
+
 #include "uart.h"
 
 #include "FreeRTOS.h"
