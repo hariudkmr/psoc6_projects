@@ -1,12 +1,19 @@
-
-#include "FreeRTOS.h"
-
+/* ========================================================================= */
+/**
+ * @file static_task.c
+ * @author Hari Udayakumar
+ * @date 06-07-2024
+ */
+/* ========================================================================= */
 /**
 * @brief configUSE_STATIC_ALLOCATION is set to 1, so the application must provide an
  * implementation of vApplicationGetIdleTaskMemory() to provide the memory that is
  * used by the Idle task. 
  *
  */
+#include "FreeRTOS.h"
+
+
 void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer,
                                    StackType_t  **ppxIdleTaskStackBuffer,
                                    uint32_t      *pulIdleTaskStackSize)
