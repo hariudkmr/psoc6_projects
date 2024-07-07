@@ -4,24 +4,35 @@
 #include "cy_pdl.h"
 #include <string.h>
 
-#if PSOC62 || PSOCWB
+typedef enum {
+    IO_LOW,
+    IO_HIGH,
+} gpio_state;
 
-#define USER_LED_PORT (GPIO_PRT13)
-#define USER_LED_PIN  (P13_7_PIN)
+typedef enum {
+    USER_LED,
+    DEBUG_UART_TX,
+    DEBUG_UART_RX,
+    TOTAL_IO_PINS,
+} gpio_pin;
 
-#endif
+typedef struct
+{
+    GPIO_PRT_Type *port;
+    uint32_t       pin;
+    uint8_t        drive_mode;
+    uint8_t        hsio; // high speed io matrix/multiplexer
+} st_gpioconfig;
 
-#if PSOCS3
+#define ARRAY_SIZE sizeof(gpio_configuration_array) / sizeof(st_gpioconfig)
 
-#define USER_LED_PORT (GPIO_PRT11)
-#define USER_LED_PIN  (P11_1_PIN)
-
-#endif
-
-void gpio_init();
-void gpio_toggle_user_led();
+void       gpio_init();
+void       gpio_set(gpio_pin pin);
+void       gpio_clear(gpio_pin pin);
+gpio_state gpio_read(gpio_pin pin);
+void       gpio_toggle(gpio_pin pin);
 
 // FreeRTOS Task
-void LedTask(void *arg);
+void user_led_gpiotask(void *arg);
 
 #endif
