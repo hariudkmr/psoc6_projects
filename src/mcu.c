@@ -6,8 +6,8 @@
  * @brief Contains System Confgiuration
  */
 /* ========================================================================= */
-/** @defgroup MCUINIT MCUINI
- *  * Controller Configured file of the project.\n
+/** @defgroup MCU MCU_INIT
+ *  Controller Configured file for PSOC6 Project.
  * @{
  */
 #include "mcu.h"
