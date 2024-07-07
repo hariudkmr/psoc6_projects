@@ -1,13 +1,18 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include "cy_pdl.h"
+#include "system_psoc6.h"
+#include "cy_device.h"
+
 /*
  *
  *
- * Peripheral Modules
+ * Peripheral Driver Header Files
  *
  *
  */
+#include "mcu.h"
 #include "gpio.h"
 #include "uart.h"
 
