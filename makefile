@@ -102,7 +102,8 @@ FRFILES +=\
 	 $(FRTOS_SRC_DIR)/queue.c \
 	 $(FRTOS_SRC_DIR)/stream_buffer.c \
 	 $(FRTOS_SRC_DIR)/tasks.c \
-	 $(FRTOS_SRC_DIR)/timers.c
+	 $(FRTOS_SRC_DIR)/timers.c \
+	 $(SRC_DIR)/static_task.c
 
 #Segger Source Files
 SGRASMFILE =  $(SGR_SRC_DIR)/SEGGER_RTT_ASM_ARMv7M.S
@@ -182,6 +183,7 @@ FROBJECTS += \
 	   $(BUILD_DIR)/stream_buffer.o \
 	   $(BUILD_DIR)/tasks.o \
 	   $(BUILD_DIR)/timers.o \
+	   $(BUILD_DIR)/static_task.o \
 
 #Segger Source Files
 SGROBJECTS += \
@@ -286,7 +288,7 @@ flash:	$(PSOC6_TARGET).hex
 	
 	
 codecheck: 
-	$(CPCK) --quiet --enable=all --suppress=missingInclude \
+	$(CPCK) --quiet --enable=all --suppress=missingInclude --suppress=unusedFunction \
 	--inline-suppr	\
 	-I $(INC_DIR)	\
 	$(CFILES)	\
