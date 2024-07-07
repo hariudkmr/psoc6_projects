@@ -118,6 +118,7 @@ SGRFILES += \
 
 # C source files
 CFILES += \
+	 $(SRC_DIR)/mcu.c	\
 	 $(SRC_DIR)/gpio.c	\
 	 $(SRC_DIR)/uart.c      \
 	 $(SRC_DIR)/main.c
@@ -169,6 +170,7 @@ OBJECTS += \
 	$(BUILD_DIR)/cy_scb_common.o 	\
 	$(BUILD_DIR)/cy_scb_uart.o 	\
 	$(BUILD_DIR)/$(CM0).o	\
+	$(BUILD_DIR)/mcu.o 	\
 	$(BUILD_DIR)/gpio.o 	\
 	$(BUILD_DIR)/uart.o 	\
 	$(BUILD_DIR)/main.o \
