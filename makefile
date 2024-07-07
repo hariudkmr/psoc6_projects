@@ -9,18 +9,14 @@ ifeq ($(BRD), s3)
     CFLAGS += -DPSOCS3=1 
     CM0 = psoc6_03_cm0p_sleep
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx5_cm4_dual.ld
-endif
-
-ifeq ($(BRD), 62)
+else ifeq ($(BRD), 62)
     DEVICE=psoc6_2m
     STUP=startup_psoc6_02_cm4
     TGT=CY8C624ABZI_S2D44 
     CFLAGS += -DPSOC62=1
     CM0 = psoc6_02_cm0p_sleep
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xxa_cm4_dual.ld
-endif
-
-ifeq ($(BRD), wb)
+else ifeq ($(BRD), wb)
     DEVICE=psoc6
     STUP=startup_psoc6_01_cm4
     TGT=CY8C6247BZI_D54 
