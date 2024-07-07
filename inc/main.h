@@ -1,3 +1,18 @@
+/*
+ ============================================================================
+ Name        : main.h
+ Author      : Hari Udayakumar
+ Version     : 1.0
+ Copyright   : n.a.
+ Description : Sumobot based on PSOC6
+ ============================================================================
+ */
+/**
+ * @file main.h
+ * @author Hari Udayakumar
+ * @date 07-07-2024
+ */
+
 #ifndef MAIN_H
 #define MAIN_H
 

@@ -29,6 +29,12 @@
  *
  */
 
+/**
+ * @file FreeRTOSConfig.h
+ * @author Hari Udayakumar
+ * @date 07-07-2024
+ */
+
 #ifndef FREERTOS_CONFIG_H
 #define FREERTOS_CONFIG_H
 

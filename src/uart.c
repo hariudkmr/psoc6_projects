@@ -16,7 +16,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-const char *string = "HelloWorld : ";
+const char *hw_string = "HelloWorld : ";
 
 /* Allocate context for UART operation */
 cy_stc_scb_uart_context_t uartContext;
@@ -51,6 +51,10 @@ const cy_stc_scb_uart_config_t uartConfig = {
 
 uint8_t count = 0;
 
+/*! \fn     UART Initialization
+    \brief  Configures PSOC6 SCB as UART for printing the debug information.
+    \return no return value
+*/
 void uart_init()
 {
 
@@ -70,7 +74,11 @@ void uart_init()
     Cy_SCB_UART_Enable(UART);
 }
 
-void uart_transmit()
+/*! \fn     UART Initialization
+    \brief  Configures PSOC6 SCB as UART for printing the debug information.
+    \return no return value
+*/
+void uart_transmit(const char *string)
 {
 
     Cy_SCB_UART_PutString(UART, string);
@@ -78,6 +86,9 @@ void uart_transmit()
     Cy_SCB_UART_PutString(UART, "\n");
 }
 
+/*! \fn     debug_print_uarttask(void *arg)
+    \brief  Transmit a Constant string using RTOS Task.
+*/
 void debug_print_uarttask(void *arg)
 {
     (void)arg;
@@ -86,7 +97,7 @@ void debug_print_uarttask(void *arg)
 
     for (;;) {
         /* Toggle the LED periodically */
-        uart_transmit();
+        uart_transmit(hw_string);
         vTaskDelay(1000);
     }
 }

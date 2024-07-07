@@ -35,11 +35,14 @@ st_gpioconfig gpio_configuration_array[TOTAL_IO_PINS] = {
 #endif
 };
 
+/*! \fn     GPIO Initialization
+    \brief  Configures all the GPIO Pins specfied using GPIO_PIN's. Configurations of the each Pins
+   is stored separaately in a structure array ( st_gpioconfig ). \return no return value
+*/
 void gpio_init()
 {
 
-    cy_stc_gpio_pin_config_t pinCfg;
-    memset((void *)&pinCfg, 0, sizeof(pinCfg));
+    cy_stc_gpio_pin_config_t pinCfg = { 0 };
 
     for (int i = 0; i < TOTAL_IO_PINS; i++) {
 
@@ -50,21 +53,44 @@ void gpio_init()
     }
 }
 
-void gpio_set(gpio_pin pin)
+/*! \fn     GPIO Write
+    \brief  Controls the GPIO State using the below functions.
+    \param  gpio_pin pin -> Index of the GPIO Configuration in GPIO
+    \param  gpio_state state -> State of the GPIO pin
+    \return no return value
+*/
+void gpio_write(gpio_pin pin, gpio_state state)
 {
-    Cy_GPIO_Set(gpio_configuration_array[pin].port, gpio_configuration_array[pin].pin);
+    if (state == IO_LOW) {
+        Cy_GPIO_Set(gpio_configuration_array[pin].port, gpio_configuration_array[pin].pin);
+    } else if (state == IO_HIGH) {
+        Cy_GPIO_Clr(gpio_configuration_array[pin].port, gpio_configuration_array[pin].pin);
+    }
 }
 
-void gpio_clear(gpio_pin pin)
+/*! \fn     GPIO Read
+    \brief  Reads the state of the GPIO PIN using the below functions.
+    \param  gpio_pin pin -> Index of the GPIO Configuration in st_gpioconfig structure array
+    \return -> State of the GPIO pin
+*/
+gpio_state gpio_read(gpio_pin pin)
 {
-    Cy_GPIO_Clr(gpio_configuration_array[pin].port, gpio_configuration_array[pin].pin);
+    return IO_LOW;
 }
 
+/*! \fn     GPIO Toggle
+    \brief  Toggles the stato of GPIO pin using the below functions.
+    \param  gpio_pin pin -> Index of the GPIO Configuration in GPIO
+    \return no return value
+*/
 void gpio_toggle(gpio_pin pin)
 {
     Cy_GPIO_Inv(gpio_configuration_array[pin].port, gpio_configuration_array[pin].pin);
 }
 
+/*! \fn     user_led_gpiotask(void *arg)
+    \brief  Toggle User Led using RTOS Task.
+*/
 void user_led_gpiotask(void *arg)
 {
     (void)arg;
