@@ -296,6 +296,6 @@ clangcheck:
 	@$(CLCK) $(CFILES) $(INC_DIR)/*.h
 
 format1:
-	$(FMT1) -i $(CFILES) $(INC_DIR)/*.h
+	$(FMT1) --dry-run --Werror -i $(CFILES) $(INC_DIR)/*.h
 format:
-	$(FMT) -i $(CFILES) $(INC_DIR)/*.h
+	$(FMT) --dry-run --Werror -i $(CFILES) $(INC_DIR)/*.h
