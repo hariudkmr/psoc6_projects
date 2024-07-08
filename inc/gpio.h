@@ -5,8 +5,8 @@
  Version     : 1.0
  Copyright   : n.a.
  Description : Sumobot based on PSOC6
- ============================================================================
- */
+ ============================================================================*/
+
 /**
  * @file gpio.h
  * @author Hari Udayakumar
@@ -41,13 +41,13 @@ typedef struct
 
 #define ARRAY_SIZE sizeof(gpio_configuration_array) / sizeof(st_gpioconfig)
 
-/*! \fn     GPIO Initialization
+/** \fn     GPIO Initialization
     \brief  Configures all the GPIO Pins specfied using GPIO_PIN's. Configurations of the each Pins
    is stored separaately in a structure array ( st_gpioconfig ). \return no return value
 */
 void gpio_init();
 
-/*! \fn     GPIO Write
+/** \fn     GPIO Write
     \brief  Controls the GPIO State using the below functions.
     \param  gpio_pin pin -> Index of the GPIO Configuration in GPIO
     \param  gpio_state state -> State of the GPIO pin
@@ -55,21 +55,21 @@ void gpio_init();
 */
 void gpio_write(gpio_pin pin, gpio_state state);
 
-/*! \fn     GPIO Read
+/** \fn     GPIO Read
     \brief  Reads the state of the GPIO PIN using the below functions.
     \param  gpio_pin pin -> Index of the GPIO Configuration in st_gpioconfig structure array
     \return -> State of the GPIO pin
 */
 gpio_state gpio_read(gpio_pin pin);
 
-/*! \fn     GPIO Toggle
+/** \fn     GPIO Toggle
     \brief  Toggles the stato of GPIO pin using the below functions.
     \param  gpio_pin pin -> Index of the GPIO Configuration in GPIO
     \return no return value
 */
 void gpio_toggle(gpio_pin pin);
 
-/*! \fn     user_led_gpiotask(void *arg)
+/** \fn     user_led_gpiotask(void *arg)
     \brief  Toggle User Led using RTOS Task.
 */
 void user_led_gpiotask(void *arg);
