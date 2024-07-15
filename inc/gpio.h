@@ -18,6 +18,7 @@
 
 #include "cy_pdl.h"
 #include <string.h>
+#include <assert.h>
 
 typedef enum {
     IO_LOW,
@@ -26,6 +27,7 @@ typedef enum {
 
 typedef enum {
     USER_LED,
+    LED8,
     DEBUG_UART_TX,
     DEBUG_UART_RX,
     TOTAL_IO_PINS,
@@ -45,6 +47,7 @@ typedef struct
     \brief  Configures all the GPIO Pins specfied using GPIO_PIN's. Configurations of the each Pins
    is stored separaately in a structure array ( st_gpioconfig ). \return no return value
 */
+
 void gpio_init();
 
 /** \fn     GPIO Write
@@ -73,5 +76,10 @@ void gpio_toggle(gpio_pin pin);
     \brief  Toggle User Led using RTOS Task.
 */
 void user_led_gpiotask(void *arg);
+
+/** \fn     user_led8_gpiotask(void *arg)
+    \brief  Toggle User Led using RTOS Task.
+*/
+void user_led8_gpiotask(void *arg);
 
 #endif

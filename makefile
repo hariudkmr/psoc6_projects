@@ -23,6 +23,13 @@ else ifeq ($(BRD), wb)
     CFLAGS += -DPSOCWB=1
     CM0 = psoc6_01_cm0p_sleep
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx7_cm4_dual.ld
+else ifeq ($(MAKECMDGOALS), clean)
+else ifeq ($(MAKECMDGOALS), format1)
+else ifeq ($(MAKECMDGOALS), codecheck)
+# BRD argument not required
+else 
+    $(error, "Must pass BRD=wb or BRD=s3 or BRD=62")
+
 endif
 
 ######################################################################################################
@@ -104,11 +111,11 @@ FRFILES +=\
 #Segger Source Files
 SGRASMFILE =  $(SGR_SRC_DIR)/SEGGER_RTT_ASM_ARMv7M.S
 SGRFILES += \
+	   $(SGR_CFG_DIR)/SEGGER_SYSVIEW_Config_FreeRTOS.c \
 	   $(SGR_SAM_DIR)/SEGGER_SYSVIEW_FreeRTOS.c \
 	   $(SGR_SRC_DIR)/SEGGER_RTT.c \
 	   $(SGR_SRC_DIR)/SEGGER_RTT_printf.c \
  	   $(SGR_SRC_DIR)/SEGGER_SYSVIEW.c \
-	   $(SGR_CFG_DIR)/SEGGER_SYSVIEW_Config_FreeRTOS.c \
 	   $(SGR_SYS_DIR)/SEGGER_RTT_Syscalls_GCC.c \
 
 
@@ -185,11 +192,12 @@ FROBJECTS += \
 
 #Segger Source Files
 SGROBJECTS += \
+	   $(BUILD_DIR)/SEGGER_SYSVIEW_Config_FreeRTOS.o \
+	   $(BUILD_DIR)/SEGGER_SYSVIEW_FreeRTOS.o \
 	   $(BUILD_DIR)/SEGGER_RTT_ASM_ARMv7M.o \
 	   $(BUILD_DIR)/SEGGER_RTT.o \
+	   $(BUILD_DIR)/SEGGER_RTT_printf.o \
  	   $(BUILD_DIR)/SEGGER_SYSVIEW.o \
-	   $(BUILD_DIR)/SEGGER_SYSVIEW_FreeRTOS.o \
-	   $(BUILD_DIR)/SEGGER_SYSVIEW_Config_FreeRTOS.o \
 
 
 # Path to compiler/linker tools.
@@ -209,7 +217,7 @@ RM=rm -f $(1)
 .SUFFIXES: .o .c .s
 .PHONY: all clean build codecheck format
 
-all: prep ofiles $(PSOC6_TARGET).elf $(PSOC6_TARGET).hex
+all: format1 codecheck prep ofiles $(PSOC6_TARGET).elf $(PSOC6_TARGET).hex
 	$(call DONE,$(PSOC6_TARGET).hex)
 
 rebuild: clean all
