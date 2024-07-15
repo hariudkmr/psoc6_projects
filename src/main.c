@@ -30,8 +30,8 @@ int main(void)
     SEGGER_SYSVIEW_Conf();
     SEGGER_SYSVIEW_Start();
 
-    xTaskCreate(user_led_gpiotask, "Toggle LED Task", 512, NULL, 5, NULL);
-    xTaskCreate(debug_print_uarttask, "UART TX Task", 512, NULL, 5, NULL);
+    xTaskCreate(user_led_gpiotask, "Toggle LED9 Task", 512, NULL, 5, NULL);
+    xTaskCreate(user_led8_gpiotask, "Toggle LED8 Task", 512, NULL, 5, NULL);
 
     vTaskStartScheduler();
 

@@ -128,6 +128,7 @@ void system_clk_init(void)
  */
 void dwt_init(void)
 {
-    (*(int *)DWT_CTRL) |= 0x1; // Counter enable
+    (*(int *)DWT_DEMCR) |= 1 << 24; // Set bit 24(TRCENA)
     (*(int *)DWT_CYCLE_COUNT) = 0; // Set counter to Zero
+    (*(int *)DWT_CTRL) |= 0x1; // Counter enable
 }

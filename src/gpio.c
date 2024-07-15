@@ -18,10 +18,12 @@
 #include "task.h"
 
 uint32_t delay = 0;
+static_assert(sizeof(gpio_pin) == 1, "Unexpected size");
 
 st_gpioconfig gpio_configuration_array[TOTAL_IO_PINS] = {
 #if PSOC62 || PSOCWB
     { GPIO_PRT13, P13_7_PIN, CY_GPIO_DM_STRONG_IN_OFF, HSIOM_SEL_GPIO },
+    { GPIO_PRT1, P1_5_PIN, CY_GPIO_DM_STRONG_IN_OFF, HSIOM_SEL_GPIO },
     { GPIO_PRT5, P5_1_PIN, CY_GPIO_DM_STRONG_IN_OFF, P5_1_SCB5_UART_TX },
     { GPIO_PRT5, P5_0_PIN, CY_GPIO_DM_HIGHZ, P5_0_SCB5_UART_RX },
 
@@ -99,5 +101,19 @@ void user_led_gpiotask(void *arg)
         /* Toggle the LED periodically */
         gpio_toggle(USER_LED);
         vTaskDelay(500);
+    }
+}
+
+/*! \fn     user_led_gpiotask(void *arg)
+    \brief  Toggle User Led using RTOS Task.
+*/
+void user_led8_gpiotask(void *arg)
+{
+    (void)arg;
+
+    for (;;) {
+        /* Toggle the LED periodically */
+        gpio_toggle(LED8);
+        vTaskDelay(1000);
     }
 }
