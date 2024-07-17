@@ -26,10 +26,8 @@ typedef enum {
 } gpio_state;
 
 typedef enum {
-    USER_LED,
+    LED9,
     LED8,
-    DEBUG_UART_TX,
-    DEBUG_UART_RX,
     TOTAL_IO_PINS,
 } gpio_pin;
 
@@ -37,18 +35,9 @@ typedef struct
 {
     GPIO_PRT_Type *port;
     uint32_t       pin;
-    uint8_t        drive_mode;
-    uint8_t        hsio; // high speed io matrix/multiplexer
 } st_gpioconfig;
 
 #define ARRAY_SIZE sizeof(gpio_configuration_array) / sizeof(st_gpioconfig)
-
-/** \fn     GPIO Initialization
-    \brief  Configures all the GPIO Pins specfied using GPIO_PIN's. Configurations of the each Pins
-   is stored separaately in a structure array ( st_gpioconfig ). \return no return value
-*/
-
-void gpio_init();
 
 /** \fn     GPIO Write
     \brief  Controls the GPIO State using the below functions.
