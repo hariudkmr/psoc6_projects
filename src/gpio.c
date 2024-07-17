@@ -13,6 +13,7 @@
  */
 
 #include "gpio.h"
+#include "cycfg_pins.h"
 
 #include "FreeRTOS.h"
 #include "task.h"
@@ -21,39 +22,9 @@ uint32_t delay = 0;
 static_assert(sizeof(gpio_pin) == 1, "Unexpected size");
 
 st_gpioconfig gpio_configuration_array[TOTAL_IO_PINS] = {
-#if PSOC62 || PSOCWB
-    { GPIO_PRT13, P13_7_PIN, CY_GPIO_DM_STRONG_IN_OFF, HSIOM_SEL_GPIO },
-    { GPIO_PRT1, P1_5_PIN, CY_GPIO_DM_STRONG_IN_OFF, HSIOM_SEL_GPIO },
-    { GPIO_PRT5, P5_1_PIN, CY_GPIO_DM_STRONG_IN_OFF, P5_1_SCB5_UART_TX },
-    { GPIO_PRT5, P5_0_PIN, CY_GPIO_DM_HIGHZ, P5_0_SCB5_UART_RX },
-
-#endif
-
-#if PSOCS3
-    { GPIO_PRT11, P11_1_PIN, CY_GPIO_DM_STRONG_IN_OFF, HSIOM_SEL_GPIO },
-    { GPIO_PRT10, P10_1_PIN, CY_GPIO_DM_STRONG_IN_OFF, P10_1_SCB1_UART_TX },
-    { GPIO_PRT10, P10_0_PIN, CY_GPIO_DM_HIGHZ, P10_0_SCB1_UART_RX },
-
-#endif
+    { LED9_PORT, LED9_PIN },
+    { LED8_PORT, LED8_PIN },
 };
-
-/*! \fn     GPIO Initialization
-    \brief  Configures all the GPIO Pins specfied using GPIO_PIN's. Configurations of the each Pins
-   is stored separaately in a structure array ( st_gpioconfig ). \return no return value
-*/
-void gpio_init()
-{
-
-    cy_stc_gpio_pin_config_t pinCfg = { 0 };
-
-    for (int i = 0; i < TOTAL_IO_PINS; i++) {
-
-        pinCfg.driveMode = gpio_configuration_array[i].drive_mode;
-        pinCfg.hsiom = gpio_configuration_array[i].hsio;
-        Cy_GPIO_Pin_Init(gpio_configuration_array[i].port, gpio_configuration_array[i].pin,
-                         &pinCfg);
-    }
-}
 
 /*! \fn     GPIO Write
     \brief  Controls the GPIO State using the below functions.
@@ -99,7 +70,7 @@ void user_led_gpiotask(void *arg)
 
     for (;;) {
         /* Toggle the LED periodically */
-        gpio_toggle(USER_LED);
+        gpio_toggle(LED9);
         vTaskDelay(500);
     }
 }

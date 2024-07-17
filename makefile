@@ -1,45 +1,10 @@
-######################################################################################################
-TARGET_SEL = -mcpu=cortex-m4
-TGTFLAGS = $(TARGET_SEL) -mfpu=fpv4-sp-d16 
-
-ifeq ($(BRD), s3)
-    DEVICE=psoc6_512k
-    STUP=startup_psoc6_03_cm4
-    TGT=CY8C6245LQI_S3D72
-    CFLAGS += -DPSOCS3=1 
-    CM0 = psoc6_03_cm0p_sleep
-    PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx5_cm4_dual.ld
-else ifeq ($(BRD), 62)
-    DEVICE=psoc6_2m
-    STUP=startup_psoc6_02_cm4
-    TGT=CY8C624ABZI_S2D44 
-    CFLAGS += -DPSOC62=1
-    CM0 = psoc6_02_cm0p_sleep
-    PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xxa_cm4_dual.ld
-else ifeq ($(BRD), wb)
-    DEVICE=psoc6
-    STUP=startup_psoc6_01_cm4
-    TGT=CY8C6247BZI_D54 
-    CFLAGS += -DPSOCWB=1
-    CM0 = psoc6_01_cm0p_sleep
-    PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx7_cm4_dual.ld
-else ifeq ($(MAKECMDGOALS), clean)
-else ifeq ($(MAKECMDGOALS), format1)
-else ifeq ($(MAKECMDGOALS), codecheck)
-# BRD argument not required
-else 
-    $(error, "Must pass BRD=wb or BRD=s3 or BRD=62")
-
-endif
-
-######################################################################################################
-
 #Include Directory
 SRC_DIR      =./src
 INC_DIR      =./inc
 LIB_DIR      =./libs
 LIB_INC_DIR  =./../libs
 BUILD_DIR    =./build
+TOOL_DIR     =./tools
 
 #FreeRTOS Directories
 FRTOS_SRC_DIR    =./libs/freertos/Source
@@ -55,6 +20,48 @@ SGR_SRC_DIR = ./libs/systemview/SEGGER
 SGR_SAM_DIR = ./libs/systemview/Sample/FreeRTOSV10.4
 SGR_SYS_DIR = ./libs/systemview/SEGGER/Syscalls
 SGR_CFG_DIR = ./libs/systemview/Config
+
+
+######################################################################################################
+TARGET_SEL = -mcpu=cortex-m4
+TGTFLAGS = $(TARGET_SEL) -mfpu=fpv4-sp-d16 
+
+ifeq ($(BRD), s3)
+    DEVICE=psoc6_512k
+    STUP=startup_psoc6_03_cm4
+    TGT=CY8C6245LQI_S3D72
+    CFLAGS += -DPSOCS3=1 
+    CM0 = psoc6_03_cm0p_sleep
+    PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx5_cm4_dual.ld
+    SYSCONFIG= $(TOOL_DIR)/config/device/GeneratedSource
+else ifeq ($(BRD), 62)
+    DEVICE=psoc6_2m
+    STUP=startup_psoc6_02_cm4
+    TGT=CY8C624ABZI_S2D44 
+    CFLAGS += -DPSOC62=1
+    CM0 = psoc6_02_cm0p_sleep
+    PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xxa_cm4_dual.ld
+    SYSCONFIG= $(TOOL_DIR)/config/device/GeneratedSource
+else ifeq ($(BRD), wb)
+    DEVICE=psoc6
+    STUP=startup_psoc6_01_cm4
+    TGT=CY8C6247BZI_D54 
+    CFLAGS += -DPSOCWB=1
+    CM0 = psoc6_01_cm0p_sleep
+    PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx7_cm4_dual.ld
+    SYSCONFIG= $(TOOL_DIR)/config/device/GeneratedSource
+    
+else ifeq ($(MAKECMDGOALS), clean)
+else ifeq ($(MAKECMDGOALS), format1)
+else ifeq ($(MAKECMDGOALS), codecheck)
+# BRD argument not required
+else 
+    $(error, "Must pass BRD=wb or BRD=s3 or BRD=62")
+
+endif
+
+######################################################################################################
+
 
 
 PSOC6_TARGET = $(BUILD_DIR)/sumobot
@@ -78,7 +85,8 @@ SGR_INC_PATH += \
 		-I../$(SGR_SAM_DIR) \
 		-I$(SGR_SYS_DIR) \
 		-I$(SGR_CFG_DIR) \
-		-I../$(SGR_CFG_DIR) 
+		-I../$(SGR_CFG_DIR)
+
 
 PDLFILES += \
 	 $(LIB_DIR)/cat1cm0p/COMPONENT_CAT1A/COMPONENT_CM0P_SLEEP/$(CM0).c \
@@ -118,6 +126,13 @@ SGRFILES += \
  	   $(SGR_SRC_DIR)/SEGGER_SYSVIEW.c \
 	   $(SGR_SYS_DIR)/SEGGER_RTT_Syscalls_GCC.c \
 
+# System Configuration files
+SYSFILES += \
+	 $(SYSCONFIG)/cycfg.c \
+	 $(SYSCONFIG)/cycfg_clocks.c \
+	 $(SYSCONFIG)/cycfg_peripherals.c \
+	 $(SYSCONFIG)/cycfg_pins.c \
+ 	 $(SYSCONFIG)/cycfg_system.c \
 
 # C source files
 CFILES += \
@@ -130,8 +145,9 @@ CFILES += \
 HFILES += \
 	 -I$(INC_DIR) \
          -I../$(INC_DIR) \
-	 -I../$(FR_CFG_DIR)
-
+	 -I../$(FR_CFG_DIR)\
+	 -I$(SYSCONFIG) \
+	 -I../$(SYSCONFIG)
 
 # Assembler command line arguments.
 AFLAGS = -c $(TARGET_SEL) --specs=nano.specs -mfloat-abi=softfp \
@@ -162,7 +178,7 @@ CFLAGS += \
 	-D$(TGT) -DCY_IPC_DEFAULT_CFG_DISABLE
 
 
-OBJECTS += \
+PDLOBJECTS += \
 	$(BUILD_DIR)/$(STUP).o \
 	$(BUILD_DIR)/cy_syslib_gcc.o \
 	$(BUILD_DIR)/system_psoc6_cm4.o \
@@ -173,6 +189,15 @@ OBJECTS += \
 	$(BUILD_DIR)/cy_scb_common.o 	\
 	$(BUILD_DIR)/cy_scb_uart.o 	\
 	$(BUILD_DIR)/$(CM0).o	\
+
+SYSOBJECTS += \
+	$(BUILD_DIR)/cycfg.o	\
+	$(BUILD_DIR)/cycfg_clocks.o	\
+	$(BUILD_DIR)/cycfg_peripherals.o	\
+	$(BUILD_DIR)/cycfg_pins.o	\
+	$(BUILD_DIR)/cycfg_system.o	\
+
+SRCOBJECTS += \
 	$(BUILD_DIR)/mcu.o 	\
 	$(BUILD_DIR)/gpio.o 	\
 	$(BUILD_DIR)/uart.o 	\
@@ -245,7 +270,14 @@ ofiles : $(CFILES) $(ASMFILES)
 	     echo "Compiling $$f"; \
 	     cd $(BUILD_DIR) && $(CC) $(CFLAGS) -c ../$$f && cd ..; \
 	 done
-	  @echo "-------------------"
+	 @echo "-------------------"
+	 @echo "Building the System configuration files"
+	 @echo "-------------------"
+	 for f in $(SYSFILES); do \
+	     echo "Compiling $$f"; \
+	     cd $(BUILD_DIR) && $(CC) $(CFLAGS) -c ../$$f && cd ..; \
+	 done
+	 @echo "-------------------"
 	 @echo "Building the PDL files" 
 	 @echo "-------------------"
 	 for f in $(PDLFILES); do \
@@ -270,11 +302,11 @@ ofiles : $(CFILES) $(ASMFILES)
 	 @echo "Done compiling C files"
 	 @echo "----------------------"
 
-$(PSOC6_TARGET).elf : $(OBJECTS) $(FROBJECTS) $(SGROBJECTS) $(PSOC6_LD)
+$(PSOC6_TARGET).elf : $(PDLOBJECTS) $(SYSOBJECTS) $(SRCOBJECTS) $(FROBJECTS) $(SGROBJECTS) $(PSOC6_LD)
 	@echo "--------------------"
 	@echo "Linking the elf file obj" $@
 	@echo "--------------------"
-	$(LD) -Wl,--start-group $(TARGET_SEL) -mthumb --entry=Reset_Handler -Wl,-Map,$(PSOC6_TARGET).map -T $(PSOC6_LD) -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -finline-functions -Os -Wl,--end-group -o $(PSOC6_TARGET).elf   $(OBJECTS) $(FROBJECTS) $(SGROBJECTS)
+	$(LD) -Wl,--start-group $(TARGET_SEL) -mthumb --entry=Reset_Handler -Wl,-Map,$(PSOC6_TARGET).map -T $(PSOC6_LD) -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -finline-functions -Os -Wl,--end-group -o $(PSOC6_TARGET).elf   $(PDLOBJECTS) $(SYSOBJECTS) $(SRCOBJECTS) $(FROBJECTS) $(SGROBJECTS)
 
 $(PSOC6_TARGET).hex : $(PSOC6_TARGET).elf
 	@echo "-------------------------"
