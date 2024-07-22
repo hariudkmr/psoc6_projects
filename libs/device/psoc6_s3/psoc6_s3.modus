@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Design version="12" device_library_hint_path="../../mtb-pdl-cat1/devicesupport.xml" xmlns="http://cypress.com/xsd/cydesignfile_v3">
+    <ToolInfo version="2.4.1.9711"/>
+    <Devices>
+        <Device mpn="CY8C6245LQI-S3D72">
+            <BlockConfig>
+                <Block location="ioss[0].port[11].pin[1]">
+                    <Personality template="mxs40pin" version="1.1">
+                        <Param id="DriveModes" value="CY_GPIO_DM_ANALOG"/>
+                        <Param id="initialState" value="1"/>
+                        <Param id="vtrip" value="CY_GPIO_VTRIP_CMOS"/>
+                        <Param id="isrTrigger" value="CY_GPIO_INTR_DISABLE"/>
+                        <Param id="sioInputBuffer" value="false"/>
+                        <Param id="sioTrip" value="CY_SIO_VTRIP_CMOS"/>
+                        <Param id="sioRef" value="CY_SIO_VREF_PINREF"/>
+                        <Param id="sioVoltage" value="CY_SIO_VOH_1_00"/>
+                        <Param id="slewRate" value="CY_GPIO_SLEW_FAST"/>
+                        <Param id="driveStrength" value="CY_GPIO_DRIVE_1_2"/>
+                        <Param id="sioOutputBuffer" value="true"/>
+                        <Param id="inFlash" value="true"/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].clock[0]">
+                    <Personality template="mxs40sysclocks" version="1.2"/>
+                </Block>
+                <Block location="srss[0].clock[0].fastclk[0]">
+                    <Personality template="mxs40fastclk" version="1.0">
+                        <Param id="divider" value="1"/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].clock[0].fll[0]">
+                    <Personality template="mxs40fll" version="2.0">
+                        <Param id="configuration" value="auto"/>
+                        <Param id="desiredFrequency" value=""/>
+                        <Param id="multiplier" value=""/>
+                        <Param id="reference" value=""/>
+                        <Param id="tolerance" value=""/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].clock[0].hfclk[0]">
+                    <Personality template="mxs40hfclk" version="1.1">
+                        <Param id="sourceClockNumber" value="0"/>
+                        <Param id="divider" value="1"/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].clock[0].imo[0]">
+                    <Personality template="mxs40imo" version="1.0">
+                        <Param id="trim" value="1"/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].clock[0].pathmux[0]">
+                    <Personality template="mxs40pathmux" version="1.0">
+                        <Param id="sourceClock" value="imo"/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].clock[0].pathmux[1]">
+                    <Personality template="mxs40pathmux" version="1.0">
+                        <Param id="sourceClock" value="imo"/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].clock[0].pathmux[2]">
+                    <Personality template="mxs40pathmux" version="1.0">
+                        <Param id="sourceClock" value="imo"/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].clock[0].pathmux[3]">
+                    <Personality template="mxs40pathmux" version="1.0">
+                        <Param id="sourceClock" value="imo"/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].clock[0].pathmux[4]">
+                    <Personality template="mxs40pathmux" version="1.0">
+                        <Param id="sourceClock" value="imo"/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].clock[0].periclk[0]">
+                    <Personality template="mxs40periclk" version="1.0">
+                        <Param id="divider" value="2"/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].clock[0].pll[0]">
+                    <Personality template="mxs40pll" version="2.0">
+                        <Param id="lowFrequencyMode" value="false"/>
+                        <Param id="configuration" value="auto"/>
+                        <Param id="desiredFrequency" value=""/>
+                        <Param id="optimization" value="MinPower"/>
+                        <Param id="feedback" value=""/>
+                        <Param id="reference" value=""/>
+                        <Param id="output" value=""/>
+                    </Personality>
+                </Block>
+                <Block location="srss[0].clock[0].slowclk[0]">
+                    <Personality template="mxs40slowclk" version="1.0">
+                        <Param id="divider" value="1"/>
+                    </Personality>
+                </Block>
+            </BlockConfig>
+            <Netlist/>
+        </Device>
+    </Devices>
+    <ConfiguratorData/>
+</Design>

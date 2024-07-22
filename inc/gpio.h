@@ -28,6 +28,7 @@ typedef enum {
 typedef enum {
     LED9,
     LED8,
+    USER,
     TOTAL_IO_PINS,
 } gpio_pin;
 
@@ -38,6 +39,12 @@ typedef struct
 } st_gpioconfig;
 
 #define ARRAY_SIZE sizeof(gpio_configuration_array) / sizeof(st_gpioconfig)
+
+/*! \fn     GPIO Init
+    \brief  GPIO Initialization function
+*/
+
+void gpio_init(void);
 
 /** \fn     GPIO Write
     \brief  Controls the GPIO State using the below functions.
@@ -70,5 +77,10 @@ void user_led_gpiotask(void *arg);
     \brief  Toggle User Led using RTOS Task.
 */
 void user_led8_gpiotask(void *arg);
+
+/*! \fn     user_switch ISR
+ *  \brief  ISR routine for switch function.
+ */
+void user_switch_isr(void);
 
 #endif

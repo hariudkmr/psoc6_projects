@@ -33,7 +33,7 @@ ifeq ($(BRD), s3)
     CFLAGS += -DPSOCS3=1 
     CM0 = psoc6_03_cm0p_sleep
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx5_cm4_dual.ld
-    SYSCONFIG= $(TOOL_DIR)/config/device/GeneratedSource
+    SYSCONFIG= $(LIB_DIR)/device/psoc6_s3/GeneratedSource
 else ifeq ($(BRD), 62)
     DEVICE=psoc6_2m
     STUP=startup_psoc6_02_cm4
@@ -41,7 +41,7 @@ else ifeq ($(BRD), 62)
     CFLAGS += -DPSOC62=1
     CM0 = psoc6_02_cm0p_sleep
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xxa_cm4_dual.ld
-    SYSCONFIG= $(TOOL_DIR)/config/device/GeneratedSource
+    SYSCONFIG= $(LIB_DIR)/device/psoc6_62/GeneratedSource
 else ifeq ($(BRD), wb)
     DEVICE=psoc6
     STUP=startup_psoc6_01_cm4
@@ -49,7 +49,7 @@ else ifeq ($(BRD), wb)
     CFLAGS += -DPSOCWB=1
     CM0 = psoc6_01_cm0p_sleep
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx7_cm4_dual.ld
-    SYSCONFIG= $(TOOL_DIR)/config/device/GeneratedSource
+    SYSCONFIG= $(LIB_DIR)/device/psoc6_wb/GeneratedSource
     
 else ifeq ($(MAKECMDGOALS), clean)
 else ifeq ($(MAKECMDGOALS), format1)
@@ -186,6 +186,7 @@ PDLOBJECTS += \
 	$(BUILD_DIR)/cy_syslib.o 	\
 	$(BUILD_DIR)/cy_sysclk.o 	\
 	$(BUILD_DIR)/cy_device.o 	\
+	$(BUILD_DIR)/cy_sysint.o 	\
 	$(BUILD_DIR)/cy_scb_common.o 	\
 	$(BUILD_DIR)/cy_scb_uart.o 	\
 	$(BUILD_DIR)/$(CM0).o	\
