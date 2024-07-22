@@ -18,6 +18,12 @@
 
 #include "cy_pdl.h"
 
+/*! \fn     UART Initialization
+    \brief  Configures PSOC6 SCB as UART for printing the debug information.
+    \return no return value
+*/
+void uart_init();
+
 /*! \fn     UART Transmit
     \brief  Configures PSOC6 SCB as UART for printing the debug information.
     \param  string -> Debug String

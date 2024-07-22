@@ -16,11 +16,24 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-const char *hw_string = "HelloWorld : ";
-uint8_t     count = 0;
+cy_stc_scb_uart_context_t DebugInterfaceContext;
 
-/*! \fn     UART transmit function
-    \brief  Tranmits Helloworld string with the counter value.
+extern const char *hw_string;
+extern uint8_t     count;
+
+/*! \fn     UART Initialization
+    \brief  Configures PSOC6 SCB as UART for printing the debug information.
+    \return no return value
+*/
+void uart_init()
+{
+
+    Cy_SCB_UART_Init(DebugInterface_HW, &DebugInterface_config, &DebugInterfaceContext);
+    Cy_SCB_UART_Enable(DebugInterface_HW);
+}
+
+/*! \fn     UART Initialization
+    \brief  Configures PSOC6 SCB as UART for printing the debug information.
     \return no return value
 */
 void uart_transmit(const char *string)
@@ -37,6 +50,8 @@ void uart_transmit(const char *string)
 void debug_print_uarttask(void *arg)
 {
     (void)arg;
+
+    uart_init();
 
     for (;;) {
         /* Toggle the LED periodically */
