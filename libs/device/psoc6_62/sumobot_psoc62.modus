@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Design version="12" device_library_hint_path="../../mtb-pdl-cat1/devicesupport.xml" xmlns="http://cypress.com/xsd/cydesignfile_v3">
-    <ToolInfo version="2.4.1.9711"/>
+    <ToolInfo version="2.4.0.5972"/>
     <Devices>
         <Device mpn="CY8C624ABZI-S2D44">
             <BlockConfig>

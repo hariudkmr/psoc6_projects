@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Design version="12" device_library_hint_path="../../mtb-pdl-cat1/devicesupport.xml" xmlns="http://cypress.com/xsd/cydesignfile_v3">
-    <ToolInfo version="2.4.1.9711"/>
+    <ToolInfo version="2.4.0.5972"/>
     <Devices>
         <Device mpn="CY8C6245LQI-S3D72">
             <BlockConfig>
                 <Block location="ioss[0].port[11].pin[1]">
+                    <Alias value="LED9"/>
                     <Personality template="mxs40pin" version="1.1">
                         <Param id="DriveModes" value="CY_GPIO_DM_ANALOG"/>
                         <Param id="initialState" value="1"/>

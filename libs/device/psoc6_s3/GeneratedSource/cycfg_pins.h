@@ -4,7 +4,7 @@
 * Description:
 * Pin configuration
 * This file was automatically generated and should not be modified.
-* Tools Package 2.4.1.9711
+* Tools Package 2.4.0.5972
 * mtb-pdl-cat1 2.4.1.17937
 * personalities 6.0.0.0
 * udd 3.0.0.2024
@@ -40,36 +40,37 @@
 extern "C" {
 #endif
 
-#define ioss_0_port_11_pin_1_ENABLED 1U
-#define ioss_0_port_11_pin_1_PORT GPIO_PRT11
-#define ioss_0_port_11_pin_1_PORT_NUM 11U
-#define ioss_0_port_11_pin_1_PIN 1U
-#define ioss_0_port_11_pin_1_NUM 1U
-#define ioss_0_port_11_pin_1_DRIVEMODE CY_GPIO_DM_ANALOG
-#define ioss_0_port_11_pin_1_INIT_DRIVESTATE 1
+#define LED9_ENABLED 1U
+#define LED9_PORT GPIO_PRT11
+#define LED9_PORT_NUM 11U
+#define LED9_PIN 1U
+#define LED9_NUM 1U
+#define LED9_DRIVEMODE CY_GPIO_DM_ANALOG
+#define LED9_INIT_DRIVESTATE 1
 #ifndef ioss_0_port_11_pin_1_HSIOM
     #define ioss_0_port_11_pin_1_HSIOM HSIOM_SEL_GPIO
 #endif
-#define ioss_0_port_11_pin_1_IRQ ioss_interrupts_gpio_11_IRQn
+#define LED9_HSIOM ioss_0_port_11_pin_1_HSIOM
+#define LED9_IRQ ioss_interrupts_gpio_11_IRQn
 #if defined (CY_USING_HAL)
-    #define ioss_0_port_11_pin_1_HAL_PORT_PIN P11_1
+    #define LED9_HAL_PORT_PIN P11_1
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define ioss_0_port_11_pin_1 P11_1
+    #define LED9 P11_1
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define ioss_0_port_11_pin_1_HAL_IRQ CYHAL_GPIO_IRQ_NONE
+    #define LED9_HAL_IRQ CYHAL_GPIO_IRQ_NONE
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define ioss_0_port_11_pin_1_HAL_DIR CYHAL_GPIO_DIR_INPUT 
+    #define LED9_HAL_DIR CYHAL_GPIO_DIR_INPUT 
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define ioss_0_port_11_pin_1_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_ANALOG
+    #define LED9_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_ANALOG
 #endif //defined (CY_USING_HAL)
 
-extern const cy_stc_gpio_pin_config_t ioss_0_port_11_pin_1_config;
+extern const cy_stc_gpio_pin_config_t LED9_config;
 #if defined (CY_USING_HAL)
-    extern const cyhal_resource_inst_t ioss_0_port_11_pin_1_obj;
+    extern const cyhal_resource_inst_t LED9_obj;
 #endif //defined (CY_USING_HAL)
 
 void init_cycfg_pins(void);

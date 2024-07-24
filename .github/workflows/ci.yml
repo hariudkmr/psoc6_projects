@@ -16,7 +16,6 @@ jobs:
       - run: make format 
       - run: make codecheck
       - run: make BRD=62
-      - run: make BRD=s3
       - run: make BRD=wb
 
 

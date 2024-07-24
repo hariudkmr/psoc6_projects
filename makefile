@@ -243,7 +243,7 @@ RM=rm -f $(1)
 .SUFFIXES: .o .c .s
 .PHONY: all clean build codecheck format
 
-all: format1 codecheck prep ofiles $(PSOC6_TARGET).elf $(PSOC6_TARGET).hex
+all: prep ofiles $(PSOC6_TARGET).elf $(PSOC6_TARGET).hex
 	$(call DONE,$(PSOC6_TARGET).hex)
 
 rebuild: clean all
