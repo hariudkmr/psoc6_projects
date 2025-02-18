@@ -38,6 +38,5 @@
  */
 #include "FreeRTOS.h"
 #include "task.h"
-#include "SEGGER_SYSVIEW.h"
 
 #endif

@@ -1,26 +1,20 @@
 #Include Directory
 SRC_DIR      =./src
 INC_DIR      =./inc
-LIB_DIR      =./libs
-LIB_INC_DIR  =./../libs
+LIB_DIR      =../../libs
+LIB_INC_DIR  =../../../libs
 BUILD_DIR    =./build
 TOOL_DIR     =./tools
 
+
 #FreeRTOS Directories
-FRTOS_SRC_DIR    =./libs/freertos/Source
-FRTOS_INC_DIR    =./libs/freertos/Source/include
-FRTOS_MEM_DIR    =./libs/freertos/Source/portable/MemMang
-FRTOS_PRT_DIR    =./libs/freertos/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
-SRC_FR_INC_DIR   =../libs/freertos/Source/include
-FR_PM_DIR        =../libs/freertos/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
-FR_CFG_DIR	 =../portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
-
-#Segger Directories
-SGR_SRC_DIR = ./libs/systemview/SEGGER
-SGR_SAM_DIR = ./libs/systemview/Sample/FreeRTOSV10.4
-SGR_SYS_DIR = ./libs/systemview/SEGGER/Syscalls
-SGR_CFG_DIR = ./libs/systemview/Config
-
+FRTOS_SRC_DIR    =$(LIB_DIR)/freertos/Source
+FRTOS_INC_DIR    =$(LIB_DIR)/freertos/Source/include
+FRTOS_MEM_DIR    =$(LIB_DIR)/freertos/Source/portable/MemMang
+FRTOS_PRT_DIR    =$(LIB_DIR)/freertos/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
+SRC_FR_INC_DIR   =$(LIB_DIR)/freertos/Source/include
+FR_PM_DIR        =$(LIB_DIR)/freertos/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
+FR_CFG_DIR	 =$(LIB_DIR)/freertos/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
 
 ######################################################################################################
 TARGET_SEL = -mcpu=cortex-m4
@@ -38,7 +32,7 @@ else ifeq ($(BRD), 62)
     DEVICE=psoc6_2m
     STUP=startup_psoc6_02_cm4
     TGT=CY8C624ABZI_S2D44 
-    CFLAGS += -DPSOC62=1
+    CFLAGS += -DPSOC62=1 
     CM0 = psoc6_02_cm0p_sleep
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xxa_cm4_dual.ld
     SYSCONFIG= $(LIB_DIR)/device/psoc6_62/GeneratedSource
@@ -46,7 +40,7 @@ else ifeq ($(BRD), wb)
     DEVICE=psoc6
     STUP=startup_psoc6_01_cm4
     TGT=CY8C6247BZI_D54 
-    CFLAGS += -DPSOCWB=1
+    CFLAGS += -DPSOCWB=1 
     CM0 = psoc6_01_cm0p_sleep
     PSOC6_LD = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/cy8c6xx7_cm4_dual.ld
     SYSCONFIG= $(LIB_DIR)/device/psoc6_wb/GeneratedSource
@@ -61,31 +55,10 @@ else
 endif
 
 ######################################################################################################
-
-
-
-PSOC6_TARGET = $(BUILD_DIR)/sumobot
+PSOC6_TARGET = $(BUILD_DIR)/helloworld
 
 ASMFILE1 = $(LIB_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/templates/COMPONENT_MTB/COMPONENT_CM4/TOOLCHAIN_GCC_ARM/$(STUP).S
 ASMFILE2 = $(LIB_DIR)/mtb-pdl-cat1/drivers/source/TOOLCHAIN_GCC_ARM/cy_syslib_gcc.S
-
-#FreeRTO Include Directories
-FR_INC_PATH += \
-	      -I$(FRTOS_INC_DIR) \
-	      -I$(SRC_FR_INC_DIR) \
-	      -I$(FRTOS_PRT_DIR) \
-	      -I$(FR_PM_DIR) \
-	      -I$(FR_CFG_DIR)
-
-#Segger Include Directories
-SGR_INC_PATH += \
-		-I$(SGR_SRC_DIR) \
-		-I../$(SGR_SRC_DIR) \
-		-I$(SGR_SAM_DIR) \
-		-I../$(SGR_SAM_DIR) \
-		-I$(SGR_SYS_DIR) \
-		-I$(SGR_CFG_DIR) \
-		-I../$(SGR_CFG_DIR)
 
 
 PDLFILES += \
@@ -116,15 +89,13 @@ FRFILES +=\
 	 $(FRTOS_SRC_DIR)/timers.c \
 	 $(SRC_DIR)/static_task.c
 
-#Segger Source Files
-SGRASMFILE =  $(SGR_SRC_DIR)/SEGGER_RTT_ASM_ARMv7M.S
-SGRFILES += \
-	   $(SGR_CFG_DIR)/SEGGER_SYSVIEW_Config_FreeRTOS.c \
-	   $(SGR_SAM_DIR)/SEGGER_SYSVIEW_FreeRTOS.c \
-	   $(SGR_SRC_DIR)/SEGGER_RTT.c \
-	   $(SGR_SRC_DIR)/SEGGER_RTT_printf.c \
- 	   $(SGR_SRC_DIR)/SEGGER_SYSVIEW.c \
-	   $(SGR_SYS_DIR)/SEGGER_RTT_Syscalls_GCC.c \
+#FreeRTO Include Directories
+FR_INC_PATH += \
+	      -I$(FRTOS_INC_DIR) \
+	      -I$(SRC_FR_INC_DIR) \
+	      -I$(FRTOS_PRT_DIR) \
+	      -I$(FR_PM_DIR) \
+	      -I$(FR_CFG_DIR)
 
 # System Configuration files
 SYSFILES += \
@@ -145,13 +116,12 @@ CFILES += \
 HFILES += \
 	 -I$(INC_DIR) \
          -I../$(INC_DIR) \
-	 -I../$(FR_CFG_DIR)\
+	 -I$(FR_CFG_DIR) \
 	 -I$(SYSCONFIG) \
-	 -I../$(SYSCONFIG)
+
 
 # Assembler command line arguments.
 AFLAGS = -c $(TARGET_SEL) --specs=nano.specs -mfloat-abi=softfp \
-	 -I$(SGR_CFG_DIR) \
 	 -mthumb -ffunction-sections -fdata-sections -g
 
 
@@ -161,8 +131,6 @@ CFLAGS += \
 	-mthumb -ffunction-sections -fdata-sections -g \
 	$(HFILES) \
 	$(FR_INC_PATH) \
-	$(SGR_INC_PATH) \
- 	-I. \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/cmsis/include \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/include \
 	-I$(LIB_INC_DIR)/mtb-pdl-cat1/devices/COMPONENT_CAT1A/include/ip \
@@ -216,16 +184,6 @@ FROBJECTS += \
 	   $(BUILD_DIR)/timers.o \
 	   $(BUILD_DIR)/static_task.o \
 
-#Segger Source Files
-SGROBJECTS += \
-	   $(BUILD_DIR)/SEGGER_SYSVIEW_Config_FreeRTOS.o \
-	   $(BUILD_DIR)/SEGGER_SYSVIEW_FreeRTOS.o \
-	   $(BUILD_DIR)/SEGGER_RTT_ASM_ARMv7M.o \
-	   $(BUILD_DIR)/SEGGER_RTT.o \
-	   $(BUILD_DIR)/SEGGER_RTT_printf.o \
- 	   $(BUILD_DIR)/SEGGER_SYSVIEW.o \
-
-
 # Path to compiler/linker tools.
 CC  = arm-none-eabi-gcc
 AS  = arm-none-eabi-gcc
@@ -263,7 +221,6 @@ ofiles : $(CFILES) $(ASMFILES)
 	 @echo "---------------------"
 	 $(AS) $(AFLAGS) $(ASMFILE1) -o $(BUILD_DIR)/$(STUP).o
 	 $(AS) $(AFLAGS) $(ASMFILE2) -o $(BUILD_DIR)/cy_syslib_gcc.o
-	 $(AS) $(AFLAGS) $(SGRASMFILE) -o $(BUILD_DIR)/SEGGER_RTT_ASM_ARMv7M.o
 	 @echo "-------------------"
 	 @echo "Building the Source files"
 	 @echo "-------------------"
@@ -292,22 +249,15 @@ ofiles : $(CFILES) $(ASMFILES)
 	     echo "Compiling $$f"; \
 	     cd $(BUILD_DIR) && $(CC) $(CFLAGS) -c ../$$f && cd ..; \
 	 done
-	 @echo "-------------------"
-	 @echo "Building the Seggerview Source files"
-	 @echo "-------------------"
-	 for f in $(SGRFILES); do \
-	     echo "Compiling $$f"; \
-	     cd $(BUILD_DIR) && $(CC) $(CFLAGS) -c ../$$f && cd ..; \
-	 done
 	 @echo "----------------------"
 	 @echo "Done compiling C files"
 	 @echo "----------------------"
 
-$(PSOC6_TARGET).elf : $(PDLOBJECTS) $(SYSOBJECTS) $(SRCOBJECTS) $(FROBJECTS) $(SGROBJECTS) $(PSOC6_LD)
+$(PSOC6_TARGET).elf : $(PDLOBJECTS) $(SYSOBJECTS) $(SRCOBJECTS) $(FROBJECTS) $(PSOC6_LD)
 	@echo "--------------------"
 	@echo "Linking the elf file obj" $@
 	@echo "--------------------"
-	$(LD) -Wl,--start-group $(TARGET_SEL) -mthumb --entry=Reset_Handler -Wl,-Map,$(PSOC6_TARGET).map -T $(PSOC6_LD) -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -finline-functions -Os -Wl,--end-group -o $(PSOC6_TARGET).elf   $(PDLOBJECTS) $(SYSOBJECTS) $(SRCOBJECTS) $(FROBJECTS) $(SGROBJECTS)
+	$(LD) -Wl,--start-group $(TARGET_SEL) -mthumb --entry=Reset_Handler -Wl,-Map,$(PSOC6_TARGET).map -T $(PSOC6_LD) -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -finline-functions -Os -Wl,--end-group -o $(PSOC6_TARGET).elf   $(PDLOBJECTS) $(SYSOBJECTS) $(SRCOBJECTS) $(FROBJECTS) 
 
 $(PSOC6_TARGET).hex : $(PSOC6_TARGET).elf
 	@echo "-------------------------"

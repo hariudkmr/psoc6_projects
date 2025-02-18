@@ -1,8 +1,8 @@
 /*******************************************************************************
-* File Name: cycfg.h
+* File Name: cycfg_routing.h
 *
 * Description:
-* Simple wrapper header containing all generated files.
+* Establishes all necessary connections between hardware elements.
 * This file was automatically generated and should not be modified.
 * Tools Package 2.4.1.9711
 * mtb-pdl-cat1 2.4.1.17937
@@ -27,26 +27,22 @@
 * limitations under the License.
 ********************************************************************************/
 
-#if !defined(CYCFG_H)
-#define CYCFG_H
+#if !defined(CYCFG_ROUTING_H)
+#define CYCFG_ROUTING_H
 
 #if defined(__cplusplus)
 extern "C" {
 #endif
 
 #include "cycfg_notices.h"
-#include "cycfg_system.h"
-#include "cycfg_clocks.h"
-#include "cycfg_routing.h"
-#include "cycfg_peripherals.h"
-#include "cycfg_pins.h"
-
-void init_cycfg_all(void);
-
+static inline void init_cycfg_routing(void) {}
+#define init_cycfg_connectivity() init_cycfg_routing()
+#define ioss_0_port_5_pin_0_HSIOM P5_0_CANFD0_TTCAN_RX0
+#define ioss_0_port_5_pin_1_HSIOM P5_1_CANFD0_TTCAN_TX0
 
 #if defined(__cplusplus)
 }
 #endif
 
 
-#endif /* CYCFG_H */
+#endif /* CYCFG_ROUTING_H */
