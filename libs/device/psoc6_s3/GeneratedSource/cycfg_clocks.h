@@ -1,8 +1,8 @@
 /*******************************************************************************
-* File Name: cycfg_system.h
+* File Name: cycfg_clocks.h
 *
 * Description:
-* System configuration
+* Clock configuration
 * This file was automatically generated and should not be modified.
 * Tools Package 2.4.1.9711
 * mtb-pdl-cat1 2.4.1.17937
@@ -27,13 +27,11 @@
 * limitations under the License.
 ********************************************************************************/
 
-#if !defined(CYCFG_SYSTEM_H)
-#define CYCFG_SYSTEM_H
+#if !defined(CYCFG_CLOCKS_H)
+#define CYCFG_CLOCKS_H
 
 #include "cycfg_notices.h"
 #include "cy_sysclk.h"
-#include "cy_pra.h"
-#include "cy_pra_cfg.h"
 #if defined (CY_USING_HAL)
     #include "cyhal_hwmgr.h"
 #endif //defined (CY_USING_HAL)
@@ -42,43 +40,25 @@
 extern "C" {
 #endif
 
-#define srss_0_clock_0_ENABLED 1U
-#define srss_0_clock_0_fastclk_0_ENABLED 1U
-#define srss_0_clock_0_fll_0_ENABLED 1U
-#define srss_0_clock_0_hfclk_0_ENABLED 1U
-#define CY_CFG_SYSCLK_CLKHF0 0UL
-#define CY_CFG_SYSCLK_CLKHF0_CLKPATH_NUM 1UL
-#define srss_0_clock_0_imo_0_ENABLED 1U
-#define srss_0_clock_0_pathmux_0_ENABLED 1U
-#define srss_0_clock_0_pathmux_1_ENABLED 1U
-#define srss_0_clock_0_pathmux_2_ENABLED 1U
-#define srss_0_clock_0_pathmux_3_ENABLED 1U
-#define srss_0_clock_0_pathmux_4_ENABLED 1U
-#define srss_0_clock_0_periclk_0_ENABLED 1U
-#define srss_0_clock_0_pll_0_ENABLED 1U
-#define srss_0_clock_0_slowclk_0_ENABLED 1U
+#define peri_0_div_16_0_ENABLED 1U
+#define peri_0_div_16_0_HW CY_SYSCLK_DIV_16_BIT
+#define peri_0_div_16_0_NUM 0U
+#define peri_0_div_8_0_ENABLED 1U
+#define peri_0_div_8_0_HW CY_SYSCLK_DIV_8_BIT
+#define peri_0_div_8_0_NUM 0U
 
 #if defined (CY_USING_HAL)
-    extern const cyhal_resource_inst_t srss_0_clock_0_pathmux_0_obj;
+    extern const cyhal_resource_inst_t peri_0_div_16_0_obj;
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    extern const cyhal_resource_inst_t srss_0_clock_0_pathmux_1_obj;
-#endif //defined (CY_USING_HAL)
-#if defined (CY_USING_HAL)
-    extern const cyhal_resource_inst_t srss_0_clock_0_pathmux_2_obj;
-#endif //defined (CY_USING_HAL)
-#if defined (CY_USING_HAL)
-    extern const cyhal_resource_inst_t srss_0_clock_0_pathmux_3_obj;
-#endif //defined (CY_USING_HAL)
-#if defined (CY_USING_HAL)
-    extern const cyhal_resource_inst_t srss_0_clock_0_pathmux_4_obj;
+    extern const cyhal_resource_inst_t peri_0_div_8_0_obj;
 #endif //defined (CY_USING_HAL)
 
-void init_cycfg_system(void);
+void init_cycfg_clocks(void);
 
 #if defined(__cplusplus)
 }
 #endif
 
 
-#endif /* CYCFG_SYSTEM_H */
+#endif /* CYCFG_CLOCKS_H */

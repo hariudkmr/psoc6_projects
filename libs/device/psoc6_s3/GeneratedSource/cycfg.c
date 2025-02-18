@@ -4,7 +4,7 @@
 * Description:
 * Wrapper function to initialize all generated code.
 * This file was automatically generated and should not be modified.
-* Tools Package 2.4.0.5972
+* Tools Package 2.4.1.9711
 * mtb-pdl-cat1 2.4.1.17937
 * personalities 6.0.0.0
 * udd 3.0.0.2024
@@ -32,5 +32,8 @@
 void init_cycfg_all(void)
 {
     init_cycfg_system();
+    init_cycfg_clocks();
+    init_cycfg_routing();
+    init_cycfg_peripherals();
     init_cycfg_pins();
 }
