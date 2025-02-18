@@ -266,7 +266,7 @@ codecheck:
 clangcheck:
 	@$(CLCK) $(CFILES) $(INC_DIR)/*.h
 
-format1:
-	$(FMT1) -i $(CFILES) $(INC_DIR)/*.h
 format:
 	$(FMT) -i $(CFILES) $(INC_DIR)/*.h
+format1:
+	$(FMT1) -i $(CFILES) $(INC_DIR)/*.h
