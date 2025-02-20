@@ -1,16 +1,16 @@
 /*******************************************************************************
-* File Name: cycfg.h
+* File Name: cycfg.c
 *
 * Description:
-* Simple wrapper header containing all generated files.
+* Wrapper function to initialize all generated code.
 * This file was automatically generated and should not be modified.
-* Tools Package 2.4.1.9711
+* Tools Package 2.4.0.5972
 * mtb-pdl-cat1 2.4.1.17937
 * personalities 6.0.0.0
 * udd 3.0.0.2024
 *
 ********************************************************************************
-* Copyright 2024 Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2025 Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.
 * SPDX-License-Identifier: Apache-2.0
 *
@@ -27,26 +27,13 @@
 * limitations under the License.
 ********************************************************************************/
 
-#if !defined(CYCFG_H)
-#define CYCFG_H
+#include "cycfg.h"
 
-#if defined(__cplusplus)
-extern "C" {
-#endif
-
-#include "cycfg_notices.h"
-#include "cycfg_system.h"
-#include "cycfg_clocks.h"
-#include "cycfg_routing.h"
-#include "cycfg_peripherals.h"
-#include "cycfg_pins.h"
-
-void init_cycfg_all(void);
-
-
-#if defined(__cplusplus)
+void init_cycfg_all(void)
+{
+    init_cycfg_system();
+    init_cycfg_clocks();
+    init_cycfg_routing();
+    init_cycfg_peripherals();
+    init_cycfg_pins();
 }
-#endif
-
-
-#endif /* CYCFG_H */

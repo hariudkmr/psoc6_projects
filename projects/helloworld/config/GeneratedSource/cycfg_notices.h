@@ -1,16 +1,17 @@
 /*******************************************************************************
-* File Name: cycfg.h
+* File Name: cycfg_notices.h
 *
 * Description:
-* Simple wrapper header containing all generated files.
+* Contains warnings and errors that occurred while generating code for the
+* design.
 * This file was automatically generated and should not be modified.
-* Tools Package 2.4.1.9711
+* Tools Package 2.4.0.5972
 * mtb-pdl-cat1 2.4.1.17937
 * personalities 6.0.0.0
 * udd 3.0.0.2024
 *
 ********************************************************************************
-* Copyright 2024 Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2025 Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.
 * SPDX-License-Identifier: Apache-2.0
 *
@@ -27,26 +28,14 @@
 * limitations under the License.
 ********************************************************************************/
 
-#if !defined(CYCFG_H)
-#define CYCFG_H
+#if !defined(CYCFG_NOTICES_H)
+#define CYCFG_NOTICES_H
 
-#if defined(__cplusplus)
-extern "C" {
+#ifdef CY_SUPPORTS_DEVICE_VALIDATION
+#ifndef CY8C624ABZI_S2D44
+    #error "Unexpected target MCU; expected CY8C624ABZI-S2D44. There may be an inconsistency between the *.modus file and the makefile target configuration device sets."
 #endif
-
-#include "cycfg_notices.h"
-#include "cycfg_system.h"
-#include "cycfg_clocks.h"
-#include "cycfg_routing.h"
-#include "cycfg_peripherals.h"
-#include "cycfg_pins.h"
-
-void init_cycfg_all(void);
-
-
-#if defined(__cplusplus)
-}
 #endif
 
 
-#endif /* CYCFG_H */
+#endif /* CYCFG_NOTICES_H */

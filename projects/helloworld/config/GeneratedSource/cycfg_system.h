@@ -4,13 +4,13 @@
 * Description:
 * System configuration
 * This file was automatically generated and should not be modified.
-* Tools Package 2.4.1.9711
+* Tools Package 2.4.0.5972
 * mtb-pdl-cat1 2.4.1.17937
 * personalities 6.0.0.0
 * udd 3.0.0.2024
 *
 ********************************************************************************
-* Copyright 2024 Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2025 Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.
 * SPDX-License-Identifier: Apache-2.0
 *
@@ -47,13 +47,14 @@ extern "C" {
 #define srss_0_clock_0_fll_0_ENABLED 1U
 #define srss_0_clock_0_hfclk_0_ENABLED 1U
 #define CY_CFG_SYSCLK_CLKHF0 0UL
-#define CY_CFG_SYSCLK_CLKHF0_CLKPATH_NUM 1UL
+#define CY_CFG_SYSCLK_CLKHF0_CLKPATH_NUM 0UL
 #define srss_0_clock_0_imo_0_ENABLED 1U
 #define srss_0_clock_0_pathmux_0_ENABLED 1U
 #define srss_0_clock_0_pathmux_1_ENABLED 1U
 #define srss_0_clock_0_pathmux_2_ENABLED 1U
 #define srss_0_clock_0_pathmux_3_ENABLED 1U
 #define srss_0_clock_0_pathmux_4_ENABLED 1U
+#define srss_0_clock_0_pathmux_5_ENABLED 1U
 #define srss_0_clock_0_periclk_0_ENABLED 1U
 #define srss_0_clock_0_pll_0_ENABLED 1U
 #define srss_0_clock_0_slowclk_0_ENABLED 1U
@@ -72,6 +73,9 @@ extern "C" {
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
     extern const cyhal_resource_inst_t srss_0_clock_0_pathmux_4_obj;
+#endif //defined (CY_USING_HAL)
+#if defined (CY_USING_HAL)
+    extern const cyhal_resource_inst_t srss_0_clock_0_pathmux_5_obj;
 #endif //defined (CY_USING_HAL)
 
 void init_cycfg_system(void);

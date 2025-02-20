@@ -1,16 +1,16 @@
 /*******************************************************************************
-* File Name: cycfg.h
+* File Name: cycfg_clocks.h
 *
 * Description:
-* Simple wrapper header containing all generated files.
+* Clock configuration
 * This file was automatically generated and should not be modified.
-* Tools Package 2.4.1.9711
+* Tools Package 2.4.0.5972
 * mtb-pdl-cat1 2.4.1.17937
 * personalities 6.0.0.0
 * udd 3.0.0.2024
 *
 ********************************************************************************
-* Copyright 2024 Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2025 Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.
 * SPDX-License-Identifier: Apache-2.0
 *
@@ -27,26 +27,32 @@
 * limitations under the License.
 ********************************************************************************/
 
-#if !defined(CYCFG_H)
-#define CYCFG_H
+#if !defined(CYCFG_CLOCKS_H)
+#define CYCFG_CLOCKS_H
+
+#include "cycfg_notices.h"
+#include "cy_sysclk.h"
+#if defined (CY_USING_HAL)
+    #include "cyhal_hwmgr.h"
+#endif //defined (CY_USING_HAL)
 
 #if defined(__cplusplus)
 extern "C" {
 #endif
 
-#include "cycfg_notices.h"
-#include "cycfg_system.h"
-#include "cycfg_clocks.h"
-#include "cycfg_routing.h"
-#include "cycfg_peripherals.h"
-#include "cycfg_pins.h"
+#define peri_0_div_8_0_ENABLED 1U
+#define peri_0_div_8_0_HW CY_SYSCLK_DIV_8_BIT
+#define peri_0_div_8_0_NUM 0U
 
-void init_cycfg_all(void);
+#if defined (CY_USING_HAL)
+    extern const cyhal_resource_inst_t peri_0_div_8_0_obj;
+#endif //defined (CY_USING_HAL)
 
+void init_cycfg_clocks(void);
 
 #if defined(__cplusplus)
 }
 #endif
 
 
-#endif /* CYCFG_H */
+#endif /* CYCFG_CLOCKS_H */

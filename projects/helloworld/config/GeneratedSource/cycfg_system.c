@@ -4,13 +4,13 @@
 * Description:
 * System configuration
 * This file was automatically generated and should not be modified.
-* Tools Package 2.4.1.9711
+* Tools Package 2.4.0.5972
 * mtb-pdl-cat1 2.4.1.17937
 * personalities 6.0.0.0
 * udd 3.0.0.2024
 *
 ********************************************************************************
-* Copyright 2024 Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2025 Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.
 * SPDX-License-Identifier: Apache-2.0
 *
@@ -50,8 +50,8 @@
 #define CY_CFG_SYSCLK_FLL_OUT_FREQ 100000000
 #define CY_CFG_SYSCLK_CLKHF0_ENABLED 1
 #define CY_CFG_SYSCLK_CLKHF0_DIVIDER CY_SYSCLK_CLKHF_NO_DIVIDE
-#define CY_CFG_SYSCLK_CLKHF0_FREQ_MHZ 75UL
-#define CY_CFG_SYSCLK_CLKHF0_CLKPATH CY_SYSCLK_CLKHF_IN_CLKPATH1
+#define CY_CFG_SYSCLK_CLKHF0_FREQ_MHZ 100UL
+#define CY_CFG_SYSCLK_CLKHF0_CLKPATH CY_SYSCLK_CLKHF_IN_CLKPATH0
 #define CY_CFG_SYSCLK_IMO_ENABLED 1
 #define CY_CFG_SYSCLK_CLKPATH0_ENABLED 1
 #define CY_CFG_SYSCLK_CLKPATH0_SOURCE CY_SYSCLK_CLKPATH_IN_IMO
@@ -68,15 +68,18 @@
 #define CY_CFG_SYSCLK_CLKPATH4_ENABLED 1
 #define CY_CFG_SYSCLK_CLKPATH4_SOURCE CY_SYSCLK_CLKPATH_IN_IMO
 #define CY_CFG_SYSCLK_CLKPATH4_SOURCE_NUM 0UL
+#define CY_CFG_SYSCLK_CLKPATH5_ENABLED 1
+#define CY_CFG_SYSCLK_CLKPATH5_SOURCE CY_SYSCLK_CLKPATH_IN_IMO
+#define CY_CFG_SYSCLK_CLKPATH5_SOURCE_NUM 0UL
 #define CY_CFG_SYSCLK_CLKPERI_ENABLED 1
-#define CY_CFG_SYSCLK_CLKPERI_DIVIDER 0
+#define CY_CFG_SYSCLK_CLKPERI_DIVIDER 1
 #define CY_CFG_SYSCLK_PLL0_ENABLED 1
-#define CY_CFG_SYSCLK_PLL0_FEEDBACK_DIV 75
-#define CY_CFG_SYSCLK_PLL0_REFERENCE_DIV 2
-#define CY_CFG_SYSCLK_PLL0_OUTPUT_DIV 4
+#define CY_CFG_SYSCLK_PLL0_FEEDBACK_DIV 25
+#define CY_CFG_SYSCLK_PLL0_REFERENCE_DIV 1
+#define CY_CFG_SYSCLK_PLL0_OUTPUT_DIV 2
 #define CY_CFG_SYSCLK_PLL0_LF_MODE false
 #define CY_CFG_SYSCLK_PLL0_OUTPUT_MODE CY_SYSCLK_FLLPLL_OUTPUT_AUTO
-#define CY_CFG_SYSCLK_PLL0_OUTPUT_FREQ 75000000
+#define CY_CFG_SYSCLK_PLL0_OUTPUT_FREQ 100000000
 #define CY_CFG_SYSCLK_CLKSLOW_ENABLED 1
 #define CY_CFG_SYSCLK_CLKSLOW_DIVIDER 0
 
@@ -138,12 +141,20 @@
         .channel_num = 0U,
     };
 #endif //defined (CY_USING_HAL)
+#if defined (CY_USING_HAL)
+    const cyhal_resource_inst_t srss_0_clock_0_pathmux_5_obj = 
+    {
+        .type = CYHAL_RSC_CLKPATH,
+        .block_num = 5U,
+        .channel_num = 0U,
+    };
+#endif //defined (CY_USING_HAL)
 #if (!defined(CY_DEVICE_SECURE))
     static const cy_stc_pll_manual_config_t srss_0_clock_0_pll_0_pllConfig = 
     {
-        .feedbackDiv = 75,
-        .referenceDiv = 2,
-        .outputDiv = 4,
+        .feedbackDiv = 25,
+        .referenceDiv = 1,
+        .outputDiv = 2,
         .lfMode = false,
         .outputMode = CY_SYSCLK_FLLPLL_OUTPUT_AUTO,
     };
@@ -683,9 +694,15 @@ __WEAK void __NO_RETURN cycfg_ClockStartupError(uint32_t error)
     }
 #endif //(!defined(CY_DEVICE_SECURE))
 #if (!defined(CY_DEVICE_SECURE))
+    __STATIC_INLINE void Cy_SysClk_ClkPath5Init()
+    {
+        Cy_SysClk_ClkPathSetSource(5U, CY_CFG_SYSCLK_CLKPATH5_SOURCE);
+    }
+#endif //(!defined(CY_DEVICE_SECURE))
+#if (!defined(CY_DEVICE_SECURE))
     __STATIC_INLINE void Cy_SysClk_ClkPeriInit()
     {
-        Cy_SysClk_ClkPeriSetDivider(0U);
+        Cy_SysClk_ClkPeriSetDivider(1U);
     }
 #endif //(!defined(CY_DEVICE_SECURE))
 #if (!defined(CY_DEVICE_SECURE))
@@ -1064,5 +1081,9 @@ void init_cycfg_system(void)
 
 #if defined (CY_USING_HAL)
     cyhal_hwmgr_reserve(&srss_0_clock_0_pathmux_4_obj);
+#endif //defined (CY_USING_HAL)
+
+#if defined (CY_USING_HAL)
+    cyhal_hwmgr_reserve(&srss_0_clock_0_pathmux_5_obj);
 #endif //defined (CY_USING_HAL)
 }

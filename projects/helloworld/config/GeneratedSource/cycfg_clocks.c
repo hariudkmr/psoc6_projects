@@ -1,16 +1,16 @@
 /*******************************************************************************
-* File Name: cycfg.h
+* File Name: cycfg_clocks.c
 *
 * Description:
-* Simple wrapper header containing all generated files.
+* Clock configuration
 * This file was automatically generated and should not be modified.
-* Tools Package 2.4.1.9711
+* Tools Package 2.4.0.5972
 * mtb-pdl-cat1 2.4.1.17937
 * personalities 6.0.0.0
 * udd 3.0.0.2024
 *
 ********************************************************************************
-* Copyright 2024 Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2025 Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.
 * SPDX-License-Identifier: Apache-2.0
 *
@@ -27,26 +27,24 @@
 * limitations under the License.
 ********************************************************************************/
 
-#if !defined(CYCFG_H)
-#define CYCFG_H
-
-#if defined(__cplusplus)
-extern "C" {
-#endif
-
-#include "cycfg_notices.h"
-#include "cycfg_system.h"
 #include "cycfg_clocks.h"
-#include "cycfg_routing.h"
-#include "cycfg_peripherals.h"
-#include "cycfg_pins.h"
 
-void init_cycfg_all(void);
+#if defined (CY_USING_HAL)
+    const cyhal_resource_inst_t peri_0_div_8_0_obj = 
+    {
+        .type = CYHAL_RSC_CLOCK,
+        .block_num = peri_0_div_8_0_HW,
+        .channel_num = peri_0_div_8_0_NUM,
+    };
+#endif //defined (CY_USING_HAL)
 
 
-#if defined(__cplusplus)
+void init_cycfg_clocks(void)
+{
+    Cy_SysClk_PeriphDisableDivider(CY_SYSCLK_DIV_8_BIT, 0U);
+    Cy_SysClk_PeriphSetDivider(CY_SYSCLK_DIV_8_BIT, 0U, 53U);
+    Cy_SysClk_PeriphEnableDivider(CY_SYSCLK_DIV_8_BIT, 0U);
+#if defined (CY_USING_HAL)
+    cyhal_hwmgr_reserve(&peri_0_div_8_0_obj);
+#endif //defined (CY_USING_HAL)
 }
-#endif
-
-
-#endif /* CYCFG_H */

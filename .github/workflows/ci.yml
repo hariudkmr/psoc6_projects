@@ -15,8 +15,7 @@ jobs:
           submodules: recursive
       - run: make format 
       - run: make codecheck
-      - run: make BRD=62
-      - run: make BRD=wb
+      - run: make
 
 
 

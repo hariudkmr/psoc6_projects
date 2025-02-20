@@ -186,7 +186,6 @@ to exclude the API function. */
 #define INCLUDE_xTaskResumeFromISR          1
 #define INCLUDE_pxTaskGetStackStart         1
 
-#include "SEGGER_SYSVIEW_FreeRTOS.h"
 /* Normal assert() semantics without relying on the provision of an assert.h
 header file. */
 #if defined(NDEBUG)
