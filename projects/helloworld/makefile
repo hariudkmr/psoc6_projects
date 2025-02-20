@@ -5,7 +5,7 @@ LIB_DIR      =../../libs
 LIB_INC_DIR  =../../../libs
 BUILD_DIR    =./build
 TOOL_DIR     =./tools
-SYSCONFIG    =./device/GeneratedSource
+SYSCONFIG    =./config/GeneratedSource
 
 
 

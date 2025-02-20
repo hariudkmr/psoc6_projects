@@ -11,7 +11,7 @@
 * CapSense Configurator 4.0.0.6195
 *
 ********************************************************************************
-* Copyright 2024, Cypress Semiconductor Corporation (an Infineon company) 
+* Copyright 2025, Cypress Semiconductor Corporation (an Infineon company) 
 * or an affiliate of Cypress Semiconductor Corporation.
 * SPDX-License-Identifier: Apache-2.0
 *
