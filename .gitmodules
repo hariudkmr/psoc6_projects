@@ -19,3 +19,6 @@
 [submodule "libs/freertos"]
 	path = libs/freertos
 	url = https://github.com/hariudkmr/freertos.git
+[submodule "thirdparty_libs/OneButton_PSOC6"]
+	path = thirdparty_libs/OneButton_PSOC6
+	url = https://github.com/hariudkmr/OneButton_PSOC6.git
