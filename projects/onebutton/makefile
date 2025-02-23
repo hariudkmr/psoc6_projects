@@ -8,17 +8,8 @@ TOOL_DIR     =./tools
 SYSCONFIG    =./config/GeneratedSource
 PDLLIB       =$(LIB_DIR)/mtb-pdl-cat1
 USBLIB	     =$(LIB_DIR)/usbdev
+THRDLIB	     =../../thirdparty_libs/Onebutton_PSOC6
 
-
-
-#FreeRTOS Directories
-FRTOS_SRC_DIR    =$(LIB_DIR)/freertos/Source
-FRTOS_INC_DIR    =$(LIB_DIR)/freertos/Source/include
-FRTOS_MEM_DIR    =$(LIB_DIR)/freertos/Source/portable/MemMang
-FRTOS_PRT_DIR    =$(LIB_DIR)/freertos/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
-SRC_FR_INC_DIR   =$(LIB_DIR)/freertos/Source/include
-FR_PM_DIR        =$(LIB_DIR)/freertos/Source/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
-FR_CFG_DIR	 =$(LIB_DIR)/freertos/portable/COMPONENT_CM4/TOOLCHAIN_GCC_ARM
 
 ######################################################################################################
 TARGET_SEL = -mcpu=cortex-m4
@@ -55,6 +46,8 @@ PDLFILES += \
 	 $(PDLLIB)/drivers/source/cy_sysclk.c	\
 	 $(PDLLIB)/drivers/source/cy_gpio.c	\
 	 $(PDLLIB)/drivers/source/cy_syslib.c	\
+	 $(PDLLIB)/drivers/source/cy_systick.c	\
+
 
 # System Configuration files
 SYSFILES += \
@@ -66,7 +59,8 @@ SYSFILES += \
 
 # C source files
 CFILES += \
-	 $(SRC_DIR)/main.c
+	 $(SRC_DIR)/main.c \
+         $(THRDLIB)/OneButtonC.c \
 	
 # C header files
 HFILES += \
@@ -75,6 +69,8 @@ HFILES += \
 	 -I../$(USBLIB) \
          -I../$(INC_DIR) \
 	 -I../$(SYSCONFIG) \
+	 -I../$(THRDLIB) \
+
 
 
 # Assembler command line arguments.
@@ -113,6 +109,7 @@ PDLOBJECTS += \
 	$(BUILD_DIR)/cy_device.o 	\
 	$(BUILD_DIR)/cy_sysint.o 	\
 	$(BUILD_DIR)/$(CM0).o	\
+	$(BUILD_DIR)/cy_systick.o 	\
 
 SYSOBJECTS += \
 	$(BUILD_DIR)/cycfg.o	\
@@ -123,6 +120,8 @@ SYSOBJECTS += \
 
 SRCOBJECTS += \
 	$(BUILD_DIR)/main.o \
+	$(BUILD_DIR)/OneButtonC.o \
+
 
 
 # Path to compiler/linker tools.

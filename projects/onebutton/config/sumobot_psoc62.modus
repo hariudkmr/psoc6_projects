@@ -10,7 +10,7 @@
                         <Param id="DriveModes" value="CY_GPIO_DM_HIGHZ"/>
                         <Param id="initialState" value="1"/>
                         <Param id="vtrip" value="CY_GPIO_VTRIP_CMOS"/>
-                        <Param id="isrTrigger" value="CY_GPIO_INTR_FALLING"/>
+                        <Param id="isrTrigger" value="CY_GPIO_INTR_BOTH"/>
                         <Param id="slewRate" value="CY_GPIO_SLEW_FAST"/>
                         <Param id="driveStrength" value="CY_GPIO_DRIVE_1_2"/>
                         <Param id="sioOutputBuffer" value="true"/>
@@ -118,6 +118,12 @@
                 </Block>
                 <Block location="srss[0].clock[0]">
                     <Personality template="mxs40sysclocks" version="1.2"/>
+                </Block>
+                <Block location="srss[0].clock[0].altsystickclk[0]">
+                    <Personality template="mxs40altsystick" version="1.0">
+                        <Param id="sourceClock" value="imo"/>
+                        <Param id="interval" value="1000"/>
+                    </Personality>
                 </Block>
                 <Block location="srss[0].clock[0].fastclk[0]">
                     <Personality template="mxs40fastclk" version="1.0">
