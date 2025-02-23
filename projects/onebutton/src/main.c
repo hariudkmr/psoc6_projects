@@ -13,9 +13,18 @@
  */
 #include "main.h"
 
+#include "cy_pdl.h"
 #include "cycfg.h"
 
+#include "OneButtonC.h"
 
+OneButton_t button1; // Declare global instance
+uint16_t    press_cnt = 0;
+
+void B1_press()
+{ // Basic function to count button presses
+    press_cnt++;
+}
 
 /**
  * Main entry point of the program.
@@ -23,16 +32,20 @@
 int main(void)
 {
 
+    // Initialize the System
     init_cycfg_all();
 
-    /* Enable interrupts */
+    OB_Init(&button1); // Init the button with default params
+    OB_Setup(&button1, USER_PORT, USER_PIN, true); // Configure the button
+
+    // Setup callback function
+    OB_AttachCallback(&button1, OB_EV_PRESS, B1_press);
+
+    // Enable interrupts
     __enable_irq();
 
-       
-  
-    for(;;)
-    {
-       Cy_SysLib_Delay(10UL);
+    for (;;) {
+        OB_Tick(&button1); // Call ticks in main loop
     }
 }
 

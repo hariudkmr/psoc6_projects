@@ -59,7 +59,7 @@ extern "C" {
     #define USER P0_4
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define USER_HAL_IRQ CYHAL_GPIO_IRQ_FALL
+    #define USER_HAL_IRQ CYHAL_GPIO_IRQ_BOTH
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
     #define USER_HAL_DIR CYHAL_GPIO_DIR_INPUT 
