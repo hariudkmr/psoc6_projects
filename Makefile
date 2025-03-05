@@ -1,5 +1,5 @@
 #Specify the Project to Build for CI Check
-PROJECT= ./projects/template
+PROJECT= ./projects/onebutton
 
 .PHONY : all clean format codecheck
 format:

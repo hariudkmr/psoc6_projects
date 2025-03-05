@@ -13,7 +13,6 @@
 #include "cycfg_peripherals.h"
 #include "uart.h"
 
-
 cy_stc_scb_uart_context_t DebugInterfaceContext;
 
 extern const char *hw_string;
@@ -54,6 +53,6 @@ void debug_print_uarttask(void *arg)
     for (;;) {
         /* Toggle the LED periodically */
         uart_transmit(hw_string);
-        //vTaskDelay(1000);
+        // vTaskDelay(1000);
     }
 }

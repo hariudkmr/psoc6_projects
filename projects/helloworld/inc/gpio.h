@@ -20,12 +20,14 @@
 #include <string.h>
 #include <assert.h>
 
-typedef enum {
+typedef enum
+{
     IO_LOW,
     IO_HIGH,
 } gpio_state;
 
-typedef enum {
+typedef enum
+{
     LED9,
     LED8,
     USER,

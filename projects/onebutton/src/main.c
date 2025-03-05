@@ -22,19 +22,18 @@ OneButton_t button1; // Declare global instance
 uint16_t    press_cnt = 0;
 
 void B1_press()
-{ 
+{
     // Basic function to count button presses
     press_cnt++;
     Cy_GPIO_Inv(LED8_PORT, LED8_PIN);
 }
 
 void B1_dpress()
-{ 
+{
 
     // Basic function to count button presses
     Cy_GPIO_Set(LED8_PORT, LED8_PIN);
 }
-
 
 /**
  * Main entry point of the program.
@@ -44,7 +43,6 @@ int main(void)
 
     // Initialize the System
     init_cycfg_all();
-
 
     OB_Init(&button1); // Init the button with default params
     OB_Setup(&button1, USER_PORT, USER_PIN, true); // Configure the button

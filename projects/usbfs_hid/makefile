@@ -85,6 +85,7 @@ CFILES += \
 HFILES += \
 	  $(FR_INC_PATH) \
 	 -I$(SRC_DIR) \
+	 -I$(USBLIB) \
 	 -I../$(USBLIB) \
          -I../$(INC_DIR) \
 	 -I../$(SYSCONFIG) \
