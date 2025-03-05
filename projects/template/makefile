@@ -211,10 +211,10 @@ flash:	$(PSOC6_TARGET).hex
 	
 	
 codecheck: 
-	$(CPCK) --quiet --enable=all --suppress=missingInclude --suppress=unusedFunction \
+	$(CPCK) --quiet --enable=all --suppress=missingInclude \
 	--inline-suppr	\
 	-I $(INC_DIR)	\
-	$(CFILES)	
+	$(CFILES)
 
 clangcheck:
 	@$(CLCK) $(CFILES) $(INC_DIR)/*.h
