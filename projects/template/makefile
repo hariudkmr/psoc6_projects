@@ -214,8 +214,7 @@ codecheck:
 	$(CPCK) --quiet --enable=all --suppress=missingInclude --suppress=unusedFunction \
 	--inline-suppr	\
 	-I $(INC_DIR)	\
-	$(CFILES)	\
-	-i $(LIB_DIR)
+	$(CFILES)	
 
 clangcheck:
 	@$(CLCK) $(CFILES) $(INC_DIR)/*.h

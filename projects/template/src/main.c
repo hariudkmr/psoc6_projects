@@ -15,8 +15,6 @@
 
 #include "cycfg.h"
 
-
-
 /**
  * Main entry point of the program.
  */
@@ -28,11 +26,8 @@ int main(void)
     /* Enable interrupts */
     __enable_irq();
 
-       
-  
-    for(;;)
-    {
-       Cy_SysLib_Delay(10UL);
+    for (;;) {
+        Cy_SysLib_Delay(10UL);
     }
 }
 
