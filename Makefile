@@ -1,24 +1,18 @@
-fmt= make format
-fmt1= make format1
-cln= make clean
-cck= make codecheck
-bld= make 
-
 #Specify the Project to Build for CI Check
-PROJECT= ./project/template
+PROJECT= ./projects/template
 
 .PHONY : all clean format codecheck
 format:
-	cd $(PROJECT); $(fmt)
+	cd $(PROJECT) && make $@  
 
-format:
-	cd $(PROJECT); $(fmt1)
+format1:
+	cd $(PROJECT) && make $@
 
 codecheck:
-	cd $(PROJECT); $(cck)
+	cd $(PROJECT) && make $@
 
 all:
-	cd $(PROJECT); $(bld)
+	cd $(PROJECT) && make $@
 
 clean:
-	cd $(PROJECT); $(cln)
+	cd $(PROJECT) && make $@
