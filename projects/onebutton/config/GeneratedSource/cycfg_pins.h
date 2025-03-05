@@ -35,6 +35,7 @@
 #if defined (CY_USING_HAL)
     #include "cyhal_hwmgr.h"
 #endif //defined (CY_USING_HAL)
+#include "cycfg_routing.h"
 
 #if defined(__cplusplus)
 extern "C" {
@@ -67,32 +68,32 @@ extern "C" {
 #if defined (CY_USING_HAL)
     #define USER_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_NONE
 #endif //defined (CY_USING_HAL)
-#define LED9_ENABLED 1U
-#define LED9_PORT GPIO_PRT13
-#define LED9_PORT_NUM 13U
-#define LED9_PIN 7U
-#define LED9_NUM 7U
-#define LED9_DRIVEMODE CY_GPIO_DM_STRONG
-#define LED9_INIT_DRIVESTATE 0
+#define LED8_ENABLED 1U
+#define LED8_PORT GPIO_PRT13
+#define LED8_PORT_NUM 13U
+#define LED8_PIN 7U
+#define LED8_NUM 7U
+#define LED8_DRIVEMODE CY_GPIO_DM_STRONG
+#define LED8_INIT_DRIVESTATE 0
 #ifndef ioss_0_port_13_pin_7_HSIOM
     #define ioss_0_port_13_pin_7_HSIOM HSIOM_SEL_GPIO
 #endif
-#define LED9_HSIOM ioss_0_port_13_pin_7_HSIOM
-#define LED9_IRQ ioss_interrupts_gpio_13_IRQn
+#define LED8_HSIOM ioss_0_port_13_pin_7_HSIOM
+#define LED8_IRQ ioss_interrupts_gpio_13_IRQn
 #if defined (CY_USING_HAL)
-    #define LED9_HAL_PORT_PIN P13_7
+    #define LED8_HAL_PORT_PIN P13_7
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define LED9 P13_7
+    #define LED8 P13_7
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define LED9_HAL_IRQ CYHAL_GPIO_IRQ_NONE
+    #define LED8_HAL_IRQ CYHAL_GPIO_IRQ_NONE
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define LED9_HAL_DIR CYHAL_GPIO_DIR_BIDIRECTIONAL 
+    #define LED8_HAL_DIR CYHAL_GPIO_DIR_BIDIRECTIONAL 
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define LED9_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_STRONG
+    #define LED8_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_STRONG
 #endif //defined (CY_USING_HAL)
 #define ioss_0_port_14_pin_0_ENABLED 1U
 #define ioss_0_port_14_pin_0_PORT GPIO_PRT14
@@ -146,32 +147,32 @@ extern "C" {
 #if defined (CY_USING_HAL)
     #define ioss_0_port_14_pin_1_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_ANALOG
 #endif //defined (CY_USING_HAL)
-#define LED8_ENABLED 1U
-#define LED8_PORT GPIO_PRT1
-#define LED8_PORT_NUM 1U
-#define LED8_PIN 1U
-#define LED8_NUM 1U
-#define LED8_DRIVEMODE CY_GPIO_DM_STRONG
-#define LED8_INIT_DRIVESTATE 0
+#define LED_ENABLED 1U
+#define LED_PORT GPIO_PRT1
+#define LED_PORT_NUM 1U
+#define LED_PIN 1U
+#define LED_NUM 1U
+#define LED_DRIVEMODE CY_GPIO_DM_STRONG
+#define LED_INIT_DRIVESTATE 0
 #ifndef ioss_0_port_1_pin_1_HSIOM
     #define ioss_0_port_1_pin_1_HSIOM HSIOM_SEL_GPIO
 #endif
-#define LED8_HSIOM ioss_0_port_1_pin_1_HSIOM
-#define LED8_IRQ ioss_interrupts_gpio_1_IRQn
+#define LED_HSIOM ioss_0_port_1_pin_1_HSIOM
+#define LED_IRQ ioss_interrupts_gpio_1_IRQn
 #if defined (CY_USING_HAL)
-    #define LED8_HAL_PORT_PIN P1_1
+    #define LED_HAL_PORT_PIN P1_1
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define LED8 P1_1
+    #define LED P1_1
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define LED8_HAL_IRQ CYHAL_GPIO_IRQ_NONE
+    #define LED_HAL_IRQ CYHAL_GPIO_IRQ_NONE
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define LED8_HAL_DIR CYHAL_GPIO_DIR_BIDIRECTIONAL 
+    #define LED_HAL_DIR CYHAL_GPIO_DIR_BIDIRECTIONAL 
 #endif //defined (CY_USING_HAL)
 #if defined (CY_USING_HAL)
-    #define LED8_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_STRONG
+    #define LED_HAL_DRIVEMODE CYHAL_GPIO_DRIVE_STRONG
 #endif //defined (CY_USING_HAL)
 #define ioss_0_port_5_pin_0_ENABLED 1U
 #define ioss_0_port_5_pin_0_PORT GPIO_PRT5
@@ -230,9 +231,9 @@ extern const cy_stc_gpio_pin_config_t USER_config;
 #if defined (CY_USING_HAL)
     extern const cyhal_resource_inst_t USER_obj;
 #endif //defined (CY_USING_HAL)
-extern const cy_stc_gpio_pin_config_t LED9_config;
+extern const cy_stc_gpio_pin_config_t LED8_config;
 #if defined (CY_USING_HAL)
-    extern const cyhal_resource_inst_t LED9_obj;
+    extern const cyhal_resource_inst_t LED8_obj;
 #endif //defined (CY_USING_HAL)
 extern const cy_stc_gpio_pin_config_t ioss_0_port_14_pin_0_config;
 #if defined (CY_USING_HAL)
@@ -242,9 +243,9 @@ extern const cy_stc_gpio_pin_config_t ioss_0_port_14_pin_1_config;
 #if defined (CY_USING_HAL)
     extern const cyhal_resource_inst_t ioss_0_port_14_pin_1_obj;
 #endif //defined (CY_USING_HAL)
-extern const cy_stc_gpio_pin_config_t LED8_config;
+extern const cy_stc_gpio_pin_config_t LED_config;
 #if defined (CY_USING_HAL)
-    extern const cyhal_resource_inst_t LED8_obj;
+    extern const cyhal_resource_inst_t LED_obj;
 #endif //defined (CY_USING_HAL)
 extern const cy_stc_gpio_pin_config_t ioss_0_port_5_pin_0_config;
 #if defined (CY_USING_HAL)

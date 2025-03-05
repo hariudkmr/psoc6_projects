@@ -53,11 +53,11 @@ const cy_stc_gpio_pin_config_t USER_config =
         .channel_num = USER_PIN,
     };
 #endif //defined (CY_USING_HAL)
-const cy_stc_gpio_pin_config_t LED9_config = 
+const cy_stc_gpio_pin_config_t LED8_config = 
 {
     .outVal = 0,
     .driveMode = CY_GPIO_DM_STRONG,
-    .hsiom = LED9_HSIOM,
+    .hsiom = LED8_HSIOM,
     .intEdge = CY_GPIO_INTR_DISABLE,
     .intMask = 0UL,
     .vtrip = CY_GPIO_VTRIP_CMOS,
@@ -70,11 +70,11 @@ const cy_stc_gpio_pin_config_t LED9_config =
     .vohSel = 0UL,
 };
 #if defined (CY_USING_HAL)
-    const cyhal_resource_inst_t LED9_obj = 
+    const cyhal_resource_inst_t LED8_obj = 
     {
         .type = CYHAL_RSC_GPIO,
-        .block_num = LED9_PORT_NUM,
-        .channel_num = LED9_PIN,
+        .block_num = LED8_PORT_NUM,
+        .channel_num = LED8_PIN,
     };
 #endif //defined (CY_USING_HAL)
 const cy_stc_gpio_pin_config_t ioss_0_port_14_pin_0_config = 
@@ -125,11 +125,11 @@ const cy_stc_gpio_pin_config_t ioss_0_port_14_pin_1_config =
         .channel_num = ioss_0_port_14_pin_1_PIN,
     };
 #endif //defined (CY_USING_HAL)
-const cy_stc_gpio_pin_config_t LED8_config = 
+const cy_stc_gpio_pin_config_t LED_config = 
 {
     .outVal = 0,
     .driveMode = CY_GPIO_DM_STRONG,
-    .hsiom = LED8_HSIOM,
+    .hsiom = LED_HSIOM,
     .intEdge = CY_GPIO_INTR_DISABLE,
     .intMask = 0UL,
     .vtrip = CY_GPIO_VTRIP_CMOS,
@@ -142,11 +142,11 @@ const cy_stc_gpio_pin_config_t LED8_config =
     .vohSel = 0UL,
 };
 #if defined (CY_USING_HAL)
-    const cyhal_resource_inst_t LED8_obj = 
+    const cyhal_resource_inst_t LED_obj = 
     {
         .type = CYHAL_RSC_GPIO,
-        .block_num = LED8_PORT_NUM,
-        .channel_num = LED8_PIN,
+        .block_num = LED_PORT_NUM,
+        .channel_num = LED_PIN,
     };
 #endif //defined (CY_USING_HAL)
 const cy_stc_gpio_pin_config_t ioss_0_port_5_pin_0_config = 
@@ -206,9 +206,9 @@ void init_cycfg_pins(void)
     cyhal_hwmgr_reserve(&USER_obj);
 #endif //defined (CY_USING_HAL)
 
-    Cy_GPIO_Pin_Init(LED9_PORT, LED9_PIN, &LED9_config);
+    Cy_GPIO_Pin_Init(LED8_PORT, LED8_PIN, &LED8_config);
 #if defined (CY_USING_HAL)
-    cyhal_hwmgr_reserve(&LED9_obj);
+    cyhal_hwmgr_reserve(&LED8_obj);
 #endif //defined (CY_USING_HAL)
 
     Cy_GPIO_Pin_Init(ioss_0_port_14_pin_0_PORT, ioss_0_port_14_pin_0_PIN, &ioss_0_port_14_pin_0_config);
@@ -221,9 +221,9 @@ void init_cycfg_pins(void)
     cyhal_hwmgr_reserve(&ioss_0_port_14_pin_1_obj);
 #endif //defined (CY_USING_HAL)
 
-    Cy_GPIO_Pin_Init(LED8_PORT, LED8_PIN, &LED8_config);
+    Cy_GPIO_Pin_Init(LED_PORT, LED_PIN, &LED_config);
 #if defined (CY_USING_HAL)
-    cyhal_hwmgr_reserve(&LED8_obj);
+    cyhal_hwmgr_reserve(&LED_obj);
 #endif //defined (CY_USING_HAL)
 
     Cy_GPIO_Pin_Init(ioss_0_port_5_pin_0_PORT, ioss_0_port_5_pin_0_PIN, &ioss_0_port_5_pin_0_config);

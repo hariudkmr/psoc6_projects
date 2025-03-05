@@ -39,8 +39,6 @@ static inline void init_cycfg_routing(void) {}
 #define init_cycfg_connectivity() init_cycfg_routing()
 #define ioss_0_port_5_pin_0_HSIOM P5_0_SCB5_UART_RX
 #define ioss_0_port_5_pin_1_HSIOM P5_1_SCB5_UART_TX
-#define ioss_0_port_14_pin_0_AUX USBDP_USB_USB_DP_PAD
-#define ioss_0_port_14_pin_1_AUX USBDM_USB_USB_DM_PAD
 
 #if defined(__cplusplus)
 }

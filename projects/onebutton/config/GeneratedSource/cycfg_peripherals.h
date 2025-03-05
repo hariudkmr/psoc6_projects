@@ -31,10 +31,26 @@
 #define CYCFG_PERIPHERALS_H
 
 #include "cycfg_notices.h"
+#include "cy_scb_uart.h"
+#include "cy_sysclk.h"
+#if defined (CY_USING_HAL)
+    #include "cyhal_hwmgr.h"
+#endif //defined (CY_USING_HAL)
+
 #if defined(__cplusplus)
 extern "C" {
 #endif
 
+#define DebugInterface_ENABLED 1U
+#define DebugInterface_HW SCB5
+#define DebugInterface_IRQ scb_5_interrupt_IRQn
+
+extern const cy_stc_scb_uart_config_t DebugInterface_config;
+#if defined (CY_USING_HAL)
+    extern const cyhal_resource_inst_t DebugInterface_obj;
+#endif //defined (CY_USING_HAL)
+
+void init_cycfg_peripherals(void);
 
 #if defined(__cplusplus)
 }
