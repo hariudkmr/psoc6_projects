@@ -16,7 +16,6 @@
 #include "cycfg_pins.h"
 #include "cy_sysint.h"
 
-
 static uint32_t delay = 10;
 static_assert(sizeof(gpio_pin) == 1, "Unexpected size");
 
@@ -86,7 +85,7 @@ void user_led_gpiotask(void *arg)
     for (;;) {
         /* Toggle the LED periodically */
         gpio_toggle(LED9);
-       // vTaskDelay(delay);
+        // vTaskDelay(delay);
     }
 }
 
@@ -100,7 +99,7 @@ void user_led8_gpiotask(void *arg)
     for (;;) {
         /* Toggle the LED periodically */
         gpio_toggle(LED8);
-        //vTaskDelay(1000);
+        // vTaskDelay(1000);
     }
 }
 
