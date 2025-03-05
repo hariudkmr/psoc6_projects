@@ -11,8 +11,9 @@ jobs:
     steps:
       - name: checkout the repository
         uses: actions/checkout@v4
-      - name: Update Submodule
-	run: git submodule update --init --recursive
+        with:
+          submodules: recursive
+      - run: git submodule update --init --recursive
       - run: make format 
       - run: make codecheck
       - run: make
