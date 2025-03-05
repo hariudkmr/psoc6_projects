@@ -214,7 +214,6 @@ codecheck:
 	--inline-suppr	\
 	-I $(INC_DIR)	\
 	$(CFILES)	\
-	-i $(LIB_DIR)
 
 clangcheck:
 	@$(CLCK) $(CFILES) $(INC_DIR)/*.h
