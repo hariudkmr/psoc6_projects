@@ -23,3 +23,6 @@
 [submodule "thirdparty_libs/Onebutton_PSOC6"]
 	path = thirdparty_libs/Onebutton_PSOC6
 	url = https://github.com/hariudkmr/OneButton_PSOC6.git
+[submodule "libs/usbdev"]
+	path = libs/usbdev
+	url = https://github.com/Infineon/usbdev.git
